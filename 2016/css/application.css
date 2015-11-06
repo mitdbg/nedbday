@@ -3,6 +3,7 @@ body {
     background-color: #FFFFFF;
     font-size: 12pt;
     font-weight: normal;
+    color: #555;
 }
 
 #nav {
@@ -33,13 +34,13 @@ h1,.jumbotron h1 {
 h2 {
     font-size: 20px;
     font-weight: bold;
-    color: navy;
+    /*color: navy;*/
 }
 
 h3 {
     font-size: 18px;
     font-weight: bold;
-    color: navy;
+    /*color: navy;*/
 }
 
 .jumbotron {
@@ -52,8 +53,18 @@ h3 {
     font-weight: normal;
 }
 
+.content-container {
+  width: 80%;
+}
+
+#logo {
+  background-image:url(/images/northeast.png); 
+  width:70%; min-width: 200px; height: 200px; background-size:cover;
+  background-repeat: no-repeat;
+}
+
 /* collapsed sidebar styles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 850px) {
     .row-offcanvas {
         position: relative;
         -webkit-transition: all 0.25s ease-out;
@@ -87,13 +98,24 @@ h3 {
     }
     #nav .sidebar>li:first-child {
         border-top: 0;
+        
     }
+    #logocontainer {
+      float: left;
+    }
+    #logo {
+      width:100%; 
+      height: 150px;
+      background-size: contain;
+      float: left;
+    }
+
     #content {
         min-height: 350px;
     }
     .content-container {
         padding: 10px 50px 0 50px;
-        border-top: #226821 2px solid;
+        /*border-top: #226821 2px solid;*/
     }
     .content-container>.panel-default,.content-container>.list-group {
         margin-top: 25px;
