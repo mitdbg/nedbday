@@ -91,6 +91,24 @@ p {
   margin: 1em;
 }
 
+#registerbtn {
+  display: block;
+  padding: 1em; 
+  padding-left: 4em;
+  padding-right: 4em;
+  background: #428bca; 
+  color: white; 
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+#registerbtn:hover {
+  background: #2F71A9;
+}
+
 /* collapsed sidebar styles */
 @media screen and (max-width: 850px) {
     .row-offcanvas {
