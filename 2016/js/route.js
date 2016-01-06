@@ -4,6 +4,7 @@ ApplicationRouter = Backbone.Marionette.AppRouter.extend({
 		"home" : "home",
 		"program" : "program",
 		"papers" : "papers",
+		"keynote" : "keynote",
 		"posters" : "posters"
 	},
 
@@ -19,6 +20,11 @@ ApplicationRouter = Backbone.Marionette.AppRouter.extend({
 	home : function() {
 		this.selectPill('ul.sidebar li.home');
 		MyApp.contentRegion.show(new ContentHomeView());
+	},
+
+	keynote : function() {
+		this.selectPill('ul.sidebar li.keynote');
+		MyApp.contentRegion.show(new ContentKeynoteView());
 	},
 
 	program : function() {

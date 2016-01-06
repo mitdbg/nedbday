@@ -38,6 +38,15 @@ ContentProgramView = Backbone.View.extend({
 	}
 });
 
+ContentKeynoteView = Backbone.View.extend({
+	initialize : function(options) {
+	},
+	render : function(options) {
+		var template = _.template($("#template_content_keynote").html(), {});
+		this.$el.html(template);
+	}
+});
+
 ContentPapersView = Backbone.View.extend({
 	initialize : function(options) {
 	},

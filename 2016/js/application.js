@@ -10,7 +10,7 @@ MyApp.addInitializer(function(options) {
 });
 
 $(document).ready(function() {
-	loadTemplate([ "nav", "content_home", "content_program", "content_papers", "content_posters" ], function() {
+	loadTemplate([ "nav", "content_home", "content_program", "content_papers", "content_posters", "content_keynote" ], function() {
 		MyApp.start();
 		this.router = new ApplicationRouter();
 		Backbone.history.start();
