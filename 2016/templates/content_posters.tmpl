@@ -1,6 +1,6 @@
 <div class="content-container">
    <h1>
-      North East Database Day Posters
+      NEDBDay Posters <small>January 28, 2016</small>
    </h1>
    <p>The poster session will include drinks and appetizers. It will be held in Building 32, R&D Commons, 4th Floor, Gates Tower. Take either set of elevators to the 4th floor.</p>
    <h3>Information for Poster Presenters</h3>
@@ -13,18 +13,693 @@
    <h3>List of accepted posters:</h3>
    <table class="table table-bordered posterTable">
       <tbody>
-         <!--
+
+
          <tr>
           <td>
-              Ramoza Ahsan, WPI; Rodica Neamtu, WPI; Elke Rundensteiner, WPI<br/>
-              <strong>Harnessing the Power of Big Data:Using a Spatial Temporal Data Model to answer Big Questions for economic prosperity</strong><br/>
-              <a href="javascript: toggleVisibility ('#po1A')">Click to toggle abstract.</a>
-              <div id="po1A" class="abstract" style="display: none;">
-                <p><i>Big data is the key to answer questions facing the society: economic, social, political, financial and educational. Despite its indisputable power or potential and its Omni presence, big data continues to be a challenge because of its complexity, diversity, disperse nature and most of all because of the difficulty in creating the appropriate tools to collect, integrate, clean and analyze it. In our approach, we are creating a spatial temporal data model to automatically integrate and transform data contained in spreadsheets collected from heterogeneous public data sources. We introduce the Data Integration through Object Modelling  (DIOM) framework which successfully overcomes some of the well-known challenges related to leveraging data from diverse sources, like diversity in schema formats and extracting processes.First we generalize and template the data from the spreadsheets and represent it into a unified data model. Secondly we automatically extract and transform the data from the spreadsheets, while profiling the meta data in the process. Lastly we provide users with the opportunity to interactively perform repairs before loading the data in the database.The experimental results confirm the merit of our approach and mark a huge step in enabling individuals and organizations and advocate for decisions for economic prosperity. The reduction in the cost of collecting processing and reporting data is tremendous.</i></p>
+              Abhishek Roy*, University of Massachusetts Amherst; Yanlei Diao, University of Massachusetts Amherst; Toby Bloom, New York Genome Center; Uday Evani, New York Genome Center; Clinton Howarth, New York Genome Center<br/>
+              <strong> Building and benchmarking a parallel deep analysis pipeline</strong><br/>
+              <a href="javascript: toggleVisibility ('#po0')">Toggle Abstract</a>
+              <div id="po0" class="abstract" style="display: none;">
+                <p>
+                The advance of next-generation sequencing has transformed  genomics into a new paradigm of data-intensive computing. This poster will present the design of a new parallel platform based on big data technology, which utilizes massive data parallelism to speed up the performance of genomic data processing pipelines. First, we designed a distributed storage system for sequencing data. Our system works with the existing file formats and genomic data analysis software. Second, we analyzed programs to find correct data partitioning schemes. Third, we set up a pipeline with minimal rounds of MapReduce jobs for the programs. We evaluate our approach on real whole genome data and identify the strengths and limitations of big data technology for genomic data analysis. While our parallel platform enables significant reduction of running time by employing high degrees of parallelism, our results also reveal a variety of overheads that impede the linear speedup as the number of cores increases.
+                </p>
               </div>
           </td>
         </tr>
-        -->
-  </tbody>
+
+
+
+         <tr>
+          <td>
+              Adam Dziedzic, The University of Chicago; Aaron Elmore*, University of Chicago<br/>
+              <strong>Portage - A Data Migrator for a Polystore in the Database Deluge Era</strong><br/>
+              <a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
+              <div id="po1" class="abstract" style="display: none;">
+                <p>
+                Ever increasing data size and new requirements in data processing have fostered the development of many new database systems. Systems such as PostgreSQL, SciDB, and Accumulo excel at specific application requirements including transactional processing, numerical computation, or large scale text processing. As organizations often utilize specialized systems there is a need to transfer data between many databases easily and efficiently. We analyze the state-of-the-art of data migration and outline research opportunities for a rapid data transfer framework. Providing an efficient data migration tool is essential to seamlessly take advantage of specialized databases.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Alex Galakatos*, Brown University<br/>
+              <strong>Optimization Techniques for Interactive Data Exploration</strong><br/>
+              <a href="javascript: toggleVisibility ('#po2')">Toggle Abstract</a>
+              <div id="po2" class="abstract" style="display: none;">
+                <p>
+                Recent trends in interactive data exploration allow users to visually compose complex analytics workflows in order to quickly understand trends and gather insights from data. In order to be useful, however, systems that target this problem must provide user with incremental feedback in the form of progressive visualizations. Unfortunately, for larger data sets, linking visualizations in order to view specific subpopoulations can be computationally expensive. At the same time, traditional techniques to speed up these types of queries (e.g., secondary indexes, sampling techniques) either require extensive pre-processing, consume too much main memory, and/or can not cover all possible data exploration paths. In this poster, we explore the connection of linking visualizations to  conditional probabilities as well as new optimization techniques and index structures which take advantage of the statistical characteristics of the data to improve the performance of progressive visualizations.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Andy Vidan*, Composable Analytics, Inc.<br/>
+              <strong>Systems and Methods for Composable Analytics</strong><br/>
+              <a href="javascript: toggleVisibility ('#po3')">Toggle Abstract</a>
+              <div id="po3" class="abstract" style="display: none;">
+                <p>
+                In this paper, we describe a new data and process integration platform called Composable Analytics, originally developed at MIT Lincoln Laboratory. Composable Analytics is a web-based software platform that enables researchers, data analysts, and decision makers to collaboratively explore complex, information-based problems through the creation and use of customized analysis applications. One goal of this new platform is to extend the power of adaptability beyond the realm of software developers and into the capacity of data scientists and analysts.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Anil Shanbhag*, MIT; Alekh Jindal, Microsoft; Yi Lu, MIT; Samuel Madden, MIT<br/>
+              <strong>A Multi-attribute Partitioning Scheme for Ad-hoc and Time-varying Database Analytics</strong><br/>
+              <a href="javascript: toggleVisibility ('#po4')">Toggle Abstract</a>
+              <div id="po4" class="abstract" style="display: none;">
+                <p>
+                Data partitioning significantly improves the query performance in distributed database systems. A large number of techniques have been proposed to efficiently partition a dataset, often focusing on finding the best partitioning for a particular query workload. However, many modern analytic applications involve ad-hoc or exploratory analysis where users do not have a representative query workload. Furthermore, workloads change over time as businesses evolve or as analysts gain better understanding of their data. Static workload-based data partitioning techniques are therefore not suitable for such settings. In this poster, we present HyperPartitioning, a new online data partitioning approach. It does not require an upfront query workload and adapts the data partitioning according to the queries posed by users over time. We present the data structures, partitioning algorithms, and an efficient implementation on top of Apache Spark and HDFS.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Arnon Rosenthal*, MITRE<br/>
+              <strong>Hybrid rulesets for legalese, alerts, and access control policies: Aim for partial success</strong><br/>
+              <a href="javascript: toggleVisibility ('#po5')">Toggle Abstract</a>
+              <div id="po5" class="abstract" style="display: none;">
+                <p>
+                To make data intensive systems more agile, we need to express controls as tool-understandable policies rather than code. However, in many domains, policies are conceived in English and cannot be fully formalized. We must devise ways to specify and operate imperfect systems  extensible sets of partially formalized rules.  This poster describes how a mix of rules and encapsulated English prose can express complex policies (initially, compliance but someday regulations and laws), and can be manipulated to explain their effect in different situations. It then describes the services needed to support it. Issues familiar to data researchers include missing data, order independence, partial compilation, and declarative rule languages. 
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Barzan Mozafari*, University of Michigan; Jags Ramnarayan, SnappyData; Sudhir Menon, SnappyData; Richard Lamb, SnappyData<br/>
+              <strong>SnappyData: Streaming, Transactions, and Interactive Analytics in a Single Cluster</strong><br/>
+              <a href="javascript: toggleVisibility ('#po6')">Toggle Abstract</a>
+              <div id="po6" class="abstract" style="display: none;">
+                <p>
+                Many customers in recent years have been frustrated by the traditional approach of combining disparate products to handle their streaming, transactional and analytical needs. This practice of stitching heterogeneous environments in custom ways has caused enormous production woes by increasing development complexity and total cost of ownership. With SnappyData, an open source platform, we propose a unified engine for real-time operational analytics, delivering stream analytics, OLTP and OLAP in a single integrated solution. We realize this platform through a seamless integration of Apache Spark (as a big data computational engine) with GemFireXD (as an in-memory transactional store).   In this work, we carefully study the challenges involved in marrying these two system. Moreover, we combine state-of- the-art approximate query processing techniques and a variety of data synopses to ensure interactive analytics over both streaming and stored data.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Brendan Gavin*, University of Massachusetts, Amherst; Vijay Gadepally, MIT Lincoln Laboratory; Jeremy Kepner, MIT Lincoln Laboratory<br/>
+              <strong>Sparse Non-Negative Matrix Factorization for Big Data Topic Modeling</strong><br/>
+              <a href="javascript: toggleVisibility ('#po7')">Toggle Abstract</a>
+              <div id="po7" class="abstract" style="display: none;">
+                <p>
+                One of the challenges faced by anyone possessing a large data set is the issue of how to extract meaningful insights from it using a reasonable amount of time and effort. Often this challenge is approached by using clustering algorithms: by grouping data points together into large clusters of related data, one can infer structure and relationships in even very large data sets. The Non-Negative Matrix Factorization (NMF) is one such clustering algorithm. In this poster, we will describe our approach for sparse NMF, sequential NMF and performance results obtained.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Chunyao Song, UMass Lowell; Tingjian Ge*, UMass Lowell; Cindy Chen, UMass Lowell; Jie Wang, UMass Lowell; Xuanming Liu, UMass Lowell<br/>
+              <strong>Event Pattern Matching over Graph Streams</strong><br/>
+              <a href="javascript: toggleVisibility ('#po8')">Toggle Abstract</a>
+              <div id="po8" class="abstract" style="display: none;">
+                <p>
+                A graph is a fundamental and general data structure underlying all data applications. Many applications today call for the management and query capabilities directly on graphs. Real time graph streams, as seen in road networks, social and communication networks, and web requests, are such applications. Event pattern matching requires the awareness of graph structures, which is different from traditional complex event processing. It also requires a focus on the dynamicity of the graph, time order constraints in patterns, and online query processing, which deviates significantly from previous work on subgraph matching as well. We study the semantics and efficient online algorithms for this important and intriguing problem, and evaluate our approaches with extensive experiments over real world datasets in four different domains.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Daniel Alabi*, Columbia University<br/>
+              <strong>Lessons from MongoDB</strong><br/>
+              <a href="javascript: toggleVisibility ('#po9')">Toggle Abstract</a>
+              <div id="po9" class="abstract" style="display: none;">
+                <p>
+                I used to reside on the distributed systems team of the server/kernel team at MongoDB. Now, I'm back in graduate school doing database research. During my time at MongoDB, I learned a lot about the theory and implementation of database systems. I would like to share some of what I learned with the NE database community.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Divya Pillai*, MIT<br/>
+              <strong>Tools for brainy cross-database queries and analyses</strong><br/>
+              <a href="javascript: toggleVisibility ('#po10')">Toggle Abstract</a>
+              <div id="po10" class="abstract" style="display: none;">
+                <p>
+                Medical research can benefit from new big data management technologies. Researchers working with MRI and CT scans need to access data from different sources and in different formats. Currently there is a lack of open-source tools to integrate imaging data with varying provenance for easy access and analysis by non-programmers. We defined schemas for raw DICOM image data, metadata, and analysis results from Freesurfer. We then prototyped a Python/ AngularJS web application to query databases of imaging data, research analyses, and clinical information in real-time. We tested this application on MRI datasets from two cohorts: adult patients with atrial fibrillation, and individual babies. We developed an interface to support custom analyses and visualizations, and as a start, we explored machine-learning methods to differentiate between T1-weighted and T2-weighted MRI images. We can later extend this application to query additional databases with the help of BigDawg. 
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Dylan Hutchison*, University of Washington; Bill Howe, University of Washington; Dan Suciu, University of Washington; Zachary Tatlock, University of Washington<br/>
+              <strong>A Polystore Algebra of Arrays, Relations, and Program Expression Graphs</strong><br/>
+              <a href="javascript: toggleVisibility ('#po11')">Toggle Abstract</a>
+              <div id="po11" class="abstract" style="display: none;">
+                <p>
+                The polystore optimization problem is to synthesize an optimal multi-system program from an input scripts specification. We present early work toward polystore optimization using program expression graphs containing physical and logical algebras, including a new algebra Lara which integrates array, relational, and key-value components.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Dylan Hutchison*, University of Washington; Vijay Gadepally, MIT Lincoln Laboratory; Jeremy Kepner, MIT Lincoln Laboratory<br/>
+              <strong>Graphulo: Graph Processing for Accumulo Databases</strong><br/>
+              <a href="javascript: toggleVisibility ('#po12')">Toggle Abstract</a>
+              <div id="po12" class="abstract" style="display: none;">
+                <p>
+                Graphulo is a Java library for the Apache Accumulo database delivering server-side sparse matrix math primitives that enable higher-level graph algorithms and analytics.  In this poster, we describe Graphulos design and its single-node matrix multiplication performance. 
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Eric Milkie*, MongoDB, Inc.<br/>
+              <strong>Implementing Read Committed Isolation Across a MongoDB Replica Set</strong><br/>
+              <a href="javascript: toggleVisibility ('#po13')">Toggle Abstract</a>
+              <div id="po13" class="abstract" style="display: none;">
+                <p>
+                MongoDB provides an interface for the user to choose the level of durability across a cluster for each replicated write operation, which we call write concern. We have recently added a similar interface to choose the isolation level for read operations, which we are calling read concern. In MongoDB 3.2, two read isolation levels are available via read concern in a distributed database (replica set): read uncommitted and read committed. This paper gives an overview of the design tradeoffs that we considered when implementing read committed isolation. We developed an elegant design by extending the pre-existing replication machinery for write concern and adding the use of storage engine snapshots. Maintaining correct read-your-write semantics with read committed isolation required special attention, and for this we made a design-time decision on how to amortize the cost of waiting for the write to replicate across the write operation itself and a subsequent read operation.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Eric Milkie*, MongoDB, Inc.<br/>
+              <strong>Raft in MongoDB</strong><br/>
+              <a href="javascript: toggleVisibility ('#po14')">Toggle Abstract</a>
+              <div id="po14" class="abstract" style="display: none;">
+                <p>
+                In 2010, MongoDB released a highly available clustering feature for the database called replica sets.  The feature was based on a one leader / many followers design, and included a consensus algorithm to automatically elect a leader among the followers.  This algorithm shares many facets with Diego Ongaros Raft consensus algorithm.  Recently, we have made an effort to adapt the MongoDB consensus algorithm to become equivalent to the Raft algorithm, and thus share its consensus guarantees.  This paper describes the work needed to extend MongoDBs consensus algorithm to be equivalent to Raft, while preserving interesting extension features such as follower chaining, non-replicating arbiters, and priority (preferred) leader elections.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Evangelia Sitaridi*, Columbia University; Kenneth  Ross, Columbia University<br/>
+              <strong>GPU Accelerated String Matching of Database Applications</strong><br/>
+              <a href="javascript: toggleVisibility ('#po15')">Toggle Abstract</a>
+              <div id="po15" class="abstract" style="display: none;">
+                <p>
+                 The abstract is in pdf from. Paper also appeared in VLDB Journal in October 2015, http://link.springer.com/article/10.1007/s00778-015-0409-y
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Firas Abuzaid*, MIT<br/>
+              <strong>Ocius: An Integrated, Online Model Training and Serving Engine</strong><br/>
+              <a href="javascript: toggleVisibility ('#po16')">Toggle Abstract</a>
+              <div id="po16" class="abstract" style="display: none;">
+                <p>
+                When building predictive data products, model training and serving are often handled by separate systems. Many data-processing frameworks have optimized training models at scale, but do not support model serving, for which there is limited generic infrastructure. Instead, users must combine disparate systems to craft ad-hoc, inefficient workarounds. Thus, we observe that there is a large opportunity for consolidation and end-to-end optimization for these workloads. We propose Ocius, a scalable model management engine that addresses model training and serving. Taking this joint approach enables cross-layer optimizations and a unified abstraction for model maintenance. Ocius adapts offline and online training algorithms to incorporate prediction feedback in real-time, and uses several techniques inspired by the database literature to optimize serving performance. Our current prototype demonstrates these optimizations for training and serving on scalable recommender systems.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+
+
+         <tr>
+          <td>
+              Holger Pirk*, MIT; Oscar Moll, MIT; Samuel Madden, MIT<br/>
+              <strong>Voodoo - A RISC Plan Algebra for Database Performance Engineering</strong><br/>
+              <a href="javascript: toggleVisibility ('#po18')">Toggle Abstract</a>
+              <div id="po18" class="abstract" style="display: none;">
+                <p>
+                With decreasing prices and increasing capacity, DRAM has become the primary memory for many database applications. The changed computation/bandwidth balance, however merits a careful (re-)examination of many DBMS design decisions: analytical applications, e.g., used to be cost-dominated by disk bandwidth. Instead, new factors such as CPU efficiency, cache locality and effective parallelization strategies have arisen. However, even with 10 years of in-memory data analytics research, making a good decision about the best strategy to evaluate a query is still an unsolved challenge for in-memory data management systems. To address this problem, we designed and implemented Voodoo: a data processing algebra that provides fine-grained control over tuning decisions while being simple enough to allow effective optimization. By compiling Voodoo to executable machine code, we avoid the prohibitively high interpretation overhead that usually comes with RISC algebras. As a res
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Jaroor Modi*, Rutgers University; Vijay Gadepally, MIT Lincoln Laboratory; Dylan Hutchison, University of Washington; Jeremy Kepner, MIT Lincoln Laboratory<br/>
+              <strong>Algebra, Triangles and Line Graphs</strong><br/>
+              <a href="javascript: toggleVisibility ('#po19')">Toggle Abstract</a>
+              <div id="po19" class="abstract" style="display: none;">
+                <p>
+                Line graphs have been used in scientific domains such as physics, chemical sciences and graph analysis. In this poster, we describe the construction of line graphs for directed and undirected graphs. Further, we describe how such line graphs can be an elegant and efficient way to compute big data tasks in large graphs such as triangle identification, triangle counting, and wedge sampling.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Jiamin Huang*, University of Michigan; Thomas Wenisch, University of Michigan; Barzan Mozafari, University of Michigan<br/>
+              <strong>Identifying the Major Sources of Variance in Transaction Latencies: Towards More Predictable Databases</strong><br/>
+              <a href="javascript: toggleVisibility ('#po20')">Toggle Abstract</a>
+              <div id="po20" class="abstract" style="display: none;">
+                <p>
+                Decades of research have sought to improve transaction processing performance and scalability in database management systems. Far less attention has been dedicated to the predictability of performance-how often individual transactions exhibit execution latency far from the mean. Performance predictability is vital when transaction processing lies on the critical path of an interactive web service, or in emerging market segments that offer transaction processing as a service to customers who contract for guaranteed levels of performance. To achieve more predictable database systems, the dominant sources of variance in transaction latency must be identified first. For this purpose, we propose VProfiler, a profiling framework. Given the source code of a DBMS, VProfiler deconstructs overall transaction latency variance into variances and covariances of the execution time of individual functions.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              John Meehan*, Brown University; Nesime Tatbul, Intel, MIT; Stan Zdonik, Brown University; Cansu Aslantas, Brown University<br/>
+              <strong>S-Store: Shared, Mutable State in Stream Processing</strong><br/>
+              <a href="javascript: toggleVisibility ('#po21')">Toggle Abstract</a>
+              <div id="po21" class="abstract" style="display: none;">
+                <p>
+                S-Store is a next-generation stream processing system that is being developed at Brown, Intel, MIT, and Portland State University. It is designed to achieve very high throughput, while maintaining a number of correctness guarantees required to handle shared, mutable state in streaming applications. This poster explores these correctness criteria and describes how S-Store achieves them, including new challenges that arise in scaling a transactional streaming system.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              John Paparrizos*, Columbia University; Luis Gravano, Columbia University<br/>
+              <strong>k-Shape: Efficient and Accurate Clustering of Time Series</strong><br/>
+              <a href="javascript: toggleVisibility ('#po22')">Toggle Abstract</a>
+              <div id="po22" class="abstract" style="display: none;">
+                <p>
+                The proliferation and ubiquity of temporal data across many disciplines has generated substantial interest in the analysis and mining of time series. Clustering is one of the most popular data mining methods, not only due to its exploratory power, but also as a preprocessing step or subroutine for other techniques. In this paper, we describe k-Shape, a novel algorithm for time-series clustering. k-Shape relies on a scalable iterative refinement procedure, which creates homogeneous and well-separated clusters. As its distance measure, k-Shape uses a normalized version of the cross-correlation measure in order to consider the shapes of time series while comparing them. Based on the properties of that distance measure, we develop a method to compute cluster centroids, which are used in every iteration to update the assignment of time series to clusters. An extensive experimental evaluation against partitional, hierarchical, and spectral clustering methods showed the robustness of k-Shape.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Leilani Battle*, MIT<br/>
+              <strong>Making Sense of Temporal Queries with Interactive Visualization</strong><br/>
+              <a href="javascript: toggleVisibility ('#po23')">Toggle Abstract</a>
+              <div id="po23" class="abstract" style="display: none;">
+                <p>
+                As real-time monitoring and analysis become increasingly important, researchers and developers turn to data stream management systems (DSMSs) for fast, efficient ways to pose temporal queries over their datasets. However, these systems are inherently complex, and even database experts find it difficult to understand the behavior of DSMS queries. To help analysts better understand these temporal queries, we developed StreamTrace, an interactive visualization tool that breaks down how a temporal query processes a given dataset, step-by-step. The design of StreamTrace is based on input from expert DSMS users; we evaluated the system with a lab study of programmers who were new to streaming queries. Results from the study demonstrate that StreamTrace can help users to verify that queries behave as expected and to isolate the regions of a query that may be causing unexpected results.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Ligia Nistor*, Oracle<br/>
+              <strong>How to Run a Query in Distributed Mode  An Aspect</strong><br/>
+              <a href="javascript: toggleVisibility ('#po24')">Toggle Abstract</a>
+              <div id="po24" class="abstract" style="display: none;">
+                <p>
+                Executing a query in a distributed setting needs much more resource management than executing it on a single machine. There are many questions to be answered, such as on how many nodes in the cluster will this query run, will all the input data be available on all nodes or only a partition will be available on each node, will the cluster have a single master or it will be a peer to peer system, how will we make sure that there is no deadlock and that all the queries that start eventually finish. This poster will give an answer to the last question, as we have implemented it for our product, the Big Data Discovery Query Engine.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Ligia Nistor*, Oracle<br/>
+              <strong>Resource Management in the Oracle Big Data Discovery Query Engine</strong><br/>
+              <a href="javascript: toggleVisibility ('#po25')">Toggle Abstract</a>
+              <div id="po25" class="abstract" style="display: none;">
+                <p>
+                Every query engine needs to decide how to manage resources. The resources can be RAM, disk space or number of threads and they are usually accounted for in a workload manager. We recently improved the functionality of the workload manager of our product, the Oracle Big Data Discovery (BDD) query engine. In addition to stopping a process if it consumes too much memory, our workload manager now also controls the access of work to processors.  We present the details of our approach and the results that we obtained.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Lijian Wan*, UMass Lowell; Tingjian Ge, UMass Lowell<br/>
+              <strong>Regular Event Models and Detecting Irregular Events and Event Sequences</strong><br/>
+              <a href="javascript: toggleVisibility ('#po26')">Toggle Abstract</a>
+              <div id="po26" class="abstract" style="display: none;">
+                <p>
+                In this work, we study the problem of learning a regular model from a number of sequences, each of which contains events in a time unit. Assuming some regularity in such sequences, we determine what events should be deemed irregular in their contexts. We perform an in-depth analysis of the model we build, and propose two optimization techniques, one of which is also of independent interest in solving a new problem named the Group Counting problem. Our comprehensive experiments on real and hybrid datasets show that the model we build is very effective in characterizing regularities and identifying irregular events. One of our optimizations improves model building speed by more than an order of magnitude, and the other significantly saves space consumption.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Liudmila Elagina*, University of Massachusetts Amherst; Gerome Miklau, UMass Amherst; Michael Hay, Colgate University<br/>
+              <strong>Rank Aggregation under Differential Privacy</strong><br/>
+              <a href="javascript: toggleVisibility ('#po27')">Toggle Abstract</a>
+              <div id="po27" class="abstract" style="display: none;">
+                <p>
+                Given a database of rankings of a set of entities, the problem of rank aggregation is to compute a single ranking that can serve as a single best representative ranking.  Rank aggregation is a well-studied problem and many alternative algorithms have been pro- posed in the literature. However, the aggregate ranking may reveal sensitive information about individuals preferences. Concerns that an adversary could learn personal preferences may prevent users from sharing their opinions. We study differentially private algorithms for computing aggregate rankings. In this initial work we compare the performance of private algorithms based on noisy Borda scores with private algorithms based on noisy Markov chain approaches, and evaluate the distortion introduced by the privacy mechanism as a function of the database size.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Manos Athanassoulis*, Harvard SEAS; Michael Kester, Harvard; Lukas Maas, Harvard; Stratos Idreos, Harvard<br/>
+              <strong>Designing Access Methods: The RUM Conjecture</strong><br/>
+              <a href="javascript: toggleVisibility ('#po28')">Toggle Abstract</a>
+              <div id="po28" class="abstract" style="display: none;">
+                <p>
+                The database research community has been building methods to store, access, and update data for more than four decades. Today, even small changes in the workload or the hardware lead to a redesign of access methods. The need for new designs has been increasing as data generation and workload diversification grow exponentially, and hardware advances introduce increased complexity. As a result, it is increasingly important to develop application-aware and hardware-aware access methods. The fundamental challenges that every researcher, systems architect, or designer faces when designing a new access method are how to minimize, read times, update cost, and memory overhead. In this project, we conjecture that when optimizing the read-update-memory overheads, optimizing in any two areas negatively impacts the third. We show how the RUM Conjecture manifests in state-of-the-art access methods, and we envision a trend toward RUM-aware access methods for future data systems.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Michael Brodie*, MIT<br/>
+              <strong>Emerging Polystore Requirements of Data-driven Discovery Platforms</strong><br/>
+              <a href="javascript: toggleVisibility ('#po29')">Toggle Abstract</a>
+              <div id="po29" class="abstract" style="display: none;">
+                <p>
+                Due to the importance and potential of data-driven discovery, data-driven discovery platforms are emerging as a new systems category from vendors. However, over 100 such platforms under names such as Scientific Gateway[9], Networked Science, and eScience[2] have been developed ad hoc for special purpose application classes for over 20 years. While their purpose is data analytics, the most demanding requirements concern managing federations of 100s of large data sets. These platforms contain early examples of polystores[6][1]. This presentation reviews the emergence of data-driven discovery systems and presents a conceptual model deduced from over 30 large-scale operational use cases. The concepts are illustrated by examples from CERN, the European Organization for Nuclear Research, one of the most robust and successful Scientific Gateways in which polystore capabilities central.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+
+
+
+         <tr>
+          <td>
+              Michael Kester*, Harvard; Manos Athanassoulis, Harvard SEAS; Stratos Idreos, Harvard<br/>
+              <strong>Access Methods in Modern Data Systems</strong><br/>
+              <a href="javascript: toggleVisibility ('#po33')">Toggle Abstract</a>
+              <div id="po33" class="abstract" style="display: none;">
+                <p>
+                Modern data systems must make runtime optimization decisions to achieve the best performance. Examples include which access path to use to retrieve and filter base data and how and where to process data. In the case of base data retrieval, should the system scan or rely on an index? When the data is processed, should the system move the data to the processing or move the processing to the data? It is up to the optimizer to make the best decision on a case to case basis. Our work explores how to make the correct decision at runtime based on all the available system properties.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Mike Elsmore*, IBM<br/>
+              <strong>NoSQL is a lie</strong><br/>
+              <a href="javascript: toggleVisibility ('#po34')">Toggle Abstract</a>
+              <div id="po34" class="abstract" style="display: none;">
+                <p>
+                NoSQL is a term on the rise, and it's a lie. NoSQL is a catch-all term and I will point out why a catch all means missing tools that may help solve your problems. Going through a few popular DB's we will walk through the use cases and why they're good at what they do.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Muhammad  El-Hindi, University of Heidelberg; Zheguang Zhao, Brown University; Carsten Binnig*, Brown University; Tim Kraska, Brown University<br/>
+              <strong>VisTrees: Fast Indexes for Interactive Data Exploration</strong><br/>
+              <a href="javascript: toggleVisibility ('#po35')">Toggle Abstract</a>
+              <div id="po35" class="abstract" style="display: none;">
+                <p>
+                Visualizations are arguably the most important tool to explore, understand and convey facts about data. As part of interactive exploration data, visualizations might be used to quickly skim through the data and look for patterns.  Unfortunately, database systems are not designed to efficiently support these workloads. As a result, visualizations often take very long to produce, creating a significant barrier to interactive data analysis.  In this paper, we focus on the interactive computation of histograms for data exploration. To address this issue, we present a novel multi-dimensional index structure called VisTree.  As a key contribution, this paper presents several techniques to better align the design of multi-dimensional indexes with the needs of visualization tools for data exploration. 
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Nikos Tsikoudis*, Brandeis University; Liuba Shrira, Brandeis University<br/>
+              <strong>RQL: Retrospective Query Language</strong><br/>
+              <a href="javascript: toggleVisibility ('#po36')">Toggle Abstract</a>
+              <div id="po36" class="abstract" style="display: none;">
+                <p>
+                Retrospection, the ability of a data store to run over past state as if it were the current state, is critical for a variety of applications. Temporal query processing techniques support retrospection but require unwelcome modifications to the DBMS and lightweight databases still do not support it. We introduce Retrospective Query Language (RQL) that supports retrospection in lightweight databases, minimizing the required ad-hoc modifications. RQL extends Retro, a technique that creates consistent snapshots and supports single snapshot retrospective queries. It provides SQL UDF based mechanisms which give the ability to execute queries that require the inspection of a sequence of snapshots. RQL supports all the basic temporal operations that have been proposed in the literature and additional, more complex aggregations without any DBMS modifications or specialized index structures. In this poster we describe our RQL framework, discuss use cases, and present preliminary evaluation.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Olga Poppe*, WPI<br/>
+              <strong>Context-aware event stream analytics</strong><br/>
+              <a href="javascript: toggleVisibility ('#po37')">Toggle Abstract</a>
+              <div id="po37" class="abstract" style="display: none;">
+                <p>
+                Certain event queries are only appropriate in particular application contexts. Yet state-of-the-art approaches tend to execute all event queries continuously regardless of the current context. This wastes resources and leads to delayed system responsiveness. We have developed the first context-aware event processing solution, called CAESAR, which features the following key innovations. (1) The CAESAR model supports application contexts as first class citizens and associates appropriate event queries with them. (2) The CAESAR optimizer employs context-aware optimization strategies including context window push-down strategy and query workload sharing among overlapping contexts. (3) The CAESAR infrastructure allows for lightweight event query suspension and activation driven by context windows. Our experimental study demonstrates that the context-aware event stream analytics consistently outperforms the state-of-the-art strategies by factor of 8 on average.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Peter Bailis*, MIT and Stanford; Samuel Madden, MIT<br/>
+              <strong>Outlier Detection and Explanation in MacroBase, a Macroscope for the Internet of Things</strong><br/>
+              <a href="javascript: toggleVisibility ('#po38')">Toggle Abstract</a>
+              <div id="po38" class="abstract" style="display: none;">
+                <p>
+                An increasing proportion of data today is generated by automated processes, sensors, and systems -- collectively, the Internet of Things (IoT). Efficiently analyzing and understanding IoT data at scale is remarkably challenging. However, as a result of its automated origins, the highly structured and regular nature of IoT data in turn enables a new class of optimizations for data management systems.  To address this opportunity, we have developed MacroBase, a system for large-scale, user-friendly IoT data management. MacroBase provides turn-key analysis of IoT data streams by automatically recognizing and summarizing interesting patterns and trends -- in effect, executing a complex outlier detection, explanation, and ranking pipeline. To facilitate efficient, accurate operation, MacroBase implements cross-layer optimizations across robust estimation, pattern mining, and sketching procedures. As a result, MacroBase can analyze over 300K events per second -- on a single core.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Raj Singh*, IBM<br/>
+              <strong>Domain-Driven Data</strong><br/>
+              <a href="javascript: toggleVisibility ('#po39')">Toggle Abstract</a>
+              <div id="po39" class="abstract" style="display: none;">
+                <p>
+                There are many types of databases and data analysis tools from which to choose today. Should you use a relational database? How about a key-value store? Maybe a document database? Or is a graph database the right fit for your project? What about polyglot persistence? Help!   This presentation will present a perspective on the ways cloud-based data management is accelerating the adoption of domain-driven data methodologies and what that means for application design in general.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Ryan Marcus*, Brandeis University; Olga Papaemmanouil, Brandeis University<br/>
+              <strong>WiSeDB: A Learning-based Workload Management Advisor for Cloud Databases (Poster)</strong><br/>
+              <a href="javascript: toggleVisibility ('#po40')">Toggle Abstract</a>
+              <div id="po40" class="abstract" style="display: none;">
+                <p>
+                Workload management for cloud databases deals with the tasks of resource provisioning, query placement and query scheduling in a manner that meets the applications performance goals while minimizing the cost of using cloud resources. Existing solutions have approached these challenges in isolation and with only a particular type of performance goal in mind. In this poster, we showcase WiSeDB, a learning-based framework for generating end-to-end workload management solutions customized to application-defined performance metrics and workload characteristics. Our approach relies on decision tree learning to train offline cost-effective models for guiding query placement, scheduling, and resource provisioning decisions. These models can be used for both batch and online scheduling of incoming workloads. Experimental results show that our approach has very low training overhead while it discovers near optimal solutions for a variety of performance goals and workload characteristics.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+
+
+
+         <tr>
+          <td>
+              Sainyam Galhotra*, University of Massachusetts Amherst; Akhil Arora, Xerox Research Centre India (XRCI), Bangalore; Shourya Roy, Xerox Research Centre India (XRCI), Bangalore<br/>
+              <strong>Holistic Influence Maximization: Combining Scalability and Efficiency with Opinion-Aware Models</strong><br/>
+              <a href="javascript: toggleVisibility ('#po43')">Toggle Abstract</a>
+              <div id="po43" class="abstract" style="display: none;">
+                <p>
+                The steady growth of graph data from social networks has resulted in wide-spread research in finding solutions to the influence maximization (IM) problem. In this paper, we propose a holistic solution to the IM problem. 1) We introduce an opinion-cum-interaction (OI) model that closely mirrors the real- world scenarios. Under the OI model, we introduce a novel problem of Maximizing the Effective Opinion (MEO) of influenced users. We prove that the MEO problem is NP-hard & cannot be approximated within a constant ratio. 2) We propose a heuristic algorithm OSIM to efficiently solve the MEO problem. To better explain OSIM, we introduce EaSyIM, an opinion-oblivious version of OSIM, a scalable algorithm capable of running within practical compute times on commodity hardware. In addition to serving as a fundamental building block for OSIM, EaSyIM addresses the scalability aspect: memory consumption & running time, of the IM problem both theoretically and empirically.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Suman Lama*, Worcester Polytechnic Institute; Bir  Kafle, Worcester Polytechnic Institute ; Mohammed Ayub, Worcester Polytechnic Institute ; Nikita Mutta, Worcester Polytechnic Institute<br/>
+              <strong>Bioassay Concept Mapping: Limitation of Current NLP Technologies</strong><br/>
+              <a href="javascript: toggleVisibility ('#po44')">Toggle Abstract</a>
+              <div id="po44" class="abstract" style="display: none;">
+                <p>
+                Large amounts of bioassay data are being collected within public repositories such as PubChem, however there is a lack of standardized methods and techniques to enter and store the data, and more importantly, promote automated grouping of bioassay topics. The main objective of this research is to create a tool capable of 1) permitting a chemical domain expert the ability to manually review and approve narrative tokens as they are generated, and 2) permit automated grouping of bioassays based on approved token sets. The ability to group bioassays in a semi-supervised manner will permit chemists to extract more relevant compound-assay data sets for Quantitative Structure Toxicity Relationship (QSTR) modeling in the future.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Viseth Sean*, Worcester Polytechnic Institute; Lei Cao, Worcester Polytechnic Institute<br/>
+              <strong>Abstract</strong><br/>
+              <a href="javascript: toggleVisibility ('#po45')">Toggle Abstract</a>
+              <div id="po45" class="abstract" style="display: none;">
+                <p>
+                Current real-world applications are generating a large volume of datasets that are continuously updated over time. Detecting outliers on such evolving datasets requires us to continuously update the result in a time-critical manner. This is challenging because the algorithm is complex and expensive. Also, users need to specify parameters to approach the true outliers. While the number of parameters is large, using a trial and error approach would be not only impractical but tedious for analysts. Worst yet, as the dataset is changing, the best parameter will need to be updated. This research thus proposes to design an interactive outlier exploration platform (IOD), which enables analysts to continuously explore anomalies in dynamic datasets. IOD consists of 2 phases: a continuous preprocessing phase followed by lightweight execution strategy. IOD embraces 3 optimization principles to compress evolving datasets into a knowledge-rich abstraction,which is then used for outlier exploration.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+
+
+
+         <tr>
+          <td>
+              Yue Wang*, UMass Amherst; Alexandra Meliou, UMass Amherst; Gerome Miklau, UMass Amherst<br/>
+              <strong>Enhancing Interactivity in Conventional Queries</strong><br/>
+              <a href="javascript: toggleVisibility ('#po48')">Toggle Abstract</a>
+              <div id="po48" class="abstract" style="display: none;">
+                <p>
+                Optimizing query execution time has been an important problem in database for years. People minimize the only primary metric, total runtime, in which the last tuple is delivered in query optimization. As we have increasing amount of data in this big data era, the total runtime is much longer. Users may wait for minutes or hours before seeing the results of their ad-hoc queries during data exploration. In this scenario, delivering partial result in reasonable time significantly enhances user experience. If users receive partial results in 1 or 2 minutes, they can decide whether to stop the query execution to submit a different one, which saves much time. So users want richer optimization criterion, the frequency of result delivery, which favors partial result. In this paper, we propose an algorithm that generates results in an incremental way to enhance user experience in data exploration. We present a prototype system that incrementally delivers results of real-world queries.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Zhan Li*, Brandeis University; Olga Papaemmanouil, Brandeis University; Mitch Cherniack, Brandeis University<br/>
+              <strong>OptMark: A Toolkit for Benchmarking Query Optimizers</strong><br/>
+              <a href="javascript: toggleVisibility ('#po50')">Toggle Abstract</a>
+              <div id="po50" class="abstract" style="display: none;">
+                <p>
+                Query optimizers have long been considered as among the most complex components of a database engine, while the assessment of an optimizers quality remains a challenging task. To address this challenge, this poster introduces OptMark, a query optimizer benchmark for evaluating the quality of a query optimizer. OptMark is designed to offer a number of desirable properties. First, it decouples the quality of an optimizer from the quality of its underlying execution engine. Second it evaluates independently both the effectiveness of an optimizer (i.e., quality of the chosen plans) and its efficiency (i.e., optimization time). OptMark includes also a generic benchmarking toolkit that is minimum invasive to the DBMS that wishes to use it. We have implemented OptMark on the open-source MySQL engine as well as two commercial database systems. This poster provides an overview of the benchmarks design, the toolkits functionality and its API as well as its implementation on these DBMSs. 
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Zhongfang Zhuang*, Worcester Polytechnic Institute; Chuan Lei, Worcester Polytechnic Institute; Elke Rundensteiner, WPI; Mohamed Eltabakh, Worcester Polytechnic Institute<br/>
+              <strong>Shared Execution of Recurring Workloads in MapReduce</strong><br/>
+              <a href="javascript: toggleVisibility ('#po51')">Toggle Abstract</a>
+              <div id="po51" class="abstract" style="display: none;">
+                <p>
+                For many applications, recurring queries come with user-specified service-level agreements (SLAs), commonly expressed as the maximum allowed latency for producing results before their merits decay. The recurring nature of these emerging workloads combined with their SLA constraints make it challenging to share and optimize their execution.  Unfortunately, existing sharing techniques neither take the recurring nature of the queries into account nor guarantee the satisfaction of the SLA requirements. Thus, we propose the first scalable multi-query sharing engine tailored for recurring workloads in the MapReduce infrastructure, called Helix. Helix deploys new sliced window-alignment techniques to create sharing opportunities among recurring queries without introducing additional I/O overheads or unnecessary data scans. Then, Helix introduces a model for creating a sharing plan among the recurring queries, and a scheduling strategy for executing them to maximize the SLA satisfaction.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              Zuohao She*, Northwestern University<br/>
+              <strong>[Poster] Query Optimization for Polystore Systems</strong><br/>
+              <a href="javascript: toggleVisibility ('#po52')">Toggle Abstract</a>
+              <div id="po52" class="abstract" style="display: none;">
+                <p>
+                Since the fall of the database mantra of one size fits all more than a decade ago, diverse database systems, in terms of language, storage model, and computing paradigm, have bloomed. This diversity on one hand brought unprecedented level of freedom to different data processing needs; yet, on the other hand, it created barriers for those who look to exploit the benefits of different systems within the same query workload. The downside of this diversity calls for the Polystore systems, a new generation of database middleware system that connect database engines of different languages, data models and computing paradigm. We are investigating how to optimize queries in this new setting.  Polystores introduce challenges in query planning because they must both identifying the space of possible plans  in terms of engines that are capable of executing a query or part thereof  and select the right order of operations.  We discuss our preliminary efforts towards these goals in this poster.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+
+         <tr>
+          <td>
+              yeounoh chun*, brown university<br/>
+              <strong>Estimating the Impact of Unknown Unknowns on Aggregate Query Results</strong><br/>
+              <a href="javascript: toggleVisibility ('#po53')">Toggle Abstract</a>
+              <div id="po53" class="abstract" style="display: none;">
+                <p>
+                It is common practice for data scientists to acquire and integrate disparate data sources to achieve higher quality results. But even with a perfectly cleaned and merged data set, two fundamental questions remain: (1) is the integrated data set complete and (2) what is the impact of any unknown (i.e., unobserved) data on query results? In this work, we develop and analyze techniques to estimate the impact of the unknown data (a.k.a., unknown unknowns) on simple aggregate queries. The key idea is that the overlap between different data sources enables us to estimate the number and values of the missing data items. Our main techniques are parameter-free and do not assume prior knowledge about the distribution. Through a series of experiments, we show that estimating the impact of unknown unknowns is invaluable to better assess the results of aggregate queries over integrated data sources. 
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
+      </tbody>
    </table>
 </div>
