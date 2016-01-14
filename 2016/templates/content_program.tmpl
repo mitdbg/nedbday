@@ -1,10 +1,18 @@
 <div class="content-container">
    <h1>
-      North East Database Day Program
+      NEDBDay Program
+      <small>January 28, 2016</small>
    </h1>
+   <style>
+   i {
+   font-weight: bold;
+   display: block;
+   }
+   </style>
+   <!--
    <h2 class="sponsorCallout">Sponsors</h2>
    <p class="sponsorCallout">Special thanks to this year's sponsors:<br/> <br/> <img src="images/logos/microsoft.jpg" width="180" /></p>
-   <p class="programDate">January 28, 2016</p>
+   -->
    <table class="table table-bordered table-hover table-condensed programTable">
       <tbody>
          <tr>
@@ -17,7 +25,7 @@
          </tr>
          <tr>
             <td>9:00-9:10am</td>
-            <td><strong>Welcome</strong> (  )</td>
+            <td><strong>Welcome</strong> (Eugene Wu/Samuel Madden)</td>
          </tr>
          <tr>
             <td>9:10-9:20am</td>
@@ -26,13 +34,33 @@
          <tr>
             <td>9:20-10:10</td>
             <td><strong>Keynote1: </strong>
-              D. Richard Hipp (SQLite).  <i>Title TBA</i><br/>
+              D. Richard Hipp (SQLite).  <i>SQLite, The Database at the Edge of the Network</i><br/>
                <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle bio.</a>
                <div id="keynote1A" class="abstract" style="display: none;">
                   <h3>Abstract</h3>
-                  <p>TBA</p>
+                  <p>
+                  SQLite is the mostly widely deployed and used database engine in the
+                  world.  But it is also, perhaps, the most widely misunderstood.
+                  Unlike most other database engines that are designed to run in the
+                  datacenter, SQLite is an embedded database engine designed for use on
+                  devices at the edge of the network.  Consequently, SQLite embodies
+                  several non-traditional and sometimes controversial design choices.
+
+                  This talk will overview the history of SQLite and describe its unusual
+                  use-case.  The talk will also summarize the design and implementation
+                  of SQLite, with emphasis on those aspects of SQLite that differ from
+                  common practice and on lessons learned from supporting SQLite for over
+                  15 years.</p>
                   <h3>Bio</h3>
-                  <p>Dwayne Richard Hipp (born April 9, 1961) is the architect and primary author of SQLite as well as the Fossil SCM. He and his wife, Ginger G. Wyrick, currently live and work in Charlotte, North Carolina. He also authored the Lemon Parser Generator and CVSTrac. CVSTrac became the inspiration for Trac. He was also a member of the Tcl core team.
+                  <p>
+                  Richard Hipp is the creator of SQLite and the technical lead for a
+                  small team of developers supporting and enhancing SQLite and related
+                  software for companies around the world.  Richard is also the creator
+                  and lead maintainer for the Fossil distributed version control system.
+                  Richard is the founder and Head of Research for Hipp, Wyrick &
+                  Company, Inc., a software consultancy that employs the key SQLite
+                  committers.  Richard holds degrees from Duke University (Ph.D. 1992)
+                  and Georgia Tech (MSEE, 1984) and currently resides in Charlotte, NC.
                   </p>
                </div>
             </td>
@@ -41,51 +69,84 @@
             <td>10:10-10:30</td>
             <td>Coffee Break</td>
          </tr>
-         <!--
          <tr class="success">
-            <td colspan="2" align="center"><strong>Session 1: New Hardware and Applications</strong></td>
+            <td colspan="2" align="center"><strong>Session 1: Interesting Topics</strong></td>
          </tr>
          <tr>
-            <td>10:30-10:50</td>
-            <td>Kristin Tufte (Portland State University) <i>Adventures in Transportation from a (Big) Data Perspective</i> <br/><a href="javascript: toggleVisibility ('#pa1A')">Click to toggle abstract.</a> | <a href="./pdf/Paper40.pdf" target="_new">Click to view full paper.</a>
+            <td>10:30-10:45</td>
+            <td>Peter Bailis (Stanford) <i>Outlier Detection and Explanation in MacroBase, a Macroscope for the Internet of Things</i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa1A')">Click to toggle abstract.</a> <!--| <a href="./pdf/Paper40.pdf" target="_new">Click to view full paper.</a>-->
                <div id="pa1A" class="abstract" style="display: none;">
-                  <h3>Kristin Tufte*, Portland State University</h3>
-                  <p>Transportation is a part of our daily lives. It is well known that transportation is an important part of our lives and economy and has a large impact on the environment. What may be less well known is how diverse and interesting the data generated by transportation infrastructure is.  This talk gives a tour through transportation data sources from a data management perspective. Data sources are described and issues in obtaining and managing that data are discussed. Transportation data is an excellent example of Big Data Variety - we describe the variations in transportation data, ranging from simple format differences to more complex semantic differences and the need to combine data across different, varied sources to provide a complete picture of the transportation system. In addition to the tour of data sources, we discuss how the transportation data is used in practice and provide ideas of how it may be used in the future. We discuss very preliminary solutions for archiving this data, but more importantly we highlight areas where (big data) computer science research is applicable in the transportation data domain.</p>
+                  <p>
+                  An increasing proportion of data today is generated by automated processes, sensors, and systems -- collectively, the Internet of Things (IoT). Efficiently analyzing and understanding IoT data at scale is remarkably challenging. However, as a result of its automated origins, the highly structured and regular nature of IoT data in turn enables a new class of optimizations for data management systems.
+                  </p>
+                  <p>
+                  To address this opportunity, we have developed MacroBase, a system for large-scale, user-friendly IoT data management. MacroBase provides turn-key analysis of IoT data streams by automatically recognizing and summarizing interesting patterns and trends -- in effect, executing a complex outlier detection, explanation, and ranking pipeline. To facilitate efficient, accurate operation, MacroBase implements cross-layer optimizations across robust estimation, pattern mining, and sketching procedures. As a result, MacroBase can analyze over 300K events per second -- on a single core.
+                  </p>
                </div>
              </td>
          </tr>
          <tr>
-            <td>10:50-11:10</td>
-            <td>Paul Brown (Paradigm4 Inc) <i>A Survey of Scientific Applications using SciDB</i> <br/><a href="javascript: toggleVisibility ('#pa2A')">Click to toggle abstract.</a> | <a href="./pdf/Paper41.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa2A" class="abstract" style="display: none;">
-                  <h3>Paul Brown*, Paradigm4 Inc</h3>
-                  <p>While SciDB is gaining popularity among commercial software developers and data analysts charged with building ``Big Data'' applications, the platform was conceived as a tool for scientists. Here, we review a number of purely scientific applications of SciDB; bioinformatics at the NIH, experimental physics at NERSC, and remote sensing at INPE. We describe each project in terms of its scientific objectives, the quantity and character of the data involved, the analytic workload, and its hardware architecture. We conclude the talk with a general summary of what these projects have in common, and comment on what experience building these applications implies for data management in the Internet-of-Things (IoT); a computing environment where all interesting data is generated by machines.</p>
+            <td>10:45-11:00</td>
+            <td>Kamil Bajda-Pawlikowski (Teradata) <i>Architecture of Presto, an Open Source SQL Engine</i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa1B')">Click to toggle abstract.</a> 
+               <div id="pa1B" class="abstract" style="display: none;">
+                  <p>
+                  Presto is an open source distributed SQL engine, originally developed by Facebook for their massive Hadoop data warehouse. Earlier this year, Teradata has joined the Presto community and announced a multi-year roadmap to accelerate Presto development to make it ready for enterprise users. This talk will cover Presto architecture and discuss the technology behind the project.
+                  </p>
                </div>
              </td>
          </tr>
          <tr>
-            <td>11:10-11:30</td>
-            <td>Carsten Binnig, Ugur Cetintemel, Tim Kraska, Stan Zdonik (Brown) <i>I-Store: Data Management for Fast Networks</i> <br/><a href="javascript: toggleVisibility ('#pa3A')">Click to toggle abstract.</a> | <a href="./pdf/Paper51.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa3A" class="abstract" style="display: none;">
-                  <h3>Carsten Binnig*, Brown University; Ugur Cetintemel, Brown University; Tim Kraska, Brown University; Stan Zdonik, Brown University</h3>
-                  <p>Existing distributed data management systems typically assume that the network is a major bottleneck.  Consequently, avoiding remote data transfers is an important design aspect of existing systems. With modern RDMA-capable networks such as Infiniband FDR/EDR the before mentioned design decisions become obsolete. Modern interconnects allow data to transfer across machines almost as fast as from the CPU to memory.  In this paper, we revisit design decisions for distributed data management systems for OLTP workloads as well as for OLAP workloads under the assumption that communication between servers is essentially free.</p>
+            <td>11:00-11:15</td>
+            <td>Rodica Neamtu (WPI) <i>Interactive Online Exploration of Time Series Data sets</i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa1C')">Click to toggle abstract.</a> 
+               <div id="pa1C" class="abstract" style="display: none;">
+                  <p>
+                  Analyzing similarities in time series data is critical for many applications ranging from financial planning to policy making. We propose a novel paradigm called Online Exploration of Time Series or ONEX that by leveraging a powerful one-time pre-processing step builds a hierarchical abstract model to achieve interactive time series analytics.
+                  <p>
+                  The pre-processing step compresses the raw data into a knowledge base encoding critical similarity relationships among time series. ONEX enables further exploration of these relationships and establishes a similarity-centric panorama of time series data sets. We theoretically and empirically compare the ONEX efficiency and query response times to other techniques based on Dynamic Time Warping and embedding-based frameworks for subsequence matching. In addition to being competitive with and in most cases faster than other methods, our approach offers a rich set of novel exploratory mining requests giving users deep insights into the data sets.
+                  </p>
                </div>
              </td>
          </tr>
          <tr>
-            <td>11:30-11:50</td>
-            <td>Xiangyao Yu (MIT), George Bezerra (MIT), Andrew Pavlo (CMU), Srinivas Devadas (MIT), Michael Stonebraker (MIT) <i>Staring into the Abyss: An Evaluation of Concurrency Control with One Thousand Cores</i> <br/><a href="javascript: toggleVisibility ('#pa4A')">Click to toggle abstract.</a> | <a href="./pdf/Paper17.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa4A" class="abstract" style="display: none;">
-                  <h3>Xiangyao Yu*, MIT; George Bezerra, MIT; Andrew Pavlo, CMU; Srinivas Devadas, MIT; Michael Stonebraker, MIT</h3>
-                  <p>Computer architectures are moving towards an era dominated by many-core machines with dozens or even hundreds of cores on a single chip. This unprecedented level of on-chip parallelism introduces a new dimension to scalability that current database management systems (DBMSs) were not designed for. In particular, as the number of cores increases, the problem of concurrency control becomes extremely challenging. With hundreds of threads running in parallel, the complexity of coordinating competing accesses to data will likely diminish the gains from increased core counts.  To better understand just how unprepared current DBMSs are for future CPU architectures, we performed an evaluation of concurrency control for on-line transaction processing (OLTP) workloads on many-core chips. We implemented seven concurrency control algorithms on a main-memory DBMS and using computer simulations scaled our system to 1024 cores. Our analysis shows that all algorithms fail to scale to this magnitude but for different reasons. In each case, we identify fundamental bottlenecks that are independent of the particular database implementation and argue that even state-of-the-art DBMSs suffer from these limitations. We conclude that rather than pursuing incremental solutions, many-core chips may require a completely redesigned DBMS architecture that is built from ground up and is tightly coupled with the hardware.</p>
+            <td>11:15-11:30</td>
+            <td> Yongjoo Park (U Mich) <i>Database Learning: Towards a database that becomes smarter every time</i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa1D')">Click to toggle abstract.</a> 
+               <div id="pa1D" class="abstract" style="display: none;">
+                  <p>
+                  Database learning is the first database system that uses its internal model for processing time-sensitive approximate analytic SQL queries, where the internal model is learned from past queries and their computed answers. Compared to view-based approaches, model-driven query answering mechanism enables flexible reuse of past computations, providing great improvements over sample-based approximate database systems. In this talk, we present database learning's system overview, technical contributions, and experimental results using TPC-H benchmark datasets.
+                  </p>
                </div>
              </td>
          </tr>
+
+         <tr>
+            <td>11:30-11:45</td>
+            <td>Michael R Anderson (U Mich) <i>Faster Feature Engineering by Approximate Evaluation </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa1E')">Click to toggle abstract.</a> 
+               <div id="pa1E" class="abstract" style="display: none;">
+                  <p>
+                  The application of machine learning to large datasets has become a vital component of many important and sophisticated software systems built today. Such trained systems are often based on supervised learning tasks that require features, or extracted signals that distill complicated raw data objects into a small number of salient values. A trained system's success depends on the quality of its features.
+                  <p>
+                  Unfortunately, feature engineering—writing code that turns raw data objects into feature vectors suitable for a machine learning algorithm—is tedious and time-consuming. Because big data inputs are so diverse, feature engineering is a trial-and-error process with many small, iterative code changes. Because the inputs are so large, each code change can involve time-consuming data processing. We introduce Zombie, a data-centric system that accelerates feature engineering through intelligent input selection, optimizing the inner loop of the feature engineering process.
+                  </p>
+               </div>
+             </td>
+         </tr>
+
+
+
          <tr>
             <td colspan="2">&nbsp;</td>
          </tr>
 
-        -->
 
 
          <tr>
@@ -121,84 +182,184 @@
 
 
 
-         <!--
          <tr class="success">
             <td colspan="2" align="center"><strong>Session 2: Graphs and DB Design</strong></td>
          </tr>
          <tr>
-            <td>1:50-2:10</td>
-            <td>Antonio Maccioni (Roma Tre Uni / Yale Uni), Daniel Abadi (Yale University) <i>On Compressing Graph Databases</i> <br/><a href="javascript: toggleVisibility ('#pa5A')">Click to toggle abstract.</a> | <a href="./pdf/Paper12.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa5A" class="abstract" style="display: none;">
-                  <h3>Antonio Maccioni*, Roma Tre Uni / Yale Uni; Daniel Abadi, Yale University</h3>
-                  <p>Distributed and parallel databases are not always a scalable solution for graphs because of the low locality in the  data matching the query. A different approach for scalability is to consider compressed versions of the input graph in order to reduce the cost of join operations at query time. These methods proved to be effective when the queries are given in advance but are not general enough to be adopted since we cannot reconstruct the original graph with decompression. This means that the results of the query are approximations of the exact answers. We want to discuss with the audience a novel compression technique that enables the database engine to evaluate graph queries (e.g., graph pattern matching queries) in an exact way. Preliminary experiments show that our approach is scalable with respect to the size of the graph and that this method can be employed as a layer over existing database systems with minimal effort.</p>
+            <td>2:00-2:15</td>
+            <td>Xiangyao Yu (MIT) <i>TicToc: Time Traveling Optimistic Concurrency Control </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa2A')">Click to toggle abstract.</a> 
+               <div id="pa2A" class="abstract" style="display: none;">
+                  <p>
+                  </p>
                </div>
              </td>
          </tr>
+
          <tr>
-            <td>2:10-2:30</td>
-            <td>Jeremy Kepner (MIT) <i>Associative Arrays: Unified Mathematics for Spreadsheets, Databases, Matrices, and Graphs</i> <br/><a href="javascript: toggleVisibility ('#pa6A')">Click to toggle abstract.</a> | <a href="./pdf/Paper7.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa6A" class="abstract" style="display: none;">
-                  <h3>Jeremy Kepner*, MIT</h3>
-                  <p>Data processing systems impose multiple views on data as it is processed by the system.  These views include spreadsheets, databases, matrices, and graphs.  The common theme amongst these views is the need to store and operate on data as whole sets instead of as individual data elements. This work describes a common mathematical representation of these data sets (associative arrays) that applies across a wide range of applications and technologies.  Associative arrays unify and simplify these different approaches for representing and manipulating data into common two-dimensional view of data. Specifically, associative arrays (1) reduce the effort required to pass data between steps in a data processing system, (2) allow steps to be interchanged with full confidence that the results will be unchanged, and (3) make it possible to recognize when steps can be simplified or eliminated.  Most database system naturally support associative arrays via their tabular interfaces.  The D4M implementation of associative arrays uses this feature to provide a common interface across SQL, NoSQL, and NewSQL databases.</p>
+            <td>2:15-2:30</td>
+            <td>Jose M Faleiro (Yale) <i>Multi-versioning in Main-memory Databases: Limitations and Opportunities</i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa2B')">Click to toggle abstract.</a> 
+               <div id="pa2B" class="abstract" style="display: none;">
+                  <p>
+                  </p>
                </div>
              </td>
          </tr>
+
          <tr>
-            <td>2:30-2:50</td>
-            <td>Barzan Mozafari (Michigan) <i>CliffGuard: Towards Workload-Resilient Database Designs</i> <br/><a href="javascript: toggleVisibility ('#pa7A')">Click to toggle abstract.</a> | <a href="./pdf/Paper50.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa7A" class="abstract" style="display: none;">
-                  <h3>Barzan Mozafari*, University of Michigan</h3>
-                  <p>A fundamental problem in database systems is choosing the best physical design, i.e., a small set of auxiliary structures that en- able the fastest execution of future queries. Almost all commer- cial databases come with designer tools that create a number of indices or materialized views (together comprising the physical de- sign) that they exploit during query processing. Existing designers are what we call nominal; that is, they assume that their input pa- rameters are precisely known and equal to some nominal values. For instance, since future workload is often not known a priori, it is common for these tools to optimize for past workloads in hopes that future queries and data will be similar. In practice, however, these parameters are often noisy or missing. Since nominal de- signers do not take the influence of such uncertainties into account, they find designs that are sub-optimal and remarkably brittle. Of- ten, as soon as the future workload deviates from the past, their overall performance falls off a cliff, leading to customer discontent and expensive re-designs. Thus, we propose a new type of database designer that is robust against parameter uncertainties, so that over- all performance degrades more gracefully when future workloads deviate from the past. Users express their risk tolerance by de- ciding on how much nominal optimality they are willing to trade for attaining their desired level of robustness against uncertain sit- uations. To the best of our knowledge, this project is the first to adopt the recent breakthroughs in the theory of robust optimization to build a practical framework for solving some of the most fundamental problems in databases, replacing today's brittle designs with a principled world of robust designs that can guarantee predictable and consistent performance.</p>
+            <td>2:30-2:45</td>
+            <td>Hideaki Kimura (HP) <i>FOEDUS: Transaction Processing on 1,000 Cores and NVRAM </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa2C')">Click to toggle abstract.</a> 
+               <div id="pa2C" class="abstract" style="display: none;">
+                  <p>
+                  This talk describes two projects at Hewlett Packard Enterprise.
+                  <p>
+
+                  The first part will summarize \textbf{The Machine}~\cite{tm},
+                  an ambitious project for which HP has been devoting
+                  75\% of its research activity to redefine
+                  hardware/software stacks in future servers.
+                  <p>
+
+                  The second part will present \textbf{FOEDUS}~\cite{foedus},
+                  an OLTP engine developed from scratch for 1,000 cores and NVRAM,
+                  which achieved 17 million TPC-C TPS (100x of the current world record).
+                  <p>
+
+                  Both projects would be of great interest to the NEDB community.
+                  The talk will call for involvement from academia.
+                  </p>
                </div>
              </td>
          </tr>
+
          <tr>
-            <td>2:50-3:10</td>
+            <td>2:45-3:00</td>
+            <td>Tim Kraska (Brown) <i>Making Distributed Transaction Scale </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa2D')">Click to toggle abstract.</a> 
+               <div id="pa2D" class="abstract" style="display: none;">
+                  <p>
+                  Common wisdom is, that distributed transactions do not
+                  scale. In this talk, we will first show that this
+                  used to be true as the network was a major bottleneck. 
+                  However, with the next generation
+                  of high-performance RDMA-capable networks this
+                  no longer holds true. RDMA significantly reduces the network
+                  overhead per message and the new Infiniband standards
+                  allow to achieve network transfer rates similar to the
+                  main memory bandwidth. Yet, simply upgrading an existing
+                  database cluster with Infiniband without redesigning
+                  the system does not necessarily improve its performance. In
+                  fact, the performance can degrade. In this talk, we show
+                  why this is the case and present a new database system for
+                  transaction processing over high-speed RDMA-capable networks.
+                  Our earlier experiments show, that our new design is
+                  able to achieve almost 2 million distributed transactions
+                  per second over an 8-node clusters compared roughly 30,000
+                  distributed transaction using more traditional transaction
+                  approaches.
+                  </p>
+               </div>
+             </td>
+         </tr>
+
+
+         <tr>
+            <td>3:00-3:10</td>
             <td>Coffee Break</td>
          </tr>
          <tr class="success">
             <td colspan="2" align="center"><strong>Session 3: Big Data and Real-time Analytics</strong></td>
          </tr>
          <tr>
-            <td>3:10-3:30</td>
-            <td> Alekh Jindal, Samuel Madden (MIT) <i>Preparing Data For The Data Lake</i> <br/><a href="javascript: toggleVisibility ('#pa8A')">Click to toggle abstract.</a> | <a href="./pdf/Paper45.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa8A" class="abstract" style="display: none;">
-                  <h3>Alekh Jindal*, MIT; Samuel Madden, MIT</h3>
-                  <p>Data preparation is increasingly becoming one of the biggest challenges in processing big data. While recent tools such as Tamer and Trifacta address the problem of integrating and cleaning the datasets as they come in, preparing these datasets for efficient processing over a variety of query workloads is still challenging. In this talk, I will discuss these challenges and describe our tool which allows for fine-grained data preparation, via a data preparation plan, and efficiently runs this plan while uploading the data to HDFS.</p>
+            <td>3:15-3:30</td>
+            <td>Ronny Diaz (MIT) <i>Query the probable implications of statistical data with BayesDB </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa3A)">Click to toggle abstract.</a> 
+               <div id="pa3A class="abstract" style="display: none;">
+                  <p>
+                  Is it possible to make statistical inference broadly accessible to non-statisticians without sacrificing mathematical rigor or inference quality? Here we present BayesDB, a probabilistic programming platform that aims to enable users to query the probable implications of their data as directly as SQL databases enable them to query the data itself. BayesDB has been applied to diverse problems involving public and proprietary data, including the diagnosis and treatment of malnutrition, in collaboration with the Bill & Melinda Gates Foundation, and analysis of wire fraud and fixed income trading, in collaboration with JP Morgan. Here we sketch two applications on public data sources: cleaning and exploring an open-access database of Earth satellites and analyzing a salary survey.
+                  </p>
                </div>
              </td>
          </tr>
+
          <tr>
-            <td>3:30-3:50</td>
-            <td>Yuan Yuan, Kaibo Wang, Rubao Lee, Xiaoning Ding, Xiaodong Zhang (Ohio State)<i>BCC: Reducing False Aborts in Optimistic Concurrency Control with Affordable Cost for In-Memory Databases</i> <br/><a href="javascript: toggleVisibility ('#pa9A')">Click to toggle abstract.</a> | <a href="./pdf/Paper32.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa9A" class="abstract" style="display: none;">
-                  <h3>Yuan Yuan*, ; Kaibo Wang, ; Rubao Lee, ; Xiaoning Ding, New Jersey Institute of Techno; Xiaodong Zhang</h3>
-                  <p>The Optimistic Concurrency Control (OCC) method has been demonstrated to provide high transaction throughputs in several recent in-memory database studies. OCC will abort a transaction if the transaction's read set has been changed by other concurrent transactions. OCC works well as long as transaction contention is low. However, it will cause unnecessary transaction aborts and significantly degrade the database's throughput when transaction contention is high. In this work, we propose a new concurrency control method BCC that is able to more precisely determine whether a transaction should be aborted. We implement BCC in Silo. Our evaluations demonstrate that BCC have much better transaction throughput  compared to OCC when transaction contention is high while having comparable performance with OCC for low contention workloads.</p>
+            <td>3:30-3:45</td>
+            <td>Michael Gubanov (UT San Antonio) <i>Hybrid: A Large-scale Linear-Relational Database Management System</i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa3B')">Click to toggle abstract.</a> 
+               <div id="pa3B class="abstract" style="display: none;">
+                  <p>
+                  Natively supporting linear algebra inside of a database system provides important abstractions for modern analytics-matrices and vectors-and at the same time avoids the ``move-your-data nightmare''. A database programmer can implement complex algorithms using these abstractions, yielding both improved productivity and significant performance gains. 
+                  <p>
+                  Unfortunately, no existing RDBMS has native support for matrix and vector data types. Array databases largely forgo the relational model. Solutions such as Matlab/R are difficult to scale and require prohibitive data movement conversion costs.
+                  <p>
+                  Here we describe and evaluate our work in progress on a scalable system that natively supports both relational and linear algebras. It is built on top of SimSQL - a distributed stochastic analytics engine. Its optimizer enables large-scale linear-relational computation by choosing a minimal-cost plan. Our experiments justify its critical role at scale and demonstrate significant performance gains.
+                  </p>
                </div>
              </td>
          </tr>
+
          <tr>
-            <td>3:50-4:10</td>
-            <td>John Hugg (VoltDB) <i>Friends don't let Friends use the Lambda Architecture</i> <br/><a href="javascript: toggleVisibility ('#pa10A')">Click to toggle abstract.</a> | <a href="./pdf/Paper39.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa10A" class="abstract" style="display: none;">
-                  <h3>John Hugg*, VoltDB Inc.</h3>
-                  <p>Recently, there have been a number of systems developed to tackle the intersection of streaming and big data. Nathan Marz has championed the Lambda Architecture as a recipe for combining speed and batch processing to tackle these problems. Today, it's hard to go to a trendy big data conference without hearing a talk about how a complex, interdependent Lambda system solved a problem in heroic fashion with only a modicum of war scars and hefty AWS bill.  In this talk, we will prove, by counterexample, that the Lambda Architecture is bad and should feel bad. We will examine an recent, popular and non-fictional Lambda conference talk. We will then show how the same problem can be solved using VoltDB in a tiny fraction of the code, with many fewer nodes and with drastically reduced operational complexity. Finally we will argue the results are generally generalizable, i.e. not specific to the one example shown.</p>
+            <td>3:45-4:00</td>
+            <td> Siddharth Samsi (Lincoln Labs) <i>D4M and Large Array Databases for Management and Analysis of Large Biomedical Imaging Data </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa3C')">Click to toggle abstract.</a> 
+               <div id="pa3C" class="abstract" style="display: none;">
+                  <p>
+                  In this paper, we will present a new set of tools that leverage the D4M (Dynamic Distributed Dimensional Data Model) toolbox for analyzing giga-voxel biomedical datasets. By combining SciDB and the D4M toolbox, we demonstrate that we can access large volumetric data and perform large-scale bioinformatics analytics efficiently and interactively. We show that it is possible to achieve an ingest rate of 2.8 million entries per second for importing large datasets into SciDB. These tools provide more efficient ways to access random sub-volumes of massive datasets and to process the information that typically cannot be loaded into memory. This work describes the D4M and SciDB tools that we developed and presents the initial performance results.
+                  </p>
                </div>
              </td>
          </tr>
+
          <tr>
-            <td>4:10-4:30</td>
-            <td>Jennie Duggan (Northwestern), Aaron Elmore (U. Chicago), Tim Kraska (Brown), Samuel Madden (MIT), Tim Mattson (Intel), Michael Stonebraker (MIT) <i>The BigDawg Architecture and Reference Implementation</i> <br/><a href="javascript: toggleVisibility ('#pa11A')">Click to toggle abstract.</a> | <a href="./pdf/Paper54.pdf" target="_new">Click to view full paper.</a>
-               <div id="pa11A" class="abstract" style="display: none;">
-                  <h3>Jennie Duggan*, Northwestern University; Aaron Elmore, Univ. of Chicago; Tim Kraska, Brown University; Samuel Madden, MIT; Tim Mattson, Intel Corp; Michael Stonebraker, MIT</h3>
-                  <p>This paper presents the reference implementation of a new architecture for future "Big Data" applications.  Such applications require "big analytics" as one might expect, but they also require real-time streaming support, real-time analytics, data visualization, and cross-storage queries.  We are guided by the principle "one size does not fit all", and we build on top of three storage engines, each designed for specialized use cases.  In addition, we demonstrate novel support for querying across multiple storage engines as well as pioneering solutions to data visualization.  In the remainder of this short paper, we describe the first of three BigDawg reference implementations, Bulldog.  In the next two years we expect to follow with Pitbull and Rottweiler releases.</p>
+            <td>4:00-4:15</td>
+            <td>Paul Brown (Paradigm4) <i>Convolution is a Database Problem!  </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa3D')">Click to toggle abstract.</a> 
+               <div id="pa3D" class="abstract" style="display: none;">
+                  <p>
+                  Among the most exciting developments in contemporary
+                  software are systems for the processing and analysis of very
+                  large image collections [16]. In this talk, we will propose
+                  that integrating these methods with scalable and reliable
+                  data management is an important challenge in DBMS research
+                  and development. We provide a brief introduction to
+                  some of these algorithms and review two inter-related problem
+                  areas; image processing, and deep learning. Then we
+                  move on to explain the role data management has to play
+                  in bringing these techniques out of narrow and relatively
+                  specialized domains. Our investigation of these use cases
+                  further motivates the inclusion of matrix operations within
+                  a scalable DBMS platform.
+                  </p>
                </div>
              </td>
          </tr>
+
+         <tr>
+            <td>4:15-4:30</td>
+            <td>Vijay Gadepally (MIT) <i>The BigDAWG Architecture </i> 
+            <br/>
+            <a href="javascript: toggleVisibility ('#pa3E')">Click to toggle abstract.</a> 
+               <div id="pa3E" class="abstract" style="display: none;">
+                  <p>
+                  BigDAWG is a polystore system designed to work on complex problems that naturally span across different processing or storage engines. BigDAWG provides an architecture that supports diverse database systems working with different data models, support for the competing notions of location transparency and semantic completeness via islands of information and a middleware that provides a uniform multi-island interface. In this article, we describe the current architecture of BigDAWG, its application on the MIMIC II medical dataset, and our plans for the mechanics of cross-system queries. During the presentation, we will also deliver a brief demonstration of the current version of BigDAWG.
+                  </p>
+               </div>
+             </td>
+         </tr>
+
          <tr>
             <td colspan="2">&nbsp;</td>
          </tr>
-        -->
          <tr>
             <td>4:30 PM</td>
             <td><a href="#posters"><strong>Poster Session</strong></a> and Appetizers / Drinks (Building 32, R&D Commons, 4th Floor, Gates Tower)</td>
