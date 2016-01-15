@@ -2,13 +2,20 @@
 Pull submissions from CMT in excel form
 Remove unneeded columns
 Save as CSV
+strip non utf8 characters
+
+    conv -f utf-8 -t utf-8 -c nedbday.csv  > foo
+    mv foo nedbday.csv
+
 import into postgres
 
-    importmydata.py nedbday test CSVFILE
+    importmydata.py nedbday test nedbday.csv
 
 run this script
   
     python gen_posters.py > posters.html
+
+copy posters.html into template file
 
 """
 from sqlalchemy import *
