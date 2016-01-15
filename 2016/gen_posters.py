@@ -18,7 +18,7 @@ conn = db.connect()
 
 q = """
 select distinct name, title, abstract from nedbday
-where status = 'Awaiting Decision' or status = 'Rejected'
+where status <> 'Accepted'
 order by name
 """
 
