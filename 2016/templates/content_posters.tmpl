@@ -781,6 +781,58 @@
         </tr>
 
 
+         <tr>
+          <td>
+              Michael Hay, Colgate University; Ashwin Machanavajjhala, Duke University; Gerome Miklau, University of Massachusetts Amherst; Yan Chen, Duke University; Dan Zhang, University of Massachusetts Amherst<br/>
+              <strong>Principled Evaluation of Differentially Private Algorithms</strong><br/>
+              <a href="javascript: toggleVisibility ('#po57')">Toggle Abstract</a>
+              <div id="po57" class="abstract" style="display: none;">
+                <p>
+                Differential privacy has become the dominant standard in the research community for strong privacy protection. There has been a flood of research into query answering algorithms that meet this standard. Algorithms are becoming increasingly complex, and in particular, the performance of many emerging algorithms is data dependent, meaning the distribution of the noise added to query answers may change depending on the input data. Theoretical analysis typically only considers the worst case, making empirical study of average case performance increasingly important. We propose a set of evaluation principles which we argue are essential for sound evaluation. Based on these principles we propose DPBENCH, a novel evaluation framework for standardized evaluation of privacy algorithms. We then apply our bench- mark to evaluate algorithms for answering 1- and 2-dimensional range queries. The result is a thorough empirical study of 15 published algorithms on a total of 27 datasets that offers new insights into algorithm behavior—in particular the influence of dataset scale and shape—and a more complete characterization of the state of the art. Our methodology is able to resolve inconsistencies in prior empirical studies and place algorithm performance in context through comparison to simple baselines. Finally, we pose open research questions which we hope will guide future algorithm design.
+                </p>
+              </div>
+          </td>
+        </tr>
+         <tr>
+          <td>
+              Matteo Brucato, UMass Amherst; Juan Felipe Beltran, NYU Abu Dhabi; Azza Abouzied, NYU Abu Dhabi; Alexandra Meliou, UMass Amherst<br/>
+              <strong>Constructing Packages from Relational Data</strong><br/>
+              <a href="javascript: toggleVisibility ('#po58')">Toggle Abstract</a>
+              <div id="po58" class="abstract" style="display: none;">
+                <p>
+                Traditional database queries follow a simple model: they define constraints that each tuple in the result must satisfy. This model is computationally efficient, as the database system can evaluate the query conditions on each tuple individually. However, many practical, real-world problems require a collection of result tuples to satisfy constraints collectively, rather than individually. In this paper, we present package queries, a new query model that extends traditional database queries to handle complex constraints and preferences over answer sets. We develop a full-fledged package query system, implemented on top of a traditional database engine. Our work makes several contributions. First, we design PaQL, a SQL-based query language that supports the declarative specification of package queries. We prove that PaQL is at least as expressive as integer linear programming, and therefore, evaluation of package queries is in general NP-hard. Second, we present a fundamental evaluation strategy that combines the capabilities of databases and constraint optimization solvers to derive solutions to package queries. The core of our approach is a set of translation rules that transform a package query to an integer linear program. Third, we introduce an offline data partitioning strategy allowing query evaluation to scale to large data sizes. Fourth, we introduce SketchRefine, a scalable algorithm for package evaluation, with strong approximation guarantees ((1 +/- e)^6-factor approximation). Finally, we present extensive experiments over real-world and benchmark data. The results demonstrate that SketchRefine is effective at deriving high-quality package results, and achieves runtime performance that is an order of magnitude faster than directly using ILP solvers over large datasets.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+         <tr>
+          <td>
+              Xiaolan Wang, University of Massachusetts Amherst; Alexandra Meliou, University of Massachusetts Amherst; Eugene Wu, Columbia University <br/>
+              <strong>QFix: Diagnosing errors through query histories</strong><br/>
+              <a href="javascript: toggleVisibility ('#po59')">Toggle Abstract</a>
+              <div id="po59" class="abstract" style="display: none;">
+                <p>
+                Data-driven applications rely on the correctness of their data to function properly and effectively. Errors in data can be incredibly costly and disruptive, leading to loss of revenue, incorrect conclusions, and misguided policy decisions. While data cleaning tools can purge datasets of many errors before the data is used, applications and users interacting with the data can introduce new errors. Subsequent valid updates can obscure these errors and propagate them through the dataset causing more discrepancies. Even when some of these discrepancies are discovered, they are often corrected superficially, on a case-by-case basis, further obscuring the true underlying cause, and making detection of the remaining errors harder. In this work, we propose QFix, a framework that derives explanations and repairs for discrepancies in relational data, by analyzing the effect of queries that operated on the data and identifying potential mistakes in those queries. QFix is flexible, handling scenarios where only a subset of the true discrepancies is known, and robust to different types of update workloads. We make four important contributions: (a) we formalize the problem of diagnosing the causes of data errors based on the queries that operated on the dataset; (b) we develop exact methods for deriving diagnoses and fixes for identified errors using state-of-the-art tools; (c) we present several optimizations techniques that improve our basic approach without compromising accuracy, and (d) we leverage a tradeoff between accuracy and performance to scale diagnosis to large datasets and query logs, while achieving near-optimal results. We demonstrate the effectiveness of QFix through extensive evaluation over real-world and synthetic data.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+         <tr>
+          <td>
+              Ermal Toto, WPI<br/>
+              <strong>Predicting the PULSE of the City: A Real Time System for Multi-Granular/Scale Predictions of Crowd Flow.</strong><br/>
+              <a href="javascript: toggleVisibility ('#po60')">Toggle Abstract</a>
+              <div id="po60" class="abstract" style="display: none;">
+                <p>
+                In recent years, the fast pace of urbanization has caused the rise of complex multi-modal transportation systems that operate under dynamic and interrelated traffic conditions. Thus, accurate forecasts of traffic dynamics throughout the  transportation system would enable smart services posed to  mitigate the most critical urban challenges. The varied nature of each network nodes, makes system wide predictions challenging. PULSE (P)ediction Framework For (U)sage (L)oad on (S)ubway Syst(E)ms), is a framework that takes in account the personality of each network node to make accurate fine grain prediction of crowd movement using  smart card transaction data from a subway system.
+                </p>
+              </div>
+          </td>
+        </tr>
+
+
 
       </tbody>
    </table>
