@@ -48,7 +48,7 @@ Self-driving vehicles have the potential to revolutionize our transportation inf
             </td>
          </tr>
          <tr class="success">
-            <td colspan="2" align="center"><strong>Session 1: Data Exploration (Chair: TBD)</strong></td>
+            <td colspan="2" align="center"><strong>Session 1: Data Exploration (Chair: Sam Madden)</strong></td>
          </tr>
          <tr>
             <td>10:00-10:20</td>
@@ -175,7 +175,7 @@ For more than 30 years, parallel database systems such as those from Teradata, M
             </td>
          </tr>
          <tr class="success">
-            <td colspan="2" align="center"><strong>Session 3: Scalable Analytics (Chair: TBD)</strong></td>
+            <td colspan="2" align="center"><strong>Session 3: Scalable Analytics (Chair: Nesime Tatbul)</strong></td>
          </tr>
          <tr>
             <td>1:50-2:10</td>
@@ -263,16 +263,10 @@ Bitmap indexes are widely used in both scientific and commercial databases. They
             <a href="javascript: toggleVisibility ('#pa4D')">Click to toggle abstract.</a> 
                <div id="pa4D" class="abstract" style="display: none;">
                   <p>
-Reusing intermediates in databases to speed-up analytical query processing has been studied in the past. Existing solutions typically require intermediate results of individual operators be materialized in memory during query processing to be considered for reuse in subsequent queries. However, these approaches are not optimal for modern main memory databases. First, inserting additional materialization operations into a query plan results in an additional overhead that first needs to be amortized by subsequent queries that can reuse the materialized intermediates. Second, modern main memory DBMSs are typically heavily optimized for cache- and register-locality and therefore attempt to minimize pipeline breakers.
+Reusing intermediates in databases to speed-up analytical query processing was studied in prior work. Existing solutions require intermediate results of individual operators to be materialized using  materialization operators. However, inserting such materialization operations into a query plan not only incurs additional execution costs but also often eliminates important cache- and register-locality opportunities, resulting in even higher performance penalties.
 </p>
 <p>
-To that end, adding additional materialization operations into a query plan not only add additional traffic to the memory bus but more importantly prevent the important cache- and register-locality, which results in performance penalties. Consequently, the benefits of materialization-based reuse techniques heavily depend on the characteristics of the workload: i.e., how much overlap between queries of a given workload exists. In the worst case, if the overlap is low the extra cost caused by materialization operations might even result in an overall performance degradation for analytical workloads.
-</p>
-<p>
-The goal of this paper is to revisit ”reuse” in the context of modern main memory databases. The main idea is to leverage internal data structures for reuse that are materialized anyway by pipeline breakers during query execution. This way, reuse comes for free without any additional execution costs. Moreover, as we will show in our experiments, a result reuse becomes more robust towards workloads with different reuse potentials and provides benefits for a wider range of workloads even if the overlap between queries is not that high.
-</p>
-<p>
-In this talk, we present a new main memory database system called HashStash that implements the reuse of internal data structures. The focus of this work is on the most common internal data structure, hash tables (HTs), as found in hash-join and hash-aggregate operations. We leave other operators and data structures (e.g., trees) for future work.
+This paper studies a novel reuse model for intermediates, which caches internal physical data structures materialized during query processing (due to pipeline breakers) and externalizes them so that they become reusable for upcoming operations.  We focus on hash tables, the most commonly used internal data structure in main memory databases to perform join and aggregation operations.  As queries arrive, our reuse-aware optimizer reasons about the reuse opportunities for hash tables, employing cost models that take into account hash table statistics together with the CPU and data movement costs within the cache hierarchy.  Experimental results, based on our prototype implementation, demonstrate performance gains of 2x for typical analytical workloads with no additional overhead for materializing intermediates. 
                   </p>
                </div>
              </td>
