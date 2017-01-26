@@ -338,19 +338,6 @@ In many "Big Data" applications, getting data into the system correctly and at s
 
 <tr>
 <td>
-Katherine Yu*, MIT; Vijay Gadepally, MIT Lincoln Laboratory <br/>
-<strong>Evaluating the BigDAWG Polystore System</strong><br/>
-<a href="javascript: toggleVisibility ('#po25')">Toggle Abstract</a>
-<div id="po25" class="abstract" style="display: none;">
-<p>
-The BigDAWG polystore database system aims to address workloads dealing with large, heterogeneous datasets. The need for such a system is motivated by an increase in Big Data applications dealing with disparate types of data, from large scale analytics to realtime data streams to text-based records, each suited for different storage engines. These applications often perform cross-engine queries on correlated data, resulting in complex query planning, data migration, and execution. One such application is a medical application built by the Intel Science and Technology Center (ISTC) on data collected from an intensive care unit (ICU).  The query execution module, in particular, is tasked with performing the physical execution of a logical query plan across the underlying islands. While there has been some performance benchmarking on both a complex cross engine query over Myria and SciDB as well as limited performance tests for skew examination and join assignment strategies, the BigDAWG system has been thus far untested using conventional benchmarks used in industry. This poster will discuss the results of more robust performance tests on the query executor by using benchmarks that have been widely used in research and industry, including TPC-C and YCSB.
-</p>
-</div>
-</td>
-</tr>
-
-<tr>
-<td>
 Dan Zhang*, University of Massachusetts Amherst <br/>
 <strong>Challenges of Visualizing Differentially Private Data</strong><br/>
 <a href="javascript: toggleVisibility ('#po26')">Toggle Abstract</a>
@@ -361,14 +348,6 @@ Differential privacy has become a primary standard for protecting individual dat
 </div>
 </td>
 </tr>
-
-<tr>
-<td>
-Dongqing Xiao*, Worcester Polytechnic Institute <br/>
-<strong>Reliability-Preserving Anonymization on Uncertain Graphs</strong><br/>
-<a href="javascript: toggleVisibility ('#po27')">Toggle Abstract</a>
-<div id="po27" class="abstract" style="display: none;">
-<p>
 In many real-world applications, graphs are not deterministic but probabilistic in nature. Before such uncertain graphs can be released for research purposes, the data needs to be anonymized to prevent potential re-identification attacks. Previous graph anonymization approaches were developed for deterministic graphs. Uncertain graph anonymization is an open and challenging problem.  This is because the additional release of edge uncertainties could be leveraged by adversaries to re-identify the victim nodes. In this work, we study the novel problem of anonymization in the context of uncertain graphs. We extend the existing framework to work over uncertain graph by integrating uncertainty into anonymization process. In particular, we introduce a new reliability-based utility metric suitable for uncertain graphs, in contrast to the existing metrics which are all geared towards deterministic graphs. We present an efficient approach which achieves the desired level of anonymity at a slight cost of reliability by perturbing edge uncertainties judiciously.  To this purpose, we develop two uncertainty-aware heuristics based on the uncertain graph theory, which is reliability-oriented edge selection and anonymity-oriented edge perturbing.  We show that the incorporation of uncertainty is necessary and beneficial. We experimentally evaluate the proposed approach using different real-world datasets and study the behavior of the algorithms under the different heuristics.  The results demonstrate the effectiveness of our approach.
 </p>
 </div>
