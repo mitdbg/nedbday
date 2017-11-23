@@ -1,0 +1,459 @@
+<div class="content-container">
+   <h1>
+         North East Database Day 2017 <br />
+         <small>Friday January 27th, 2017</small><br/>
+         <small>MIT CSAIL Building 32 Room 123</small>
+   </h1>
+   <p>The poster session will include drinks and appetizers. It will be held in Building 32, R&D Commons, 4th Floor, Gates Tower. Take either set of elevators to the 4th floor.</p>
+   <h3>Information for Poster Presenters</h3>
+   <p>We will be able to provide poster board, easels, and mounting supplies for you.
+      You will need to print your poster and bring it with you to the conference. We recommend posters to be either A0, A1, or ANSI D or E sizes  (either 24" by 32" or 36" by 42"). 
+      Our poster boards are large enough to accommodate any of these (4' x 6'). 
+      You may orient your poster as you see fit. If you prefer to print out individual 8.5" x 11" pages, our board will be large enough to 
+      accommodate about 12 pages. However, we recommend making a single poster -- if you don't have access to a large format printer Fedex/Kinkos can print your poster for you.
+   </p>
+   <p>We will have a storage area for poster tubes at the conference. You will also be able to set up your posters from 8:00 AM Friday morning, if you would like to put them up early.</p>
+   <h3>List of accepted posters:</h3>
+
+<table class="table table-bordered posterTable">
+<tbody>
+
+<tr>
+<td>
+Ligia Nistor*, Oracle <br/>
+<strong>Using Compression to Reduce the Query Latency in Distributed Mode</strong><br/>
+<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
+<div id="po1" class="abstract" style="display: none;">
+<p>
+This poster shows how the compression of result tables influences the latency of a query run in distributed mode in the Big Data Discovery Query engine. The result tables containing partial results of evaluating a query written in EQL are sent between nodes at various times in the query evaluation. By reducing the size of the result tables by using the LZ4 compression algorithm, we shorten the stage result wait times. The poster will show performance results proving that  the execution latency went down dramatically when the compression of the result tables was performed.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Rebecca Taft*, MIT <br/>
+<strong>STeP: Scalable Tenant Placement for Managing Database-as-a-Service Deployments</strong><br/>
+<a href="javascript: toggleVisibility ('#po2')">Toggle Abstract</a>
+<div id="po2" class="abstract" style="display: none;">
+<p>
+Public cloud providers with Database-as-a-Service offerings must efficiently allocate computing resources to each of their customers. An effective assignment of tenants both reduces the number of physical servers in use and meets customer expectations at a price point that is competitive in the cloud market. For public cloud vendors like Microsoft and Amazon, this means packing millions of usersÕ databases onto hundreds or thousands of servers.  This poster studies tenant placement by examining a publicly released dataset of anonymized customer resource usage statistics from Microsoft's Azure SQL Database production system over a three-month period. We implemented the STeP framework to ingest and analyze this large dataset. STeP allowed us to use this production dataset to evaluate several new algorithms for packing database tenants onto servers. The evaluation shows that these techniques produce highly efficient packings by collocating tenants with compatible resource usage patterns. 
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Xiaolan Wang*, UMass Amherst <br/>
+<strong>MIDAS: Using the Wealth of Web Sources to Fill Knowledge Gaps</strong><br/>
+<a href="javascript: toggleVisibility ('#po3')">Toggle Abstract</a>
+<div id="po3" class="abstract" style="display: none;">
+<p>
+Knowledge bases, massive collections of facts (RDF triples) in diverse topics, support vital modern applications, such as enhancing search results for several major search engines. However, existing knowledge bases are incomplete, with many facts missing, in particular, little-known, long-tailed facts. Many knowledge bases rely on a semi-automatic procedure for augmentation, thus determining what to extract and from which web source still require manual effort and heavily depend on the help of domain experts. In this poster, we present MIDAS, a system that automatically generates high-quality web source slices for augmenting knowledge bases. We make three major contributions. The goal of MIDAS is to reduce this manual effort by identifying web sources with missing facts and generating descriptions for their content.  
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Yeounoh Chung*, Brown University <br/>
+<strong>A Data Quality Metric (DQM): How to Estimate The Number of Undetected Errors in Data Sets</strong><br/>
+<a href="javascript: toggleVisibility ('#po4')">Toggle Abstract</a>
+<div id="po4" class="abstract" style="display: none;">
+<p>
+In almost all data processing pipelines, some form of data cleaning is required for reliable analysis. As the use of crowds becomes more prevalent in data cleaning problems, it is important to reason about the impact of crowd's inherent non-determinism on the ultimate accuracy of any subsequent analytics. At any given time, there may be a large number of unknown errors in a data set missed by the crowd workers. To this end, this work proposes techniques to address this issue with a metric that estimates the number of remaining errors in a data set after crowd-sourced data cleaning. This problem is similar to species estimation problems, and we propose several novel estimators that are robust to false positive and compatible with priotization. We show that the proposed estimation techniques can provide accurate estimates of remaining errors in the cleaned dataset, even in the presence of errorneous responses from crowds.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Anna Fariha*, University of Massachusetts, Amherst; Tony Ohmann, University of Massachusetts, Amherst; Yuriy Brun, UMass Amherst; Alexandra Meliou, University of Massachusetts Amherst <br/>
+<strong>Accelerating query evaluation using multi-query prediction</strong><br/>
+<a href="javascript: toggleVisibility ('#po5')">Toggle Abstract</a>
+<div id="po5" class="abstract" style="display: none;">
+<p>
+Redundancy is common in modern data management system use. Different users may execute similar patterns or sequences of queries, and history of executed queries may serve as an effective predictor of future queries. We posit that data management systems could use this redundancy to predict and improve efficiency of future queries. We present QueryPredict, a technique that uses automated query model inference, query prediction, and multi-query preemptive computation to improve query execution time. QueryPredict uses logs of past queries to predict likely sequences of future queries, creates plans that benefit these potential sequences, and preemptively executes these plans before a client even composes the next query. QueryPredict borrows ideas from multi-query optimization and query rewriting to optimize for multiple likely future query sequences and has the potential to improve data management systems used by both humans and applications.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Ran Tan, NC State University; Vijay Gadepally, MIT Lincoln Laboratory; Rada Chirkova*, NC State University <br/>
+<strong>Achieving Query-specific Integration and Just-in-time Migration: A Survey of Solutions for Data Processing across Heterogeneous Data Models</strong><br/>
+<a href="javascript: toggleVisibility ('#po6')">Toggle Abstract</a>
+<div id="po6" class="abstract" style="display: none;">
+<p>
+In real-world applications, enabling nontrivial data processing, such as hybrid analytics, on distributed heterogeneous data sets is increasingly becoming a priority. This challenge has traditionally been approached by Extract-Transform-Load processes, where the available data are wrangled and integrated into a single homogeneous collection in preparation for the intended queries and data modifications. In an emerging class of data-intensive systems, a different approach is used, where data processing is done on the original distributed heterogeneous data and in presence of query-specific data integration and just-in-time data migration and transformation. Within this class, a data-intensive system can be characterized by the degree to which its queries explicitly specify operations that contribute to transforming the stored data from one data model to another. Arguably, such operations would ideally be transparent to the user and would not need to be explicitly expressed in queries. That is, all the query-required data transformations would be handled by the query compiler and executor in the data-intensive system.   The intent of this study is to survey state-of-the-art solutions for data processing across distributed heterogeneous data sets, and to categorize these solutions using the measures of the supported data models, supported query APIs, and the degree to which the data-model-crossing data-transformation operations are explicitly prescribed in typical queries. The proposed poster will contain information on the following: Background of hybrid analytics and the idea of query-specific integration and just-in-time migration and transformation; descriptions of the proposed metrics of supported query language interfaces, supported data storage formats, and the degree to which model-crossing data transformations are specified explicitly in queries; discussion of how two or more existing data-intensive systems can be described using the proposed metrics; summary; and discussion of future work.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Zheng Li, Oracle Corporation; Tingjian Ge, UMass Lowell; Xuanming Liu*, UMass Lowell <br/>
+<strong>History is a mirror to the future: Best-effort approximate complex event matching with insufficient resources</strong><br/>
+<a href="javascript: toggleVisibility ('#po7')">Toggle Abstract</a>
+<div id="po7" class="abstract" style="display: none;">
+<p>
+Complex event processing (CEP) has proven to be a highly relevant topic in practice. As it is sensitive to both errors in the stream and uncertainty in the pattern, approximate complex event processing (ACEP) is an important direction but has not been adequately studied before. ACEP is costly, and is often performed under insufficient computing resources. We propose an algorithm that learns from the past behavior of ACEP runs, and makes decisions on what to process first in an online manner, so as to maximize the number of full matches found. In addition, we devise effective optimization techniques. Finally, we propose a mechanism that uses reinforcement learning to dynamically update the history structure without incurring much overhead. Put together, these techniques drastically improve the fraction of full matches found in resource constrained environments.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Zheng Li, UMass Lowell; Tingjian Ge*, UMass Lowell; Lijian Wan, UMass Lowell <br/>
+<strong>Stochastic Data Acquisition for Answering Queries as Time Goes by</strong><br/>
+<a href="javascript: toggleVisibility ('#po8')">Toggle Abstract</a>
+<div id="po8" class="abstract" style="display: none;">
+<p>
+Data and actions are tightly coupled. On one hand, data analysis results trigger decision making and actions. On the other hand, the action of acquiring data is the very Þrst step in the whole data processing pipeline. Data acquisition almost always has some costs, which could be either monetary costs or computing resource costs such as sensor battery power, network transfers, or I/O costs. Using outdated data to answer queries can avoid the data acquisition costs, but there is a penalty of potentially inaccurate results. Given a sequence of incoming queries over time, we study the problem of sequential decision making on when to acquire data and when to use existing versions to answer each query. We propose two approaches to solve this problem using reinforcement learning and tailored locality-sensitive hashing. A systematic empirical study using two real-world datasets shows that our approaches are e_ective and e_cient.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Carsten Binnig, Brown University; Lorenzo De Stefani, Brown University; Tim Kraska, Brown University; Eli Upfal, Brown University; Emanuel Zgraggen, Brown University; Zheguang Zhao*, Brown University	 <br/>
+<strong>Towards Sustainable Insights, or Why Polygamy is Bad for You</strong><br/>
+<a href="javascript: toggleVisibility ('#po9')">Toggle Abstract</a>
+<div id="po9" class="abstract" style="display: none;">
+<p>
+Have you ever been in a sauna? If yes, according to our recent survey conducted on Amazon Mechanical Turk, people who go to saunas are more likely to know that Mike Stonebraker is not a character in “The Simpsons”. While this result clearly makes no sense, recently proposed tools to automatically suggest visualizations, correlations, or perform visual data exploration, significantly increase the chance that a user makes a false discovery like this one. In this paper, we first show how current tools mislead users to consider random fluctuations as significant discoveries. We then describe our vision and early results for QUDE, a new system for automatically controlling the various risk factors during the data exploration process. QUDE currently performs risk evaluations using default hypotheses for simple workflows. We implemented QUDE as part of Vizdom and currently evaluate different types of user feedback and warnings as outlined in our storyboards. We also already developed techniques for quantifying the impact of the unknown unknowns [2], currently evaluate the data quality metrics with several real world use cases, and developed new approximation algorithms for detecting the Simpson’s Paradox. However, by no means do we claim that we solved all open issues. Rather, we believe that QUDE is just a first step towards a potential new research area focused on the control of various risk factors in all type of analytics. We demonstrate that recent recommendation systems such as SeeDB [3] and Data Polygamy [1] significantly increase the risk of making false discoveries. We further present our vision and initial ideas for QUDE, a system for automatically controlling the various risk factors in interactive data exploration, automatic model building, and insight recommendation. The goal of this work is, on one hand, to point out that the risk of false discoveries can not be ignored, and on the other, to outline possible solutions with the hope to foster a new line of research around tools for sustainable insights.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Niv Dayan*, Harvard University; Stratos Idreos, Harvard University <br/>
+<strong>GeckoFTL: Scalable Flash Translation Techniques For Very Large Flash Devices</strong><br/>
+<a href="javascript: toggleVisibility ('#po10')">Toggle Abstract</a>
+<div id="po10" class="abstract" style="display: none;">
+<p>
+The volume of metadata needed by a flash translation layer (FTL) is proportional to the storage capacity of a flash device. Ideally, this metadata should reside in the device's integrated RAM to enable fast access. However, as flash devices scale to terabytes, the necessary volume of metadata is exceeding the available integrated RAM. Moreover, recovery time after power failure, which is proportional to the size of the metadata, is becoming impractical. The simplest solution is to persist more metadata in flash. The problem is that updating metadata in flash increases the amount of internal IOs thereby harming performance and device lifetime.   In this paper, we identify a key component of the metadata called the Page Validity Bitmap (PVB) as the bottleneck. PVB is used by the garbage-collectors of state-of-the-art FTLs to keep track of which physical pages in the device are invalid. PVB constitutes 95% of the FTL's RAM-resident metadata, and recovering PVB after power fails takes a significant proportion of the overall recovery time. To solve this problem, we propose a page-associative FTL called GeckoFTL, whose central innovation is replacing PVB with a new data structure called Logarithmic Gecko. Logarithmic Gecko is similar to an LSM-tree in that it first logs updates and later reorganizes them to ensure fast and scalable access time. Relative to the baseline of storing PVB in flash, Logarithmic Gecko enables cheaper updates at the cost of slightly more expensive garbage-collection queries. We show that this is a good trade-off because (1) updates are intrinsically more frequent than garbage-collection queries to page validity metadata, and (2) flash writes are more expensive than flash reads. We demonstrate analytically and empirically through simulation that GeckoFTL achieves a 95% reduction in space requirements and at least a 51% reduction in recovery time by storing page validity metadata in flash while keeping the contribution to internal IO overheads 98% lower than the baseline.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Alex Rivilis*, DataStax <br/>
+<strong>DataStax Poster</strong><br/>
+<a href="javascript: toggleVisibility ('#po11')">Toggle Abstract</a>
+<div id="po11" class="abstract" style="display: none;">
+<p>
+The rise of cloud applications demands a new approach to data management. These applications require a highly scalable database capable of intelligently distributing load across clusters of machines spanning multiple datacenters. Cloud Applications require immediate, low latency access to data to provide interactive and customer facing functionality. They also require powerful tools capable of understanding data in real-time so that developers can create compelling and intelligent functionality. DataStax Enterprise (DSE) accelerates your ability to deliver real-time value at epic scale by providing a comprehensive and operationally simple data management layer with a unique always-on architecture built on Apache Cassandra. DataStax Enterprise provides the distributed, responsive and intelligent foundation to build and run cloud applications.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Yue Wang*, UMass Amherst; Alexandra Meliou, University of Massachusetts Amherst; Gerome Miklau, UMass Amherst <br/>
+<strong>Lifting the Haze off the Cloud: A Consumer-Centric Market for Database Computation in the Cloud</strong><br/>
+<a href="javascript: toggleVisibility ('#po12')">Toggle Abstract</a>
+<div id="po12" class="abstract" style="display: none;">
+<p>
+The availability of public computing resources in the cloud has revolutionized data analysis, but requesting cloud resources often involves complex decisions for consumers. Estimating the completion time and cost of a computation and requesting the appropriate cloud resources are challenging tasks even for an expert user. We propose a new market-based framework for pricing computational tasks in the cloud. Our framework introduces an agent between consumers and cloud providers. The agent takes data and computational tasks from users, estimates time and cost for evaluating the tasks, and returns to consumers contracts that specify the price and completion time. Our framework can be applied directly to existing cloud markets without altering the way cloud providers offer and price services. In addition, it simplifies cloud use for consumers by allowing them to compare contracts, rather than choose resources directly. We present design, analytical, and algorithmic contributions focusing on pricing computation contracts, analyzing their properties, and optimizing them in complex workflows. We conduct an experimental evaluation of our market framework over a real-world cloud service and demonstrate empirically that our market ensures three key properties: (a) that consumers benefit from using the market due to competitiveness among agents, (b) that agents have an incentive to price contracts fairly, and (c) that inaccuracies in estimates do not pose a significant risk to agentsÕ profits. Finally, we present a fine-grained pricing mechanism for complex workflows and show that it can increase agent profits by more than an order of magnitude in some cases.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Connor Hanlon*, MIT Lincoln Laboratory; Vijay Gadepally, MIT Lincoln Laboratory <br/>
+<strong>Public Key Encrypted Database Retrieval</strong><br/>
+<a href="javascript: toggleVisibility ('#po13')">Toggle Abstract</a>
+<div id="po13" class="abstract" style="display: none;">
+<p>
+In today's day and age, the need for privacy pertaining to personal data is more important than ever.  With personal information being used more frequently when trying to access information from databases, it is crucial to allow the party retrieving that information to be able to do so privately.  Due to advances in cryptography, a user can access information from a database without giving away any information as to what they are querying.  Many database systems such as Paradigm 4's SciDB or TileDB utilize a model that performs addition and multiplication of numeric arrays. This allows for operations to be performed on encrypted data if the data is encrypted using an additively-homomorphic cryptosystem.  Therefore, a user can encrypt a query, allow the operations to be performed on encrypted data, receive the encrypted result, and decrypt the result personally, allowing the user to maintain his or her privacy. This poster shows the math behind the calculations on encrypted data, as well as the preliminary results of an implementation of this process using C.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Holger Pirk*, MIT; Oscar Moll, MIT; Samuel Madden, MIT <br/>
+<strong>Voodoo - Portable Database Performance on Modern Hardware</strong><br/>
+<a href="javascript: toggleVisibility ('#po14')">Toggle Abstract</a>
+<div id="po14" class="abstract" style="display: none;">
+<p>
+Database performance tuning is about more than query response times: while faster responses certainly improve the user experience, increased efficiency also reduces the cost for procuring, maintaining, powering and cooling machines in datacenters and server rooms alike. These ""secondary"" benefits translate directly into financial gains for providers which creates strong incentives for the development of new optimizations. Creating new optimizations, however, is becoming harder due to the increasing heterogeneity and specialization of hardware. Driven by the stagnation of processor core clock frequencies, hardware specialization has resulted in devices as heterogeneous as GPUs, CPUs, FPGAs and even application specific chips (ASICs). Each of these specialized devices exposes an equally specialized programming model, making the effective exploitation of this blend of hardware components challenging. While standardized programming frameworks like OpenCL provide a unified programming model, they do not provide ""performance portability"", i.e., the benefits of an optimization on one hardware platform rarely translates into equal benefits on a different platform and often even hurt performance. The current trend towards just-in-time generation of natively executable code provides the ability to enable many of these optimization at a per-query basis. However, to the best of our knowledge, no current system actually exploits this ability, thus seriously underutilizing the available hardware. To achieve (close-to) full saturation of the hardware resources, we developed a system called Voodoo that we present in this paper.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Dana Van Aken*, Carnegie Mellon University <br/>
+<strong>Automatic Database Management System Tuning Through Large-scale Machine Learning</strong><br/>
+<a href="javascript: toggleVisibility ('#po15')">Toggle Abstract</a>
+<div id="po15" class="abstract" style="display: none;">
+<p>
+Database management system (DBMS) configuration tuning is an essential aspect of any data-intensive application effort. But this is historically a difficult task because DBMSs have hundreds of configuration "knobs" that control everything in the system, such as the amount of memory to use for caches and how often data is written to storage. The problem with these knobs is that they are not standardized, not independent, and not universal. Worse, information about the effects of the knobs typically comes only from (expensive) experience. To overcome these challenges, we present an automated technique that leverages past experience and collects new information to tune DBMS configurations. Our evaluation shows that, with minimal resource consumption, our tool recommends configurations that are as good as or better than ones generated by existing tools or a human expert. We showcase our tuning techniques and evaluation results in this poster.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Christina Wallin*, Teradata <br/>
+<strong>PrestoDB: A Federated Query Engine to Access Data in SQL Databases, NoSQL Databases, and Beyond</strong><br/>
+<a href="javascript: toggleVisibility ('#po16')">Toggle Abstract</a>
+<div id="po16" class="abstract" style="display: none;">
+<p>
+PrestoDB is a distributed SQL query engine that has been proven at scale and is used by several large web-scale companies in production.  It provides ANSI SQL standard access to various data sources, including both SQL and NoSQL databases and even data sources that are not databases, like JMX stats or Kafka. As a federated engine, Presto faces many challenges, including pushing down parts of the query to minimize data transfer; handling authentication and authorization; and mapping non-SQL data sources such that they can be queried via ANSI SQL. Presto addresses these challenges via an extensible plugin architecture that must be implemented for each data source. This poster describes the challenges of a federated engine, the plugin architecture that Presto uses, and highlights several plugins in particular.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Eric Metcalf*, Brown University; Cansu Aslantas, Brown University; Stan Zdonik, Brown University; John Meehan, Brown University; Nesime Tatbul, Intel Labs and MIT; Philipp Eichmann, Brown University <br/>
+<strong>Metronome: Real-time Data Management for Time Series Data</strong><br/>
+<a href="javascript: toggleVisibility ('#po17')">Toggle Abstract</a>
+<div id="po17" class="abstract" style="display: none;">
+<p>
+Metronome is a real-time time series data management system being developed at Brown University, University of Massachusetts Lowell, and Intel.  The Metronome data model is based on streams and windows and incorporates a rich set of built-in operators.  We intend to show that it is possible to exploit special properties of our model to optimize queries.  We also show that by paying attention to the way data is stored significant performance increases can be achieved. This poster presents a time series algebra, our proposed architecture, an approach to high-speed data ingestion, and the internal structure of our storage manager.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Alex Galakatos*, Brown University; Andrew Crotty, Brown University; Tim Kraska, Brown University <br/>
+<strong>Storage Approaches for Large Time Series Data</strong><br/>
+<a href="javascript: toggleVisibility ('#po18')">Toggle Abstract</a>
+<div id="po18" class="abstract" style="display: none;">
+<p>
+Time series are nearing ubiquity in a wide variety of both scientific and commercial applications, with data sources ranging from financial market transactions to sensor readings to logs generated by IoT devices. To efficiently answer these types of queries, the underlying system must be able to efficiently access specific time intervals, perform aggregate functions over the associated values, and return a result in an interactive fashion. Although more traditional storage formats, such as row/column stores and even NoSQL key-value stores, are used to store time series data, they do not leverage the unique properties of time series data to efficiently search and perform aggregation. Therefore, we present a hybrid storage format which allows a system for time series to search and perform aggregation more efficiently.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Kartik Singhal*, Brown University; Maurice Herlihy, Brown University; Dhruva R. Chakrabarti, Hewlett-Packard Laboratories; Terence Kelly, Hewlett-Packard Laboratories <br/>
+<strong>A Concurrent Crash-Resilient Graph Data Structure for Non-Volatile Memory</strong><br/>
+<a href="javascript: toggleVisibility ('#po19')">Toggle Abstract</a>
+<div id="po19" class="abstract" style="display: none;">
+<p>
+Parallel graph analysis frameworks such as the Parallel Boost Graph Library, Galois, or Ligra either do not support analyses on dynamically changing graphs, or do so inefficiently. Current practice is to prepare read-only snapshots for analysis. Taking snapshots can take considerable time for large graphs, and the use of global locks for snapshots conflicts with updates. Further, recording and replaying large input streams is not feasible, and there is no support for crash-resilience.  In this poster, we describe ongoing work on a novel concurrent graph data structure that takes advantage of the Atlas[1] programming model for persistent memory. This work  supports efficient dynamic updates, non-blocking snapshots, and crash-resilience.  [1]: Dhruva R. Chakrabarti, Hans-J. Boehm, and Kumud Bhandari. 2014. Atlas: leveraging locks for non-volatile memory consistency. In Proceedings of the 2014 ACM International Conference on Object Oriented Programming Systems Languages & Applications (OOPSLA '14). ACM, New York, NY, USA, 433-452. DOI=http://dx.doi.org/10.1145/2660193.2660224
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Kayhan Dursun, Brown University; Carsten Binnig*, Brown University; Ugur Cetintemel, Brown University; Robert Petrocelli, Oracle <br/>
+<strong>SiliconDB - Rethinking Databases for Modern Heterogeneous Co-Processor Environments </strong><br/>
+<a href="javascript: toggleVisibility ('#po20')">Toggle Abstract</a>
+<div id="po20" class="abstract" style="display: none;">
+<p>
+In the past decade, the work centered around specialized co-processors for DBMSs (e.g. FPGAs, GPUs, etc.) has focused on how to efficiently implement query processing algorithms. Unfortunately, a major limitation with these co-processors was the data transfer bottleneck between the host CPU and the co-processors, which were typically attached to the system via a slow PCI connection with low bandwidth and high latency. Recent years have seen the emergence of a new class of co-processors that co-reside with CPUs on the same die. This trend is mainly motivated by the effect of dark silicon; defined by the areas on the CPU die that cannot be populated with general-purpose cores because of their energy consumption. 
+</p>
+<p>
+Developing efficient DBMS software for these new co-processor environments demands a critical rethinking of many of the basic architectural and design assumptions. For example, besides having CPUs and co-processors to access to the same memory bus, they may even have them to share same caches. Therefore, NUMA awareness and cache efficiency will play an important role when designing query processing algorithms on these co-processor environments. Moreover, query optimization needs a change as well. Instead of minimizing data transfers to the co-processor, it is more important to efficiently leverage all resources in parallel by executing operators in a hybrid fashion on the accelerators and the normal CPUs at the same time.
+</p>
+<p>
+In this work, we describe the design towards a new database system called SiliconDB that targets these new heterogeneous co-processor environments. As an early example, we are using the Spark M7 processor of such an environment to rethink the architecture of DBMSs for analytical column stores. In the future, we will study alternative co-processor environments with support of other database workloads.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Ying Su, Brown University; Xiaocheng Wang, Brown University; Carsten Binnig*, Brown University; Ugur Cetintemel, Brown University; Nikhil Murgai, Fidelity Investments <br/>
+<strong>Making the Case for Query-by-Voice with EchoQuery</strong><br/>
+<a href="javascript: toggleVisibility ('#po21')">Toggle Abstract</a>
+<div id="po21" class="abstract" style="display: none;">
+<p>
+In this poster and demo, we present an end-to-end prototype system called EchoQuery that implements the QbV paradigm by oㄦing a voice-based and hands-free interface to a relational database. Natural language interfaces to databases (NLIDBs) have been studied for several decades in the past [1] and recently gained more attention again [5, 6]. Diㄦent from our system, early NLIDBs have been very limited since they mainly focused on constructing interfaces for individual domains and not general purpose interfaces for exploring arbitrary data sets. More recent work [5, 6] to construct NLIDBs also provides a general purpose natural-language interface to query data sets independent from a certain domain. However, this work mainly focuses on the translation process from natural language (e.g., En- glish) to SQL rather than building a full end-to-end QbV - system which is the scope of EchoQuery.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Lauren Milechin*, MIT Lincoln Laboratory <br/>
+<strong>D4M 3.0</strong><br/>
+<a href="javascript: toggleVisibility ('#po22')">Toggle Abstract</a>
+<div id="po22" class="abstract" style="display: none;">
+<p>
+The D4M tool is used by hundreds of researchers to perform complex analytics on unstructured data. Over the past few years, the D4M toolbox has evolved to support connectivity with a variety of database engines, graph analytics in the Apache Accumulo database, and an implementation using the Julia programming language. In this article, we describe some of our latest additions to the D4M toolbox and our upcoming D4M 3.0 release.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Kyle O'Brien*, MIT Lincoln Laboratory; Vijay Gadepally, MIT Lincoln Laboratory; Jennie Duggan, Northwestern University; Adam Dziedzic, University of Chicago; Aaron Elmore, University of Chicago; Samuel Madden, MIT; Timothy Mattson, Intel; Zuohao She, Northwestern University; Michael Stonebraker, MIT <br/>
+<strong>BigDAWG Polystore Release and Demonstration</strong><br/>
+<a href="javascript: toggleVisibility ('#po23')">Toggle Abstract</a>
+<div id="po23" class="abstract" style="display: none;">
+<p>
+The Intel Science and Technology Center for Big Data is developing a reference implementation of a Polystore database. The BigDAWG (Big Data Working Group) system supports Òmany sizesÓ of database engines, multiple programming languages and complex analytics for a variety of workloads. Our recent efforts include application of BigDAWG to an ocean metagenomics problem and containerization of BigDAWG. We intend to release an open source BigDAWG v1.0 in the Spring of 2017. In this presentation, we will demonstrate a number of polystore applications developed with oceanographic researchers at MIT and describe our forthcoming open source release of the BigDAWG system.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+John Meehan*, Brown University; Jiang Du, University of Toronto; Cansu Aslantas, Brown University; Nesime Tatbul, Intel Labs and MIT; Stan Zdonik, Brown University <br/>
+<strong>Data Ingestion for the Connected World</strong><br/>
+<a href="javascript: toggleVisibility ('#po24')">Toggle Abstract</a>
+<div id="po24" class="abstract" style="display: none;">
+<p>
+In many "Big Data" applications, getting data into the system correctly and at scale via traditional ETL (Extract, Transform, and Load) processes is a fundamental roadblock to being able to perform timely analytics or make real-time decisions. The best way to address this problem is to build a new architecture for ETL which takes advantage of the push-based nature of a stream processing system. We discuss the requirements for a streaming ETL engine and describe a generic architecture which satisfies those requirements. We also describe our implementation of streaming ETL using a scalable messaging system (Apache Kafka), a transactional stream processing system (S-Store), and a distributed polystore (Intel's BigDAWG), as well as propose a new time-series database optimized to handle ingestion internally.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Dan Zhang*, University of Massachusetts Amherst <br/>
+<strong>Challenges of Visualizing Differentially Private Data</strong><br/>
+<a href="javascript: toggleVisibility ('#po25')">Toggle Abstract</a>
+<div id="po25" class="abstract" style="display: none;">
+<p>
+Differential privacy has become a primary standard for protecting individual data while support- ing flexible data analysis. Despite the adoption of differential privacy to a wide variety of applications and tasks, visualizing the output of differentially private algorithms has rarely been considered. Visualization is one of the primary means by which humans understand and explore an unknown dataset and therefore supporting visualization is an important goal to advance the practical adoption of differential privacy. In this initial work on private data visualization we explore key challenges and propose solution approaches. We use two-dimensional location data as an example domain, and consider the challenges of plotting noisy output, the impact of visual artifacts caused by noise, and the proper way to present known uncertainty about private output.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Dongqing Xiao*, Worcester Polytechnic Institute <br/>
+<strong>Reliability-Preserving Anonymization on Uncertain Graphs</strong><br/>
+<a href="javascript: toggleVisibility ('#po26')">Toggle Abstract</a>
+<div id="po26" class="abstract" style="display: none;">
+<p>
+In many real-world applications, graphs are not deterministic but probabilistic in nature. Before such uncertain graphs can be released for research purposes, the data needs to be anonymized to prevent potential re-identification attacks. Previous graph anonymization approaches were developed for deterministic graphs. Uncertain graph anonymization is an open and challenging problem.  This is because the additional release of edge uncertainties could be leveraged by adversaries to re-identify the victim nodes. In this work, we study the novel problem of anonymization in the context of uncertain graphs. We extend the existing framework to work over uncertain graph by integrating uncertainty into anonymization process. In particular, we introduce a new reliability-based utility metric suitable for uncertain graphs, in contrast to the existing metrics which are all geared towards deterministic graphs. We present an efficient approach which achieves the desired level of anonymity at a slight cost of reliability by perturbing edge uncertainties judiciously.  To this purpose, we develop two uncertainty-aware heuristics based on the uncertain graph theory, which is reliability-oriented edge selection and anonymity-oriented edge perturbing.  We show that the incorporation of uncertainty is necessary and beneficial. We experimentally evaluate the proposed approach using different real-world datasets and study the behavior of the algorithms under the different heuristics.  The results demonstrate the effectiveness of our approach.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Michael Gubanov*, University of Texas; Manju Priya, University of Texas; Maksim Podkorytov, University of Texas <br/>
+<strong>iLight: A Flashlight for Large-scale Dark Structured Data</strong><br/>
+<a href="javascript: toggleVisibility ('#po27')">Toggle Abstract</a>
+<div id="po27" class="abstract" style="display: none;">
+<p>
+The massive scale involved causes difficulty in the ability to quickly grasp the information contained in large-scale datasets, often referred to as 'dark data'. For example, there are millions of structured tables available on the Web, but finding a specific table or understanding what is inside a large-scale structured data set is often difficult or infeasible because of the scale involved. Here we descibe iLIGHT, a system that can quickly grasp the contents of an unexplored, large-scale structured dataset, and efficiently organize and visualize the data for querying or browsing.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Thao Pham, HPE Vertica; Styliani Pantela*, HPE Vertica <br/>
+<strong>Vertica Directed Queries</strong><br/>
+<a href="javascript: toggleVisibility ('#po28')">Toggle Abstract</a>
+<div id="po28" class="abstract" style="display: none;">
+<p>
+A query optimizer aims at choosing the best execution plan for a query. In certain cases, even the best optimizer would come up with a suboptimal plan. At the same time, an internal change in strategy which produces better plans for 95% of queries may result in worse plans for the remaining 5%. Vertica's Directed Queries provide a solution for such cases when users know the optimizer is selecting a suboptimal plan. A directed query in Vertica is a map from a query to a specific execution plan of the query. When the directed query is activated, the query will be run using the associated execution plan. VerticaÕs Directed Queries are unique in the way they save the execution plan. The saved plan is not a serialization of an internal structure, but instead an annotated query: a SQL query augmented with a set of Vertica-specific hints.  This gives great flexibility to both Vertica users and developers. Users can easily retrieve the optimizer's plan for a query, even after an upgrade, in the form of an annotated SQL query. If the performance of a query degrades, the users can always use the saved annotated SQL to restore the original way of execution. They can also modify one or more of the hints in the annotated SQL to try a different plan for user-guided changes. At the same time, Vertica developers can arbitrarily improve the internal data structures related to a query plan without worrying about incompatibility with any directed queries that have been saved from previous versions. Directed Queries bring the Vertica Optimizer a step closer to complete robustness.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Dylan Hutchison*, University of Washington; Bill Howe, University of Washington; Vijay Gadepally, MIT Lincoln Laboratory; Jeremy Kepner, MIT Lincoln Laboratory <br/>
+<strong>In-Database vs. External System Analytics on a Key-Value Store</strong><br/>
+<a href="javascript: toggleVisibility ('#po29')">Toggle Abstract</a>
+<div id="po29" class="abstract" style="display: none;">
+<p>
+NoSQL key-value databases emphasize record-level read-write operations, relying on external infrastructure such as Spark or MapReduce to implement complex analytics (e.g., matrix math, relational joins, machine learning). Computing in an external system is expensive for small yet complex analytics, requiring long code paths to extract data from the database and prepare native data structures. In response, developers implement custom applications that push simple Þlters and sums into the databaseÕs scans in order to maximize in-database processing. Recent software generalized this approach to provide native, in-database support for complex analytics.   In this poster we evaluate the performance of in-database vs. external system approaches to query processing for the Apache Accumulo NoSQL database. SpeciÞcally we run Graphulo, a library for matrix math inside AccumuloÕs scantime iterators, and MapReduce, an o_-the-shelf external system commonly used with Accumulo, on sparse matrix multiplication. Results indicate that the GraphuloÕs in-database approach is superior at smaller problem sizes, while at larger problem sizes the two approaches have similar performance.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Leilani Battle*, MIT <br/>
+<strong>Sculpin: Efficient Exploration of Multidimensional Datasets</strong><br/>
+<a href="javascript: toggleVisibility ('#po30')">Toggle Abstract</a>
+<div id="po30" class="abstract" style="display: none;">
+<p>
+In this submission, we present Sculpin, a visualization system for interactive exploration of multidimensional datasets. Sculpin has a client-server architecture, where datasets are stored on the server and queried using a database management system (or DBMS), and query results are sent to the client to be visualized. To support exploration of query results along several dimensions at once, Sculpin creates an ensemble of coordinated visualizations, where a userÕs interactions with one visualization updates all other coordinated visualizations. To improve performance, Sculpin inserts a middleware layer in front of the DBMS. The middleware layer is in charge of: 1) prefetching data in anticipation of the userÕs future data requests; 2) applying visualization-focused caching strategies to efficiently manage query results from the DBMS; and 3) applying incremental query execution strategies to avoid computing the parts of the userÕs query that will never be explored.  We evaluated Sculpin through a user study with domain scientists exploring satellite imagery data. We found that our prefetching techniques provide comparable performance results compared with existing techniques, while supporting multidimensional predictions (unlike existing techniques, which only support predictions in 2D). Combining pre-fetching with our incremental query execution approach enables Sculpin to support near-interactive response times (average response time of 550ms or less), while reducing the time spent executing queries by 380% and space consumed by unexplored query results by 370%. Furthermore, we found that adding our cache-optimization techniques provided an additional 200ms (or 60%) reduction in response times, enabling Sculpin to operate at interactive speeds. Using all of our techniques, Sculpin provides a 370% improvement in resource consumption over existing systems, while also supporting fast, iterative, and interactive visual exploration of multidimensional data. 
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Susan Malaika*, IBM <br/>
+<strong>Graph Databases: What's Happening and What's Next</strong><br/>
+<a href="javascript: toggleVisibility ('#po31')">Toggle Abstract</a>
+<div id="po31" class="abstract" style="display: none;">
+<p>
+Graph technologies are experiencing a revival for storing and analyzing data especially where relationships between entities are important. Machine learning and related technologies also incorporate graph data. This poster summarizes popular graph databases, their interfaces and use cases. and then will describe the new graph project JanusGraph at the Linux Foundation. The poster will include a JanusGraph call for participation, highlighting areas where contributions are needed.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Peter Mork*, Noblis; Arnie Rosenthal, MITRE; Adriane Chapman, University of Southampton <br/>
+<strong>How We Learned to Stop Worrying and Embrace the Chaos</strong><br/>
+<a href="javascript: toggleVisibility ('#po32')">Toggle Abstract</a>
+<div id="po32" class="abstract" style="display: none;">
+<p>
+Semantic interoperability and seamless data integration have been research goals since the inception of electronic information management systems. And yet, after decades of research on ontology alignment, schema matching, mediators, and data exchange theory, these goals remain unattainable at anything approaching scale. In this presentation, we elucidate the tension between task-oriented and model-driven integration. The former emphasizes tackling the next task: great for demonstrating progress but often producing confusing simplifications. The latter approach requires the development of a shared conceptualization of the domain (the model) from which a wide range of information exchanges can be derived. Our research unifies these approaches with a common framework, which we outline in this submission.
+</p>
+</div>
+</td>
+</tr>
+
+<tr>
+<td>
+Thibault Sellam*, Columbia University; Haoci Zhang, Tsinghua University; Eugene Wu, Columbia University <br/>
+<strong>VizGen: Automatic Interface Design from Query Logs</strong><br/>
+<a href="javascript: toggleVisibility ('#po33')">Toggle Abstract</a>
+<div id="po33" class="abstract" style="display: none;">
+<p>
+Many professionals use databases on a daily basis, but have neither the knowledge nor the interest to write the applications that access them. Marketing analysts, business consultants, finance specialists rely on costly IT services and consultants to generate “dashboards” or run queries on their behalf. This poster introduces VizGen, a pipeline to generate interactive applications automatically from query logs. First, Vizgen creates a so-called transformation graph, in which each vertex represents a query and each edge a transformation. Users define the transformations over the queries' abstract syntax trees, using a domain-specific language called PILang. During the second phase, Vizgen maps GUI widgets to this graph, minimizing the user effort necessary to travel from one node to the node. Finally, the system detects usage patterns from the user sessions. It exploits those to create shortcuts and issue placement recommendations.
+</p>
+</div>
+</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
