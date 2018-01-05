@@ -1,308 +1,326 @@
 <div class="content-container">
-   <h1>
-         North East Database Day 2018 <br />
-         <small>Friday January 19th, 2018</small><br/>
-         <small>MIT CSAIL Building 32 Room 123</small>
-   </h1>
-   <style>
-   i {
-   font-weight: bold;
-   display: block;
-   }
-   </style>
-   <h2 class="sponsorCallout">Special thanks to this year's sponsors</h2>
-   <p class="sponsorCallout">
+  <h1>
+    North East Database Day 2018 <br />
+    <small>Friday January 19th, 2018</small><br/>
+    <small>MIT CSAIL Building 32 Room 123</small>
+  </h1>
+  <style>
+  i {
+    font-weight: bold;
+    display: block;
+  }
+  </style>
+  <h2 class="sponsorCallout">Special thanks to this year's sponsors</h2>
+  <p class="sponsorCallout">
     <img src="images/logos/facebook5.jpg" width="180" /> &nbsp; &nbsp;
-    <img src="images/logos/microsoft.jpg" width="180" /> 
+    <img src="images/logos/microsoft.jpg" width="180" />
   </p>
 
-   <table class="table table-bordered table-hover table-condensed programTable">
-      <tbody>
-         <tr>
-            <th width="17%">Time</th>
-            <th width="83%">Event</th>
-         </tr>
-         <tr>
-            <td>8:15-9:00</td>
-            <td><strong>Registration</strong></td>
-         </tr>
-         <tr>
-            <td>9:00-9:10</td>
-            <td><strong>Welcome and Acknowledgements</strong> (Sam Madden/Wolfgang Gatterbauer)</td>
-         </tr>
-         <tr>
-            <td>9:10-10:00</td>
-            <td><strong>Keynote 1: </strong>
-              Dan Suciu (University of Washington) <i>Communication Cost in Parallel Query Evaluation</i>
-			  <!--<a href="talks/suciu.pdf">slides</a>-->
-			  <br/>
-               <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
-               <div id="keynote1A" class="abstract" style="display: none;">
-                  <h3>Abstract</h3>
-                  <p>
-Consider the following question: what is the minimum amount of
-communication required to compute a query in parallel, on a cluster
-with p servers?  If the query is a join of two relations, then a
-standard partitioned hash-join algorithm will exchange the entire
-data.  But if the join attribute is skewed, then we must treat the
-heavy hitters specially, and the communication cost will be larger
-than the entire data.  For multi-join queries, the optimal
-communication cost appears even harder to determine, since it depends
-on the sizes of the intermediate relations, which are hard to
-estimate.  In this talk I will describe a class of algorithms that
-have provably optimal communication cost for multi-join queries.  I
-will start by discussing a simple, one round algorithm that is optimal
-over skew-free data, then discuss how skewed data can be treated
-optimally using additional communication rounds.
-                  </p>
-                  <h3>Bio</h3>
-                  <p>
-<b>Dan Suciu</b> is a Professor in Computer Science at the University of Washington. He received his Ph.D. from the University of Pennsylvania in 1995, was a principal member of the technical staff at AT&T Labs and joined the University of Washington in 2000. Suciu is conducting research in data management, with an emphasis on topics related to Big Data and data sharing, such as probabilistic data, data pricing, parallel data processing, data security. He is a co-author of two books Data on the Web: from Relations to Semistructured Data and XML, 1999, and Probabilistic Databases, 2011. He is a Fellow of the ACM, holds twelve US patents, received the best paper award in SIGMOD 2000 and ICDT 2013, the ACM PODS Alberto Mendelzon Test of Time Award in 2010 and in 2012, the 10 Year Most Influential Paper Award in ICDE 2013, the VLDB Ten Year Best Paper Award in 2014, and is a recipient of the NSF Career Award and of an Alfred P. Sloan Fellowship. Suciu serves on the VLDB Board of Trustees, and is an associate editor for the Journal of the ACM, VLDB Journal, ACM TWEB, and Information Systems and is a past associate editor for ACM TODS and ACM TOIS. Suciu's PhD students Gerome Miklau, Christopher Re and Paris Koutris received the ACM SIGMOD Best Dissertation Award in 2006, 2010, and 2016 respectively, and Nilesh Dalvi was a runner up in 2008.
-                  </p>
-               </div>
-            </td>
-         </tr>
-         <tr class="success">
-            <td colspan="2" align="center"><strong>Session 1: Learned Components</strong></td>
-         </tr>
-         <tr>
-            <td>10:00-10:20</td>
-            <td>Tim Kraska (MIT), Alex Beutel (Google), Ed Chi (Google), Jeff Dean (Google), Neoklis Polyzotis (Google),<i>Learned Index Structures</i> 
-			<!--<a href="talks/fernandez.pdf">slides</a>-->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa1A')">Click to toggle abstract.</a> 
-               <div id="pa1A" class="abstract" style="display: none;">
-                  <p>
-Indexes are models: a BTree-Index can be seen as a model to map a key to the position of a record within a sorted array, a Hash-Index as a model to map a key to a position of a record within an unsorted array, and a BitMap-Index as a model to indicate if a data record exists or not. In this talk, we start from this premise and posit that all existing index structures can be replaced with other types of models, including deep-learning models, which we term learned indexes. The key idea is that a model can learn the sort order or structure of lookup keys and use this signal to effectively predict the position or existence of records. Our initial results show, that by using neural nets we are able to outperform cache-optimized BTrees by up to 70% in speed while saving a significant amount of memory. More importantly though, we believe that the idea of replacing core components of a data management system through learned models has far reaching implications for future systems designs.
-                  </p>
-               </div>
-             </td>
-         </tr>
-         <tr>
-            <td>10:20-10:40</td>
-            <td>Dana Van Aken (CMU), Andrew Pavlo (CMU), Geoffrey J. Gordon (CMU), Bohan Zhang (CMU) 
-				<i>Automatic Database Management System Tuning Through Large-scale Machine Learning</i>
-			<!--<a href="talks/fiedler.pdf">slides</a>-->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa1B')">Click to toggle abstract.</a> 
-               <div id="pa1B" class="abstract" style="display: none;">
-                  <p>
-Database management systems (DBMSs) are the most important component of any data-intensive application. They can handle large amounts of data and complex workloads. But they're difficult to manage because they have hundreds of configuration "knobs" that control factors such as the amount of memory to use for caches and how often to write data to storage. Organizations often hire experts to help with tuning activities, but experts are prohibitively expensive for many. In this talk, I will present OtterTune, a new tool that can automatically find good settings for a DBMSs configuration knobs. OtterTune differs from other DBMS configuration tools because it leverages knowledge gained from tuning previous DBMS deployments to tune new ones. Our evaluation shows that OtterTune recommends configurations that are as good as or better than ones generated by existing tools or a human expert.
-                  </p>
-               </div>
-             </td>
-         </tr>
+  <table class="table table-bordered table-hover table-condensed programTable">
+    <tbody>
+      <tr>
+        <th width="17%">Time</th>
+        <th width="83%">Event</th>
+      </tr>
+      <tr>
+        <td>8:15-9:00</td>
+        <td><strong>Registration</strong></td>
+      </tr>
+      <tr>
+        <td>9:00-9:10</td>
+        <td><strong>Welcome and Acknowledgements</strong> (Sam Madden/Wolfgang Gatterbauer)</td>
+      </tr>
+      <tr>
+        <td>9:10-10:00</td>
+        <td><strong>Keynote 1: </strong>
+          Dan Suciu (University of Washington) <i>Communication Cost in Parallel Query Evaluation</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
+          <div id="keynote1A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              Consider the following question: what is the minimum amount of
+              communication required to compute a query in parallel, on a cluster
+              with p servers?  If the query is a join of two relations, then a
+              standard partitioned hash-join algorithm will exchange the entire
+              data.  But if the join attribute is skewed, then we must treat the
+              heavy hitters specially, and the communication cost will be larger
+              than the entire data.  For multi-join queries, the optimal
+              communication cost appears even harder to determine, since it depends
+              on the sizes of the intermediate relations, which are hard to
+              estimate.  In this talk I will describe a class of algorithms that
+              have provably optimal communication cost for multi-join queries.  I
+              will start by discussing a simple, one round algorithm that is optimal
+              over skew-free data, then discuss how skewed data can be treated
+              optimally using additional communication rounds.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Dan Suciu</b> is a Professor in Computer Science at the University of Washington. He received his Ph.D. from the University of Pennsylvania in 1995, was a principal member of the technical staff at AT&T Labs and joined the University of Washington in 2000. Suciu is conducting research in data management, with an emphasis on topics related to Big Data and data sharing, such as probabilistic data, data pricing, parallel data processing, data security. He is a co-author of two books Data on the Web: from Relations to Semistructured Data and XML, 1999, and Probabilistic Databases, 2011. He is a Fellow of the ACM, holds twelve US patents, received the best paper award in SIGMOD 2000 and ICDT 2013, the ACM PODS Alberto Mendelzon Test of Time Award in 2010 and in 2012, the 10 Year Most Influential Paper Award in ICDE 2013, the VLDB Ten Year Best Paper Award in 2014, and is a recipient of the NSF Career Award and of an Alfred P. Sloan Fellowship. Suciu serves on the VLDB Board of Trustees, and is an associate editor for the Journal of the ACM, VLDB Journal, ACM TWEB, and Information Systems and is a past associate editor for ACM TODS and ACM TOIS. Suciu's PhD students Gerome Miklau, Christopher Re and Paris Koutris received the ACM SIGMOD Best Dissertation Award in 2006, 2010, and 2016 respectively, and Nilesh Dalvi was a runner up in 2008.
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 1: Learned Components</strong></td>
+      </tr>
+      <tr>
+        <td>10:00-10:20</td>
+        <td>Tim Kraska (MIT), Alex Beutel (Google), Ed Chi (Google), Jeff Dean (Google), Neoklis Polyzotis (Google),<i>Learned Index Structures</i>
+          <!--<a href="talks/fernandez.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1A')">Click to toggle abstract.</a>
+          <div id="pa1A" class="abstract" style="display: none;">
+            <p>
+              Indexes are models: a BTree-Index can be seen as a model to map a key to the position of a record within a sorted array, a Hash-Index as a model to map a key to a position of a record within an unsorted array, and a BitMap-Index as a model to indicate if a data record exists or not. In this talk, we start from this premise and posit that all existing index structures can be replaced with other types of models, including deep-learning models, which we term learned indexes. The key idea is that a model can learn the sort order or structure of lookup keys and use this signal to effectively predict the position or existence of records. Our initial results show, that by using neural nets we are able to outperform cache-optimized BTrees by up to 70% in speed while saving a significant amount of memory. More importantly though, we believe that the idea of replacing core components of a data management system through learned models has far reaching implications for future systems designs.
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>10:20-10:40</td>
+        <td>Dana Van Aken (CMU), Andrew Pavlo (CMU), Geoffrey J. Gordon (CMU), Bohan Zhang (CMU)
+          <i>Automatic Database Management System Tuning Through Large-scale Machine Learning</i>
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1B')">Click to toggle abstract.</a>
+          <div id="pa1B" class="abstract" style="display: none;">
+            <p>
+              Database management systems (DBMSs) are the most important component of any data-intensive application. They can handle large amounts of data and complex workloads. But they're difficult to manage because they have hundreds of configuration "knobs" that control factors such as the amount of memory to use for caches and how often to write data to storage. Organizations often hire experts to help with tuning activities, but experts are prohibitively expensive for many. In this talk, I will present OtterTune, a new tool that can automatically find good settings for a DBMSs configuration knobs. OtterTune differs from other DBMS configuration tools because it leverages knowledge gained from tuning previous DBMS deployments to tune new ones. Our evaluation shows that OtterTune recommends configurations that are as good as or better than ones generated by existing tools or a human expert.
+            </p>
+          </div>
+        </td>
+      </tr>
 
-         <tr>
-            <td colspan="2">&nbsp;</td>
-         </tr>
-         <tr>
-            <td>10:40-11:00</td>
-            <td><strong>Coffee Break</strong></td>
-         </tr>
-         <tr>
-            <td colspan="2">&nbsp;</td>
-         </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>10:40-11:00</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
 
-         <tr>
-            <td>11:00-11:20</td>
-            <td>Raul Castro Fernandez (MIT), Samuel Madden (MIT)<i>The Fabric of Data: Envisioning Data Integration on a Learned Vector Space</i>
-				<!--<a href="talks/galhotr.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa2A')">Click to toggle abstract.</a> 
-               <div id="pa2A" class="abstract" style="display: none;">
-                  <p>
-In many data integration projects data that is both structured (i.e. relational tables) and unstructured (i.e., text) needs to be combined. To perform integration in this context, a common approach would be to use domain-specific information extractors on the unstructured data to obtain structured relations, and then integrate these with the structured data. This approach is both tedious and time-consuming. In this paper, we present our vision for an alternative approach that represents both structured and unstructured data in a single vector space, which we call a data fabric. The main advantage of this approach is that it reduces human intervention during the integration process, because: i) we learn the fabric directly from the data; and ii) we automatically generate the training data from the inputs, rather than requiring human input. We will present a prototype of a system for building the fabric.
-                  </p>
-               </div>
-             </td>
-         </tr>
+      <tr>
+        <td>11:00-11:20</td>
+        <td>Raul Castro Fernandez (MIT), Samuel Madden (MIT)<i>The Fabric of Data: Envisioning Data Integration on a Learned Vector Space</i>
+          <!--<a href="talks/galhotr.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2A')">Click to toggle abstract.</a>
+          <div id="pa2A" class="abstract" style="display: none;">
+            <p>
+              In many data integration projects data that is both structured (i.e. relational tables) and unstructured (i.e., text) needs to be combined. To perform integration in this context, a common approach would be to use domain-specific information extractors on the unstructured data to obtain structured relations, and then integrate these with the structured data. This approach is both tedious and time-consuming. In this paper, we present our vision for an alternative approach that represents both structured and unstructured data in a single vector space, which we call a data fabric. The main advantage of this approach is that it reduces human intervention during the integration process, because: i) we learn the fabric directly from the data; and ii) we automatically generate the training data from the inputs, rather than requiring human input. We will present a prototype of a system for building the fabric.
+            </p>
+          </div>
+        </td>
+      </tr>
 
-         <tr class="success">
-            <td colspan="2" align="center"><strong>Session 2: New functionalities</strong></td>
-         </tr>
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 2: New functionalities</strong></td>
+      </tr>
 
-         <tr>
-            <td>11:20-11:40</td>
-            <td>Alexander Rasin (DePaul University), James Wagner (DePaul University), Karen Heart (DePaul University), Tanu Malik (DePaul University), Jonathan Grier (Grier Forensics) <i>The Flexibility of Database Forensics: Security Audits, Evidence Gathering, Meta-Querying Analysis, Performance Tuning</i>
-				<!--<a href="talks/stonebraker.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa2B')">Click to toggle abstract.</a> 
-               <div id="pa2B" class="abstract" style="display: none;">
-                  <p>
-The vast majority of data, including sensitive data, is stored in relational database management systems (DBMS). DBMSes generally expose an access API, while opaquely managing storage and query execution. Therefore, users must implicitly trust that their database (and the database administrator!) has not been compromised and is acting properly. Moreover, DBMS access control mechanisms and audit query logs are vulnerable to a database administrator. In cases of suspected fraud, tampering, or data theft, a forensic investigation is performed; however, a pronounced lack of database forensic tools makes investigating a DBMS particularly challenging. In this talk, we will review the principles of database forensic analysis and the numerous applications including including detection of data tampering and other attacks perpetrated by an extra-privileged user, a meta-querying mechanism to collect evidence from DBMS storage, and leveraging data layout for better query performance in DBMSes.
-                  </p>
-               </div>
-             </td>
-         </tr>
+      <tr>
+        <td>11:20-11:40</td>
+        <td>Alexander Rasin (DePaul University), James Wagner (DePaul University), Karen Heart (DePaul University), Tanu Malik (DePaul University), Jonathan Grier (Grier Forensics) <i>The Flexibility of Database Forensics: Security Audits, Evidence Gathering, Meta-Querying Analysis, Performance Tuning</i>
+          <!--<a href="talks/stonebraker.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2B')">Click to toggle abstract.</a>
+          <div id="pa2B" class="abstract" style="display: none;">
+            <p>
+              The vast majority of data, including sensitive data, is stored in relational database management systems (DBMS). DBMSes generally expose an access API, while opaquely managing storage and query execution. Therefore, users must implicitly trust that their database (and the database administrator!) has not been compromised and is acting properly. Moreover, DBMS access control mechanisms and audit query logs are vulnerable to a database administrator. In cases of suspected fraud, tampering, or data theft, a forensic investigation is performed; however, a pronounced lack of database forensic tools makes investigating a DBMS particularly challenging. In this talk, we will review the principles of database forensic analysis and the numerous applications including including detection of data tampering and other attacks perpetrated by an extra-privileged user, a meta-querying mechanism to collect evidence from DBMS storage, and leveraging data layout for better query performance in DBMSes.
+            </p>
+          </div>
+        </td>
+      </tr>
 
-         <tr>
-            <td>11:40-12:00</td>
-            <td>Lauren Milechin (MIT EAPS), Vijay Gadepally (MIT Lincoln Laboratory), Jeremy Kepner (MIT Lincoln Laboratory), Dylan Hutchison (University of Washington) <i>Enabling Graph Analytics with Graphulo</i>
-				<!--<a href="talks/mork.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa2C')">Click to toggle abstract.</a> 
-               <div id="pa2C" class="abstract" style="display: none;">
-                  <p>
-Graphulo is a tool built for Apache Accumulo to enable in-database graph analytics. This allows analysts to perform graph analytics on large graphs that do not easily fit into local memory. In order to reduce the barrier of entry for analytics developers, we have developed interfaces to two common analytical programming environments: MATLAB®/Octave through the D4M library and Apache Pig.
-                  </p>
-               </div>
-             </td>
-         </tr>
+      <tr>
+        <td>11:40-12:00</td>
+        <td>Lauren Milechin (MIT EAPS), Vijay Gadepally (MIT Lincoln Laboratory), Jeremy Kepner (MIT Lincoln Laboratory), Dylan Hutchison (University of Washington) <i>Enabling Graph Analytics with Graphulo</i>
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2C')">Click to toggle abstract.</a>
+          <div id="pa2C" class="abstract" style="display: none;">
+            <p>
+              Graphulo is a tool built for Apache Accumulo to enable in-database graph analytics. This allows analysts to perform graph analytics on large graphs that do not easily fit into local memory. In order to reduce the barrier of entry for analytics developers, we have developed interfaces to two common analytical programming environments: MATLAB®/Octave through the D4M library and Apache Pig.
+            </p>
+          </div>
+        </td>
+      </tr>
 
-         <tr>
-            <td colspan="2">&nbsp;</td>
-         </tr>
-         <tr>
-            <td>12:00-1:00</td>
-            <td><strong>Lunch Break</strong></td>
-         </tr>
-         <tr>
-            <td colspan="2">&nbsp;</td>
-         </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>12:00-1:00</td>
+        <td><strong>Lunch Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
 
-         <tr>
-            <td>1:00-1:50</td>
-            <td><strong>Keynote 2: </strong>
-              Silvio Micali (MIT CSAIL) <i>TBD</i>
-			  <!--<a href="talks/dewitt.pptx">slides</a><br/>-->
-               <a href="javascript: toggleVisibility ('#keynote2A')">Click to toggle abstract and bio.</a>
-               <div id="keynote2A" class="abstract" style="display: none;">
-                  <h3>Abstract</h3>
-                  <p>
-TBD
-                  </p>
-               </div>
-            </td>
-         </tr>
-         <tr class="success">
-            <td colspan="2" align="center"><strong>Session 3: Data cleaning and schema evolution</strong></td>
-         </tr>
-         <tr>
-            <td>1:50-2:10</td>
-            <td>Poonam Kumari (University of Buffalo), Oliver Kennedy (University of Buffalo)
-				<i>The Good and Bad Data</i>
-				<!-- <a href="talks/saeidi.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa3A')">Click to toggle abstract.</a> 
-               <div id="pa3A" class="abstract" style="display: none;">
-                  <p>
-Data uncertainty arises from sensor errors, ambiguous human generated inputs, and more. Data cleaning tools help clean dirty data and provide results which are termed as clean data. But how do we define dirty data? For example deleting missing values from data set would help the analyst in one context, while in a different application, deleting missing value might produce bias results. In this paper we go through iterative data cleaning process and the challenges faced by analysts. We conclude by presenting a study design for future work which addresses few of the challenges emerging as part of data cleaning.
-                  </p>
-               </div>
-             </td>
-         </tr>
-
-         <tr>
-            <td>2:10-2:30</td>
-            <td>Styliani Pantela (Microfocus Vertica), Ben Vandiver (Microfocus Vertica), Jaimin Dave (Microfocus Vertica)
-				<i>Schema Evolution Through Optimistic Concurrency Control in Vertica</i>
-				<!--<a href="talks/kepner.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa3B')">Click to toggle abstract.</a> 
-               <div id="pa3B" class="abstract" style="display: none;">
-                  <p>
-Parallelism and concurrency increasingly become key requirements for modern database management systems. They allow for improved performance and scalability. A lot of DBMSs have used optimistic concurrency control to improve these requirements. In this paper we study optimistic concurrency control in the context of column stores and schema evolution. We describe the implementation of a multi-versioned optimistic concurrency control mechanism customized for schema evolution, specifically for the Add Column Data Definition Language (DDL) operation. The implementation parallelizes the bulk of the DDL implementation while taking advantage of the columnar format of Vertica. We reduce overall lock contention and improve concurrency of the system while limiting the number of interfering DDLs that will result in rolled back transactions.
-                  </p>
-               </div>
-             </td>
-         </tr>
-
-         <tr>
-            <td colspan="2">&nbsp;</td>
-         </tr>
-         <tr>
-            <td>2:30-2:50</td>
-            <td><strong>Coffee Break</strong></td>
-         </tr>
-         <tr>
-            <td colspan="2">&nbsp;</td>
-         </tr>
-
-         <tr class="success">
-            <td colspan="2" align="center"><strong>Session 4: Storage Management</strong></td>
-         </tr>
-         <tr>
-            <td>2:50-3:10</td>
-            <td>Michael L. Brodie (MIT), Michael Stonebraker (MIT), Ricardo Mayerhofer (B2Wdigital), Jialing Pei (MIT) <i>The Case for the Co-evolution of Applications and Data (extended abstract) </i>
-				<!--<a href="talks/shanbhag.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa4A')">Click to toggle abstract.</a> 
-               <div id="pa4A" class="abstract" style="display: none;">
-                  <p>
-Database design is the process of designing an initial shared database and a collection of applications, then evolving the design as business conditions change. In “the wild” changes occur often, once a quarter or more.
-
-There are three approaches to this evolution:
-
-Data First: In this approach, advocated by all DBMS textbooks, the database is always kept in 3 rd normal form. Substantial application maintenance is required as the schema changes, leading to application decay. This approach has no database decay, but may result in substantial application decay.
-
-Application First: This approach attempts to minimize application maintenance, while letting the database schema decay. Hence, application decay is minimized, but substantial database decay may occur.
-
-A third approach, which we advocate and call coevolution, is to combine both using a holistic view to minimize both application and database decay.
-
-To justify the superiority of the third approach, we examined the evolution of an application that processes checkout requests for B2W, a large South American online retailer over a 6-year time period from 2010 2016. Over the course of 36 evolution steps, we found that 10 followed an application first strategy, 10 followed a data first tactic, and 16 followed a coevolution approach. At each step, it appeared that B2W IT personnel were informally minimizing some composite cost function, i.e. they were engaged in coevolution.
-
-As a result, any design tool must be capable of suggesting all three tactics above. To the best of our knowledge no current design tool has this capability, as noted in [1, 2, 4]. As a result, we are well along on building just such a tool. This abstract outlines our B2W study and briefly discusses our design tool.
-                  </p>
-               </div>
-             </td>
-         </tr>
-
-         <tr>
-            <td>3:10-3:30</td>
-            <td>Rundong Li (Northeastern University), Mirek Riedewald (Northeastern University) <i>Skew and Distributed Joins: A Probabilistic Perspective</i> 
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa4B')">Click to toggle abstract.</a> 
-               <div id="pa4B" class="abstract" style="display: none;">
-                  <p>
-We propose a novel probabilistic analysis for the classic problem of distributed equi-join computation in the presence of skew. Join-attribute skew causes load imbalance during distributed equi-join computation, delaying job completion. It can be addressed by more fine-grained partitioning, at the cost of input duplication. Inspired by hash partitioning, we study algorithms that assign join keys randomly to workers. For random load assignment, fine-grained partitioning creates a tradeoff between load expectation and variance. We show that minimizing load variance subject to a constraint on expectation is a monotone submodular maximization problem with Knapsack constraints, hence admitting provably near-optimal greedy solutions. The resulting algorithms deliver the best join running times to date, consistently improving over the state of the art, sometimes by a wide margin.
-                  </p>
-               </div>
-             </td>
-         </tr>
-
-         <tr>
-            <td>3:30-3:50</td>
-            <td>Michael Kester (Harvard), Manos Athanassoulis (Harvard SEAS), Stratos Idreos (Harvard)
-				<i>UAccess Path Selection in Main-Memory Optimized Data Systems: Should I Scan or Should I Probe?</i>
-				<!--<a href="talks/athanassoulis.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa4C')">Click to toggle abstract.</a> 
-               <div id="pa4C" class="abstract" style="display: none;">
-                  <p>
-In this paper, we compare modern sequential scans and secondary index scans. Through detailed analytical modeling and experimentation we show that while scans have become useful in more cases than before, both access paths are still useful, and so, access path selection (APS) is still required to achieve the best performance when considering variable workloads. We show how to perform access path selection. In particular, contrary to the way traditional systems choose between scans and secondary indexes, we find that in addition to the query selectivity, the underlying hardware, and the system design, modern optimizers also need to take into account query concurrency. We further discuss the implications of integrating access path selection in a modern analytical data system.
-                  </p>
-               </div>
-             </td>
-         </tr>
-
-         <tr>
-            <td>3:50-4:10</td>
-            <td>David Cohen (Intel), Steve Shaw (Intel), Dhruba Borthakur (Rockset), Venkat Venkataramani (Rockset), Max Mether (MariaDB) 
-				<i>Employing Shared, Log-Structured Storage within a Database's Storage Engine</i>
-				<!--<a href="talks/binnig.pdf">slides</a> -->
-            <br/>
-            <a href="javascript: toggleVisibility ('#pa4D')">Click to toggle abstract.</a> 
-               <div id="pa4D" class="abstract" style="display: none;">
-                  <p>
-At last year’s NEDB Day, David DeWitt talked about the end of shared-nothing and the emergence of shared storage in the database arena. Months later, Gartner published an article declaring that commercial Hadoop Distributions are obsolete, specifically HDFS. In its place, AWS-s3-style cloud storage has emerged as the preferred vehicle for managing persistent data over time. In this talk, we will discuss another facet of this development, specifically the use of shared, log-structured storage to support the persistence requirements of distributed databases. In our talk, we’ll discuss the details of this approach and provide some early results based on an operational MariaDB/MyRocks implementation. To the best of our knowledge, this is the first known open-source implementation of a distributed database using a cloud store and we invite students/academic to collaborate in our endeavor.
-                  </p>
-               </div>
-             </td>
-         </tr>
+      <tr>
+        <td>1:00-1:50</td>
+        <td><strong>Keynote 2: </strong>
+          Silvio Micali (MIT CSAIL) <i>TBD</i>
+          <!--<a href="talks/dewitt.pptx">slides</a><br/>-->
+          <a href="javascript: toggleVisibility ('#keynote2A')">Click to toggle abstract and bio.</a>
+          <div id="keynote2A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              TBD
+            </p>
+          </div>
+        </td>
+      </tr>
 
 
-         <tr>
-            <td colspan="2">&nbsp;</td>
-         </tr>
-         <tr>
-            <td>4:10</td>
-            <td><a href="#posters"><strong>Poster Session</strong></a> and Appetizers / Drinks (Building 32, R&D Commons, 4th Floor, Gates Tower)</td>
-         </tr>
-         <tr>
-            <td>6:00</td>
-            <td>Adjourn</td>
-          </tr>
-      </tbody>
-   </table>
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 3: Storage Management</strong></td>
+      </tr>
+
+
+
+      <tr>
+        <td>1:50-2:10</td>
+        <td>Rundong Li (Northeastern University), Mirek Riedewald (Northeastern University) <i>Skew and Distributed Joins: A Probabilistic Perspective</i>
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa4B')">Click to toggle abstract.</a>
+          <div id="pa4B" class="abstract" style="display: none;">
+            <p>
+              We propose a novel probabilistic analysis for the classic problem of distributed equi-join computation in the presence of skew. Join-attribute skew causes load imbalance during distributed equi-join computation, delaying job completion. It can be addressed by more fine-grained partitioning, at the cost of input duplication. Inspired by hash partitioning, we study algorithms that assign join keys randomly to workers. For random load assignment, fine-grained partitioning creates a tradeoff between load expectation and variance. We show that minimizing load variance subject to a constraint on expectation is a monotone submodular maximization problem with Knapsack constraints, hence admitting provably near-optimal greedy solutions. The resulting algorithms deliver the best join running times to date, consistently improving over the state of the art, sometimes by a wide margin.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>2:10-2:30</td>
+        <td>Michael Kester (Harvard), Manos Athanassoulis (Harvard SEAS), Stratos Idreos (Harvard)
+          <i>UAccess Path Selection in Main-Memory Optimized Data Systems: Should I Scan or Should I Probe?</i>
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa4C')">Click to toggle abstract.</a>
+          <div id="pa4C" class="abstract" style="display: none;">
+            <p>
+              In this paper, we compare modern sequential scans and secondary index scans. Through detailed analytical modeling and experimentation we show that while scans have become useful in more cases than before, both access paths are still useful, and so, access path selection (APS) is still required to achieve the best performance when considering variable workloads. We show how to perform access path selection. In particular, contrary to the way traditional systems choose between scans and secondary indexes, we find that in addition to the query selectivity, the underlying hardware, and the system design, modern optimizers also need to take into account query concurrency. We further discuss the implications of integrating access path selection in a modern analytical data system.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>2:30-2:50</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+      <tr>
+        <td>2:50-3:10</td>
+        <td>David Cohen (Intel), Steve Shaw (Intel), Dhruba Borthakur (Rockset), Venkat Venkataramani (Rockset), Max Mether (MariaDB)
+          <i>Employing Shared, Log-Structured Storage within a Database's Storage Engine</i>
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa4D')">Click to toggle abstract.</a>
+          <div id="pa4D" class="abstract" style="display: none;">
+            <p>
+              At last year’s NEDB Day, David DeWitt talked about the end of shared-nothing and the emergence of shared storage in the database arena. Months later, Gartner published an article declaring that commercial Hadoop Distributions are obsolete, specifically HDFS. In its place, AWS-s3-style cloud storage has emerged as the preferred vehicle for managing persistent data over time. In this talk, we will discuss another facet of this development, specifically the use of shared, log-structured storage to support the persistence requirements of distributed databases. In our talk, we’ll discuss the details of this approach and provide some early results based on an operational MariaDB/MyRocks implementation. To the best of our knowledge, this is the first known open-source implementation of a distributed database using a cloud store and we invite students/academic to collaborate in our endeavor.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 4: Data cleaning and schema evolution</strong></td>
+      </tr>
+      <tr>
+        <td>3:10-3:30</td>
+        <td>Poonam Kumari (University of Buffalo), Oliver Kennedy (University of Buffalo)
+          <i>The Good and Bad Data</i>
+          <!-- <a href="talks/saeidi.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3A')">Click to toggle abstract.</a>
+          <div id="pa3A" class="abstract" style="display: none;">
+            <p>
+              Data uncertainty arises from sensor errors, ambiguous human generated inputs, and more. Data cleaning tools help clean dirty data and provide results which are termed as clean data. But how do we define dirty data? For example deleting missing values from data set would help the analyst in one context, while in a different application, deleting missing value might produce bias results. In this paper we go through iterative data cleaning process and the challenges faced by analysts. We conclude by presenting a study design for future work which addresses few of the challenges emerging as part of data cleaning.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:30-3:50</td>
+        <td>Styliani Pantela (Microfocus Vertica), Ben Vandiver (Microfocus Vertica), Jaimin Dave (Microfocus Vertica)
+          <i>Schema Evolution Through Optimistic Concurrency Control in Vertica</i>
+          <!--<a href="talks/kepner.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa3B')">Click to toggle abstract.</a>
+          <div id="pa3B" class="abstract" style="display: none;">
+            <p>
+              Parallelism and concurrency increasingly become key requirements for modern database management systems. They allow for improved performance and scalability. A lot of DBMSs have used optimistic concurrency control to improve these requirements. In this paper we study optimistic concurrency control in the context of column stores and schema evolution. We describe the implementation of a multi-versioned optimistic concurrency control mechanism customized for schema evolution, specifically for the Add Column Data Definition Language (DDL) operation. The implementation parallelizes the bulk of the DDL implementation while taking advantage of the columnar format of Vertica. We reduce overall lock contention and improve concurrency of the system while limiting the number of interfering DDLs that will result in rolled back transactions.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td>3:50-4:10</td>
+        <td>Michael L. Brodie (MIT), Michael Stonebraker (MIT), Ricardo Mayerhofer (B2Wdigital), Jialing Pei (MIT) <i>The Case for the Co-evolution of Applications and Data (extended abstract) </i>
+          <!--<a href="talks/shanbhag.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa4A')">Click to toggle abstract.</a>
+          <div id="pa4A" class="abstract" style="display: none;">
+            <p>
+              Database design is the process of designing an initial shared database and a collection of applications, then evolving the design as business conditions change. In “the wild” changes occur often, once a quarter or more.
+
+              There are three approaches to this evolution:
+
+              Data First: In this approach, advocated by all DBMS textbooks, the database is always kept in 3 rd normal form. Substantial application maintenance is required as the schema changes, leading to application decay. This approach has no database decay, but may result in substantial application decay.
+
+              Application First: This approach attempts to minimize application maintenance, while letting the database schema decay. Hence, application decay is minimized, but substantial database decay may occur.
+
+              A third approach, which we advocate and call coevolution, is to combine both using a holistic view to minimize both application and database decay.
+
+              To justify the superiority of the third approach, we examined the evolution of an application that processes checkout requests for B2W, a large South American online retailer over a 6-year time period from 2010 2016. Over the course of 36 evolution steps, we found that 10 followed an application first strategy, 10 followed a data first tactic, and 16 followed a coevolution approach. At each step, it appeared that B2W IT personnel were informally minimizing some composite cost function, i.e. they were engaged in coevolution.
+
+              As a result, any design tool must be capable of suggesting all three tactics above. To the best of our knowledge no current design tool has this capability, as noted in [1, 2, 4]. As a result, we are well along on building just such a tool. This abstract outlines our B2W study and briefly discusses our design tool.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>4:10</td>
+        <td><a href="#posters"><strong>Poster Session</strong></a> and Appetizers / Drinks (Building 32, R&D Commons, 4th Floor, Gates Tower)</td>
+      </tr>
+      <tr>
+        <td>6:00</td>
+        <td>Adjourn</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
