@@ -3,40 +3,50 @@
       <h1> Keynote Speakers </h1>
 <p>
       <p>
-      We are excited to have two keynote speakers to provide 
-      perspectives on data management and analysis from the forefront of 
-      their domains -- self-driving vehicles and data warehousing in the cloud!
+      We are excited to have two keynote speakers to provide
+      perspectives on data management and analysis from the forefront of
+      their domains -- parallel query processing and distributed consensus through blockchains!
       </p>
    </div>
    <div class="page-content">
 
-      <h2>Self-Driving Vehicles, SLAM, and Databases<br>
-          <p>John Leonard &nbsp; <small>MIT Dept. of Mechanical Engineering and MIT CSAIL</small></p> </h2>
+      <h2>Communication Cost in Parallel Query Evaluation<br>
+          <p>Dan Suciu &nbsp; <small>University of Washington</small></p> </h2>
 
       <h3>Abstract</h3>
       <p>
-Self-driving vehicles have the potential to revolutionize our transportation infrastructure, but also raise major challenges for research and policy development. Led by the efforts of Google and many leading automobile manufacturers, interest in the field of self-driving vehicles has surged in the past several years. In this talk, I will describe some of the core technologies of mobile robotics that underpin self-driving vehicles and other new applications of robotics, including: sensing, mapping, navigation, and path-planning. Despite recent progress, fully autonomous driving remains extremely difficult, with a number of difficult open questions. I will also describe the role of Simultaneous Localization and Mapping (SLAM) algorithms in self-driving, and will discuss potential connections of self-driving and SLAM with database algorithms and technology.
+        Consider the following question: what is the minimum amount of
+        communication required to compute a query in parallel, on a cluster
+        with p servers?  If the query is a join of two relations, then a
+        standard partitioned hash-join algorithm will exchange the entire
+        data.  But if the join attribute is skewed, then we must treat the
+        heavy hitters specially, and the communication cost will be larger
+        than the entire data.  For multi-join queries, the optimal
+        communication cost appears even harder to determine, since it depends
+        on the sizes of the intermediate relations, which are hard to
+        estimate.  In this talk I will describe a class of algorithms that
+        have provably optimal communication cost for multi-join queries.  I
+        will start by discussing a simple, one round algorithm that is optimal
+        over skew-free data, then discuss how skewed data can be treated
+        optimally using additional communication rounds.
       </p>
       <h3>Bio</h3>
       <p>
-John J. Leonard is Samuel C. Collins Professor of Mechanical and Ocean Engineering and Associate Department Head for Research in the MIT Department of Mechanical Engineering. He is also a member of the MIT Computer Science and Artificial Intelligence Laboratory (CSAIL). His research addresses the problems of navigation and mapping for autonomous mobile robots and underwater vehicles. He is an IEEE Fellow (2014).
+Dan Suciu is a Professor in Computer Science at the University of Washington. He received his Ph.D. from the University of Pennsylvania in 1995, was a principal member of the technical staff at AT&T Labs and joined the University of Washington in 2000. Suciu is conducting research in data management, with an emphasis on topics related to Big Data and data sharing, such as probabilistic data, data pricing, parallel data processing, data security. He is a co-author of two books Data on the Web: from Relations to Semistructured Data and XML, 1999, and Probabilistic Databases, 2011. He is a Fellow of the ACM, holds twelve US patents, received the best paper award in SIGMOD 2000 and ICDT 2013, the ACM PODS Alberto Mendelzon Test of Time Award in 2010 and in 2012, the 10 Year Most Influential Paper Award in ICDE 2013, the VLDB Ten Year Best Paper Award in 2014, and is a recipient of the NSF Career Award and of an Alfred P. Sloan Fellowship. Suciu serves on the VLDB Board of Trustees, and is an associate editor for the Journal of the ACM, VLDB Journal, ACM TWEB, and Information Systems and is a past associate editor for ACM TODS and ACM TOIS. Suciu's PhD students Gerome Miklau, Christopher Re and Paris Koutris received the ACM SIGMOD Best Dissertation Award in 2006, 2010, and 2016 respectively, and Nilesh Dalvi was a runner up in 2008.
       </p>
 
-      <h2>Data Warehousing in the Cloud – The Death of Shared Nothing<br>
-          <p>David J. DeWitt &nbsp; <small>MIT CSAIL</small> <br>
-             Willis Lang &nbsp; <small>Microsoft Jim Gray Systems Lab</small></p> </h2>
- 
+      <h2>TBD<br>
+          <p>Silvio Micali &nbsp; <small>MIT CSAIL</small> <br>
+          </p>
+       </h2>
+
       <h3>Abstract</h3>
       <p>
-For more than 30 years, parallel database systems such as those from Teradata, Microsoft, Netezza, and Vertica have been employed a “shared-nothing” design in which storage and compute are co-located. Recently, several cloud-based data warehousing (DW) SAAS solutions have appeared including Amazon Redshift™, Microsoft’s SQL Data Warehouse™, the Snowflake Elastic Data Warehouse™ service, and Google’s BigQuery™. Except for Redshift, every cloud DW SAAS offering that we are aware of is based on a shared-storage design, and not the shared-nothing design paradigm. In this talk we explain why the marketplace for cloud DW offerings has exploded and is expected to continue to expand in the years to come. We will briefly describe each of the four services, highlighting their key architectural features and motivate why we expect that the designs based on a shared-storage paradigm to dominate going forward.
+<!-- TBD -->
       </p>
-      <h3>DeWitt Bio</h3>
-      <p>
+      <h3>Bio</h3>
+      <!-- <p>
 David DeWitt was a faculty member in the Computer Sciences Department at the University of Wisconsin-Madison from 1976 to 2008. In March 2008 he retired from UW-Madison and joined Microsoft as a Technical Fellow to start the Jim Gray Systems Laboratory. In the fall of 2016 he left Microsoft to move to Boston to join the MIT faculty. Professor DeWitt is a member of the National Academy of Engineering and a Fellow of the American Academy of Arts and Sciences. His pioneering contributions to the field of scalable database systems for “big data” were recognized by ACM with the 2009 Software Systems Award.
-      </p>
-      <h3>Willis Bio</h3>
-      <p>
-Willis Lang is a senior scientist working for Microsoft at the Jim Gray Systems Laboratory. He obtained his PhD from the University of Wisconsin-Madison. His researcher/developer role at Microsoft has resulted in product impact across Azure SQL Database, Azure DW, SQL Server, and APS in the areas of performance/scalability, SAAS efficiency, manageability, security, and fault tolerance.
-      </p>
+      </p> -->
    </div>
 </div>
