@@ -775,6 +775,34 @@ Teaching files play an important role in radiologist’s diagnosis process with 
 
 <tr>
 <td>
+   Rundong Li*, Aditya Ghosh, Mirek Riedewald, Wolfgang Gatterbauer
+<br/>
+<strong>
+Optimizing Data Partitioning for Distributed Band Joins
+</strong><br/>
+<a href="javascript: toggleVisibility ('#po32')">Toggle Abstract</a>
+<div id="po32" class="abstract" style="display: none;">
+<p>
+   A default solution for band join is any of the distributed theta-join algorithms.
+   However, band joins can perform quite similar to equi-joins depending on the band width.
+   As band width gets smaller, each input tuple will join with fewer tuples, in which case
+   less replication is needed and fewer false positive pairs are generated.
+   In the extreme case, band width is zero, a band join collapses to an equi-join.
+   On the other hand, when band with gets bigger and extremely reaches infinity,
+   the band join turns into a cross-product. In our research, we look into the gap
+   between the partitioning results from state of the art algorithms and the results with
+   optimal data replication and false positives. For this, we contribute a novel band join
+   algorithm that can optimize for the best combination of replication and false positives.
+   The key idea is to transform a band join into an equi-join, and apply state of the art
+   distributed equi-join algorithm.
+</p>
+</div>
+</td>
+</tr>
+
+
+<tr>
+<td>
 Eric Metcalf*, Brown University; Stan Zdonik, Brown University; John Meehan, Brown University; Nesime Tatbul, Intel Labs and MIT
 <br/>
 <strong>
