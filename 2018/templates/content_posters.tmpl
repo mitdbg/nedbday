@@ -46,8 +46,8 @@ Niv Dayan*, Harvard University; Manos Athanassoulis, Harvard SEAS; Stratos Idreo
 <strong>
 Monkey: Optimal Navigable Key-Value Store
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po101')">Toggle Abstract</a>
+<div id="po101" class="abstract" style="display: none;">
 <p>
 We present Monkey, an LSM-based key-value store that strikes the optimal balance between the costs of updates and lookups with any given main memory budget. The insight is that worst-case lookup cost is proportional to the sum of the false positive rates of the Bloom filters across all levels of the LSM-tree. Monkey allocates memory to filters across different levels so as to minimize this sum. We show analytically that Monkey reduces the asymptotic complexity of the  worst-case lookup I/O cost, and we verify empirically using an implementation on top of LevelDB that Monkey reduces lookup latency by an increasing margin as the data volume grows.  Furthermore, we map the LSM-tree design space onto a closed-form model that enables co-tuning the merge policy, the buffer size and the filters' false positive rates to trade among lookup cost, update cost and/or main memory, depending on the workload, the dataset, and the underlying hardware.
 </p>
@@ -64,8 +64,8 @@ Charles Lovering*, WPI; Cuong Nguyen, WPI; Rodica Neamtu, Worcester Polytechnic 
 <strong>
 Ranked Time Series Matching by Interleaving Similarity Distances
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po102')">Toggle Abstract</a>
+<div id="po102" class="abstract" style="display: none;">
 <p>
 Our proposed method K-ONEX uses a preprocess-once and query-many-times paradigm that interleaves the inexpensive Euclidean distance with the robust Dynamic Time Warping (DTW), to retrieve the k most similar matches to a given sample sequence. We first reduce the data cardinality by generating Euclidean-based groups of similar time series. Then these groups are further explored using the elastic DTW to find similar sequences of any length and temporal alignment. Our evaluation shows the our framework is 2-3 orders of magnitude faster than benchmark methods while achieving 100% accuracy by exploring on average less than 0.5% of the sequences in each dataset.
 </p>
@@ -82,8 +82,8 @@ Michael Gubanov*, University of Texas
 <strong>
 Hybrid.Poly: An Interactive Large-scale In-memory Analytical Polystore
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po103')">Toggle Abstract</a>
+<div id="po103" class="abstract" style="display: none;">
 <p>
 Anecdotal evidence suggests that {\em Variety} of Big data is one of the most challenging problems in Computer Science research today \cite{nist}. It is a significant impediment for Big data users who simply want to access all relevant data regardless of its shape, format, size, and a back-end system used to store it.  Here we describe Hybrid.Poly -- a consolidated parallel in-memory Polystore engine and several popular analytical workloads, implemented as queries.
 </p>
@@ -100,8 +100,8 @@ Darshana Balakrishnan*, State University of New York at Buffalo; Oliver Kennedy,
 <strong>
 Just-In-Time Data Structures
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po104')">Toggle Abstract</a>
+<div id="po104" class="abstract" style="display: none;">
 <p>
 In most standard database systems updating an index is a very time-consuming process. Index structures need to be updated and reorganized every time the database changes. Adaptive indexing is a form of incremental index organization in every query posted to the system is considered as a hint for building the index. This type of incremental indexing puts a little penalty on the initial few queries but they will eventually get answered faster when compared to building a full static index and then scanning it. However, an adaptive index structure like a sorted array or a B-Tree that is initially optimal for one workload becomes sub-optimal as the workload changes. Just-In-Time Data Structures is a generalized approach to adaptive indexing that dynamically adapts to changing workloads even after index convergence. We show that it is possible to simulate the behavior of the Just-In-Time data Structure so as to help us estimate appropriate heuristics for index creation.
 </p>
@@ -118,8 +118,8 @@ Michael Gubanov*, University of Texas
 <strong>
 Hybrid.ai: An AI-Augmented Search Engine for Large-scale Structured Data
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po105')">Toggle Abstract</a>
+<div id="po105" class="abstract" style="display: none;">
 <p>
 Variety of Big data is a significant impediment for anyone who wants to search inside a large-scale structured dataset. For example, there are millions of tables available on the Web, but the most relevant search result does not necessarily match the keyword-query exactly due to a variety of ways to represent the same information. Here we describe and evaluate Hybrid.ai, an AI-augmented search engine for large-scale structured data that automatically clusters the corpus and routes the user query to the most relevant cluster to return the best search results. Hybrid.ai employs a new unsupervised scalable clustering algorithm that automatically generates and trains machine learning classifiers capable of recognizing similar data objects. It has broader applications beyond this search-engine to any structured data corpora.
 </p>
@@ -136,8 +136,8 @@ Priya Deshpande*, DePaul University
 <strong>
 Big Data Integration Requirement of Today’s Healthcare System
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po106')">Toggle Abstract</a>
+<div id="po106" class="abstract" style="display: none;">
 <p>
 Current situation in this digitized world generates the requirement of big data integration and analysis. Healthcare records generate petabytes of big data in a single day. The data is heterogeneous in nature, captured in different files and formats, varies from hospital to hospital. If we integrate this data and provide meaningful information to medical community, we can improve the overall quality of patient care. Our research focused on integration of health records. To start with integration of healthcare data sources, we developed Integrated Radiological Image search (IRIS) engine, which could be a good example of a publicly available data integration system in healthcare domain. IRIS provided support for medical ontologies, which would help radiologists to interpret clinical reports by considering context behind the search queries. Integrated healthcare system would help doctors to make faster, accurate and more reliable decisions about diagnosis of diseases.
 </p>
@@ -153,8 +153,8 @@ Eden Zik*, Vertica; Ben Vandiver, Vertica
 <strong>
 Eventual Durability for Cloud Databases with Ephemeral Nodes
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po107')">Toggle Abstract</a>
+<div id="po107" class="abstract" style="display: none;">
 <p>
    Users of cloud databases seeking low prices often utilize “spot instances”, which are terminated as soon as market price exceeds the price paid by the user. However, their ephemeral nature poses a serious challenge for database consistency. We present a technique involving the storage of catalog metadata in a cloud object store (such as S3), which, while slower than local storage, is significantly more durable. This provides metadata persistence amidst catastrophic cluster-wide failures, which are especially common in cloud deployments utilizing spot instances.
 
@@ -178,8 +178,8 @@ Gourab Mitra*, University at Buffalo; Oliver Kennedy, University at Buffalo, SUN
 <strong>
 Data Synthesis for automatically generating Smartphone Database Benchmarks
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po108')">Toggle Abstract</a>
+<div id="po108" class="abstract" style="display: none;">
 <p>
 To build applications which evolve with changing requirements,it is important to make the correct choice of database to power them. One of the ways to do that is to use a benchmark which are domain specific. But when compared to the variety of applications that use databases, benchmarks are far less in number. It is important to characterize an application in order to prepare a relevant benchmark. An application’s database query log provides a source to infer it’s behaviour. Most benchmarking suites employ data generators to synthetically provide data. These data generators rely on a formal specification of the complete database schema. In this paper, we discuss ongoing research on design of a methodology to infer the schema from a smartphone database query log. This information could be translated into schema model to drive data generators. We envision that this method could be be used to synthetically generate data for automatic generation of benchmarks for smartphone databases.
 </p>
@@ -195,8 +195,8 @@ William Spoth*, University at Buffalo; Oliver Kennedy, University at Buffalo, SU
 <strong>
 MESS: Meta-data Extraction System for Schemas
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po109')">Toggle Abstract</a>
+<div id="po109" class="abstract" style="display: none;">
 <p>
 Data is often collected first and cleaned later as an after thought. It is common for essential information to the curation process to be embedded into file names, time stamps, or other file system meta-data. This meta-data then needs to be painstakingly incorporated during cleaning, or even worse, sometimes by another person. When the data collection process begins, users have a general sense of what their ideal data looks like, MESS is aimed at making that a reality. MESS is a structured system for extracting meta-data and imposing logical groupings of data that mimics common data collection practices directly from the source. MESS aids in the cleaning and planning process and outputs a view that would typically be the starting point for workload queries.
 </p>
@@ -212,8 +212,8 @@ Gokhan Kul*, University at Buffalo
 <strong>
 Incoming Query Prediction on Mobile Databases with Probabilistic NFA
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po110')">Toggle Abstract</a>
+<div id="po110" class="abstract" style="display: none;">
 <p>
 Mobile databases are the statutory backbones of many applications on smartphones. Their performance depends on the performance of the underlying data sources. However, these databases and the querying engines in the applications are usually uncontrolled, not properly designed, and not tuned for optimal performance. In this paper, we propose a probabilistic non-deterministic automata (PNFA) based methodology for pre-fetching and caching information through incoming workload prediction. We use a given workload to construct a PNFA that models the k-length prefixes and probabilities of suffixes that follows them. Then, we use the PNFA to predict possible incoming queries based on the probabilities associated with each suffix. We believe this methodology is very suitable for mobile databases since PNFAs are easy to construct, easily modifiable to use on-the-fly, and memory efficient.
 </p>
@@ -229,8 +229,8 @@ Anil Shanbhag*, MIT
 <strong>
 The next frontier for high performance analytics: GPUs
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po111')">Toggle Abstract</a>
+<div id="po111" class="abstract" style="display: none;">
 <p>
 In this work, we examine the true nature of the performance benefit of GPU-based database. To do so, we examine the performance of different query operators individually on GPUs to address these issues. We present performance characteristics of all basic operators like Select, Join, etc on GPU vs equivalent optimal implementations on CPU. We present novel algorithms to do join and top-k efficiently on the GPU that avoid the ’paradigm’ tax and make full use of GPU hardware. We combine these optimized implementations to build a prototype GPU-based database we call Luna. Luna run on the Star Schema benchmark can give 11x improvement in throughput and latency and be 3.5x more cost-efficient (measured as $’s to run workload).
 </p>
@@ -253,8 +253,8 @@ Andrew Crotty*, Brown University; Alex Galakatos, Brown University; Tim Kraska, 
 <strong>
 MgBench: A Benchmark for Systems that Manage Machine-generated Data
 </strong><br/>
-<a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
-<div id="po1" class="abstract" style="display: none;">
+<a href="javascript: toggleVisibility ('#po112')">Toggle Abstract</a>
+<div id="po112" class="abstract" style="display: none;">
 <p>
 We are currently in the midst of an explosion of growth in the number of data-generating devices, ranging from simple wearable technology to complex autonomous vehicles. These devices are producing massive volumes of machine-generated data at unprecedented rates, but how well do we understand the unique challenges and opportunities surrounding this emerging data management problem? Through extensive conversations with a wide variety of industry professionals, we identified the key characteristics of these workloads. Based on these conversations, we analyze three case studies containing real-world data and queries that we believe are representative of common machine-generated data analysis tasks. These case studies form the basis of MgBench, a new benchmark for systems that manage machine-generated data. Using this benchmark, we are evaluating how well existing solutions perform under this realistic and diverse set of workloads.
 </p>
