@@ -3,38 +3,24 @@
     <h1> Keynote Speakers </h1>
     <p>
       <p>
-        We are excited to have two keynote speakers to provide
-        perspectives on data management and analysis from the forefront of
-        their domains -- parallel query processing and distributed consensus through blockchains!
+        We are excited to have one senior and two junio keynote speakers to provide
+        perspectives on data management from verifiable systems to fairness in data analysis. 
       </p>
     </div>
     <div class="page-content">
 
-      <h2>Communication Cost in Parallel Query Evaluation<br>
-        <p>Dan Suciu &nbsp; <small>University of Washington</small></p> </h2>
+      <h2>Verifying a file system: correctness in presence of crashes <br>
+        <p>Frans Kaashoek &nbsp; <small>MIT</small></p> </h2>
 
         <h3>Abstract</h3>
         <p>
-          Consider the following question: what is the minimum amount of
-          communication required to compute a query in parallel, on a cluster
-          with p servers?  If the query is a join of two relations, then a
-          standard partitioned hash-join algorithm will exchange the entire
-          data.  But if the join attribute is skewed, then we must treat the
-          heavy hitters specially, and the communication cost will be larger
-          than the entire data.  For multi-join queries, the optimal
-          communication cost appears even harder to determine, since it depends
-          on the sizes of the intermediate relations, which are hard to
-          estimate.  In this talk I will describe a class of algorithms that
-          have provably optimal communication cost for multi-join queries.  I
-          will start by discussing a simple, one round algorithm that is optimal
-          over skew-free data, then discuss how skewed data can be treated
-          optimally using additional communication rounds.
+          As a case study of system software verification, this talk will describe FSCQ, the first file system with a machine-checkable proof (using the Coq proof assistant) that its implementation meets its specification and whose specification includes crashes. FSCQ provably avoids bugs that have plagued previous file systems, such as performing disk writes without sufficient barriers or forgetting to zero out directory blocks. If a crash happens at an inopportune time, these bugs can lead to data loss. FSCQ's theorems prove that, under any sequence of crashes followed by reboots, FSCQ will recover the file system correctly without losing data. Our experience with FSCQ and results by other researchers suggest that formal verification has much potential, with many interesting and challenging research problems. Joint work with: Tej Chajed, Haogang Chen, Atalay İleri, Adam Chlipala, Nickolai Zeldovich
         </p>
         <h3>Bio</h3>
         <p>
-          Dan Suciu is a Professor in Computer Science at the University of Washington. He received his Ph.D. from the University of Pennsylvania in 1995, was a principal member of the technical staff at AT&T Labs and joined the University of Washington in 2000. Suciu is conducting research in data management, with an emphasis on topics related to Big Data and data sharing, such as probabilistic data, data pricing, parallel data processing, data security. He is a co-author of two books Data on the Web: from Relations to Semistructured Data and XML, 1999, and Probabilistic Databases, 2011. He is a Fellow of the ACM, holds twelve US patents, received the best paper award in SIGMOD 2000 and ICDT 2013, the ACM PODS Alberto Mendelzon Test of Time Award in 2010 and in 2012, the 10 Year Most Influential Paper Award in ICDE 2013, the VLDB Ten Year Best Paper Award in 2014, and is a recipient of the NSF Career Award and of an Alfred P. Sloan Fellowship. Suciu serves on the VLDB Board of Trustees, and is an associate editor for the Journal of the ACM, VLDB Journal, ACM TWEB, and Information Systems and is a past associate editor for ACM TODS and ACM TOIS. Suciu's PhD students Gerome Miklau, Christopher Re and Paris Koutris received the ACM SIGMOD Best Dissertation Award in 2006, 2010, and 2016 respectively, and Nilesh Dalvi was a runner up in 2008.
+          Frans Kaashoek is the Charles Piper Professor in MIT's EECS department and a member of CSAIL, where he coleads the parallel and distributed operating systems (PDOS) group. He received his PhD from the Vrije Universiteit (Amsterdam, The Netherlands) for his work on group communication in the Amoeba distributed operating system. Frans is a member of the National Academy of Engineering and the American Academy of Arts and Sciences, the recipient of the ACM SIGOPS Mark Weiser award and the 2010 ACM Prize in Computing. He was a cofounder of Sightpath, Inc. and Mazu Networks, Inc.   </p>
         </p>
-
+        
         <h2>My Top Ten Fears about the DBMS Field<br>
           <p>Michael Stonebraker &nbsp; <small>MIT CSAIL</small> <br>
           </p>
