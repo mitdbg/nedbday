@@ -561,15 +561,15 @@
     </tr>
 <tr>
     <td>
-    Nesime Tatbul (Intel Labs and MIT), Stan Zdonik (Brown University), Mejbah Alam (Intel Labs), Justin Gottschlich (Intel Labs)
+    Nesime Tatbul (Intel Labs and MIT), Tae Jun Lee (Microsoft), Stan Zdonik (Brown University), Mejbah Alam (Intel Labs), Justin Gottschlich (Intel Labs)
     <br/>
     <strong>
-    Novel Approaches for Time Series Anomaly Detection
+    Precision and Recall for Time Series
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po371')">Toggle Abstract</a>
-    <div id="po371" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
+    <div id="po1" class="abstract" style="display: none;">
     <p>
-    It is widely anticipated that time series data will dominate our future. From autonomous driving to industrial automation, the inevitable rise of the Internet of Things (IoT) has already exposed us to billions of data sources generating time varying data at unprecedented complexity and scale. A key capability that lies at the core of managing time series data is the identification of patterns that signify "interesting" phenomena, such as anomalies. Anomalies are patterns in data that do not conform to expected (or, normal) behavior. Detecting anomalies before, after, or as they occur not only finds use in many mission-critical domains, but also empowers systems and users with the ability to cope with large data volumes by guiding attention and resources to information that matters the most.  Although anomaly detection has been actively studied for many decades, there are several challenges to be overcome before it can become practical in real-world deployments of time series applications. In particular, anomaly detection is a highly domain-specific problem, making models and algorithms widely variable. Furthermore, anomalies are relatively rare or unique events, possibly occurring in noisy or complex data environments (e.g., IoT, multi-variate or multi-resolution time series). This not only limits access to high-quality training data, but also complicates the whole training process. In order to deal with such challenges, it is critical to build tools that will enable data scientists to productively develop and interact with time series anomaly detection systems.  This talk will give examples from our ongoing research in this direction. In particular, we would like to share our recent results about a new accuracy scoring model that we developed for time series classification [1]. Time permitting, we will also present our follow-up work in progress on Greenhouse, a novel ML system for time series anomaly detection [2].  [1] N. Tatbul, T. J. Lee, S. Zdonik, M. Alam, and J. Gottschlich. Precision and Recall for Time Series. In 32nd Annual Conference on Neural Information Processing Systems (NeurIPS’18), Montreal, Canada, December 2018.  [2] T. J. Lee, J. Gottschlich, N. Tatbul, E. Metcalf, and S. Zdonik. Greenhouse: A Zero-Positive Machine Learning System for Time Series Anomaly Detection. In Inaugural Conference on Systems and Machine Learning (SysML’18), Stanford, CA, February 2018. 
+    Classical anomaly detection is principally concerned with point-based anomalies, those anomalies that occur at a single point in time. Yet, many real-world anomalies are range-based, meaning they occur over a period of time. Motivated by this observation, we present a new mathematical model to evaluate the accuracy of time series classification algorithms. Our model expands the well-known Precision and Recall metrics to measure ranges, while simultaneously enabling customization support for domain-specific preferences.
     </p>
     </div>
     </td>
