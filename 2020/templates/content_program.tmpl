@@ -1,0 +1,474 @@
+<div class="content-container">
+  <h1>
+    North East Database Day 2019  <br />
+    <small>Thursday January 24th, 2019</small><br/>
+    <small>Samberg Conference Center at MIT</small>
+  </h1>
+<h2 class="sponsorCallout">Special thanks to this year's sponsors</h2>
+  <p class="sponsorCallout">
+         <img src="images/logos/amazon.jpg" width="230" /> &nbsp; &nbsp;
+    <img src="images/logos/google_new.png" width="230" />&nbsp; &nbsp;
+    <img src="images/logos/facebook5.jpg" width="230" /> &nbsp; &nbsp;
+    <img src="images/logos/MSFT_large.png" width="240" />
+  </p>
+
+  <table class="table table-bordered table-hover table-condensed programTable">
+    <tbody>
+      <tr>
+        <th width="17%">Time</th>
+        <th width="83%">Event</th>
+      </tr>
+      <tr>
+        <td>8:15-9:00</td>
+        <td><strong>Registration</strong></td>
+      </tr>
+      <tr>
+        <td>9:00-9:10</td>
+        <td><strong>Welcome and Acknowledgements</strong> (Tim Kraska/Stephen Bach)</td>
+      </tr>
+      <tr>
+        <td>9:10-10:00</td>
+        <td><strong>Keynote 1: </strong>
+		Frans Kaashoek (MIT) <i>Verifying a file system: correctness in presence of crashes</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote1A')">Click to toggle abstract and bio.</a>
+          <div id="keynote1A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+              As a case study of system software verification, this talk will describe FSCQ,
+			the first file system with a machine-checkable proof (using the Coq proof
+			assistant) that its implementation meets its specification and whose
+			specification includes crashes.  FSCQ provably avoids bugs that have plagued
+			previous file systems, such as performing disk writes without sufficient
+			barriers or forgetting to zero out directory blocks.  If a crash happens at an
+			inopportune time, these bugs can lead to data loss.  FSCQ's theorems prove that,
+			under any sequence of crashes followed by reboots, FSCQ will recover the file
+			system correctly without losing data.  Our experience with FSCQ and results by
+			other researchers suggest that formal verification has much potential, with many
+			interesting and challenging research problems.
+
+			Joint work with: Tej Chajed, Haogang Chen, Atalay İleri, Adam Chlipala, Nickolai
+			Zeldovich
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Frans Kaashoek</b>  is the Charles Piper Professor in MIT's EECS department and a member of CSAIL, where he coleads the parallel and distributed operating systems (PDOS) group. He received his PhD from the Vrije Universiteit (Amsterdam, The Netherlands) for his work on group communication in the Amoeba distributed operating system.  Frans is a member of the National Academy of Engineering and the American Academy of Arts and Sciences, the recipient of the ACM SIGOPS Mark Weiser award and the 2010 ACM Prize in Computing.  He was a cofounder of Sightpath, Inc. and Mazu Networks, Inc..
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 1: Internet-Scale DBMS </strong>Chair: Stephen Bach</td>
+      </tr>
+      <tr>
+        <td>10:00-10:20</td>
+	
+        <td><i>Have Your Cake and Query it Too: Read-Your-Writes Consistency for Asynchronously Updating Secondary Indexes</i><br/>
+	John Hugg (Facebook)
+          <!--<a href="talks/fernandez.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1A')">Click to toggle abstract.</a>
+          <div id="pa1A" class="abstract" style="display: none;">
+            <p>
+              At the scale of the world's largest social networks, loose couplings between systems allow for more agility and better team organization. Data stores at this scale often decouple key-value storage, caching, secondary indexing, and materializations. While this can make “web scale” problems tractable, it makes delivering even basic traditional database consistency extremely challenging. 
+			This talk will describe a possible system that tracks write metadata for each user as it flows from the primary store to decoupled secondary indexes. This would allows us to enforce Read-Your-Writes consistency in the face of asynchronous update pipelines. We will also discuss some of the challenges of evaluating consistency-related tradeoffs at scale.
+            </p>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>10:20-10:40</td>
+        <td>
+	 <i>F1 Query: Declarative Query at Scale</i><br/>
+	John Cieslewicz (Google), Ben Handy (Google), Jason Govig (Google), Petros Venetis
+		(Google), Chanjun Yang(Google),  Keith Peters (Google), Jeff Shute (Google), Daniel Tenedorio (Google), Himani Apte (Google), 
+		Felix Weigel (Google), David Wilhite (Google), Jiacheng Yang (Google), Jun Xu (Google), Jiexing Li (Google), Zhan Yuan (Google), 
+		Craig Chasseur (Google), Qiang Zeng (Google), Ian Rae (Google), Andrew Harn (Google), Yang Xia (Google), 
+		Andrey Gubichev (Google), Amr El-Helw (Google), Zhepeng Yan (Google), Mohan Yang (Google), 
+		Yiqun Wei (Google), Thanh Do (Google), Colin Zheng (Google), Goetz Graefe (Google), Somayeh Sardashti (Google), 
+		Ahmed M. Aly (Google), Divy Agrawal (Google), Ashish Gupta (Google), Shiv Venkataraman (Google)
+         
+          <!--<a href="talks/fiedler.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa1B')">Click to toggle abstract.</a>
+          <div id="pa1B" class="abstract" style="display: none;">
+            <p>
+            F1 Query, an SQL query engine, is unique not because of its focus on doing one thing well, but instead because it aims to cover all corners of the requirements space for enterprise data processing and analysis. F1 Query effectively blurs the traditional distinction between transactional, interactive, and batch-processing workloads, covering many use cases by supporting: (i) OLTP point queries that affect only a few records, (ii) low-latency OLAP querying of large amounts of data, and (iii) large ETL pipelines transforming and blending data from different sources into new tables supporting complex analysis and reporting workloads. F1 Query has also significantly reduced the need for developing hard-coded data processing pipelines, by enabling declarative queries integrated with custom business logic. As such, F1 is a one-size-fits-all querying system that can support the vast majority of use cases for enterprise data processing and analysis.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>10:40-11:00</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      
+       <tr class="success">
+        <td colspan="2" align="center"><strong>Session 2: Rethinking DBMS </strong>Chair: Oliver Kennedy</td>
+      </tr>
+
+
+      <tr>
+        <td>11:00-11:30</td>
+        <td><strong>Short Keynote 2: </strong>
+		Stratos Idreos (Harvard) <i>The Periodic Table of Data Structures</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote2A')">Click to toggle abstract and bio.</a>
+          <div id="keynote2A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+             Data structures are everywhere. They define the behavior of modern data systems and data-driven algorithms. For example, with data systems that utilize the correct data structure design for the problem at hand we can reduce the monthly bill of large-scale NoSQL applications on the cloud by hundreds of thousands of dollars. We can accelerate data science tasks by being able to dramatically speed up the computation of statistics over large amounts of data. We can train drastically more neural networks within a given time budget, improving accuracy. 
+
+			However, knowing the right data structure and system design for any given scenario is a notoriously hard problem; there is a massive space of possible designs while there is no single design that is perfect across all data, queries, and hardware scenarios.  We will discuss our quest for the first principles of data structures and system design. We will show signs that it is possible to reason about the design space, heading toward a future of self-designing data systems.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Stratos Idreos</b> is an associate professor of Computer Science at Harvard University where he leads the Data Systems Laboratory. Stratos was awarded the ACM SIGMOD Jim Gray Doctoral Dissertation award for his thesis on adaptive indexing. He received the 2011 ERCIM Cor Baayen award as "most promising European young researcher in computer science and applied mathematics" from the European Research Council on Informatics and Mathematics.  He won the 2011 Challenges and Visions best paper award in the Very Large Databases conference as well as “best of conference” selections at VLDB  2012 and SIGMOD 2017. In 2015 he was awarded the IEEE TCDE Rising Star Award from the IEEE Technical Committee on Data Engineering for his work on adaptive data systems. Stratos is also a recipient of the IBM zEnterpise System Recognition Award, a Facebook Faculty award, and an NSF Career award. 
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>11:30-11:50</td>
+        <td> <i>Deep Dive on Amazon Aurora with PostgreSQL Compatibility</i> <br/>James Finnerty (Amazon Web Services)
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2B')">Click to toggle abstract.</a>
+          <div id="pa2B" class="abstract" style="display: none;">
+            <p>
+              Amazon Aurora with PostgreSQL Compatibility is a managed relational database service designed for the cloud that combines the speed and availability of high-end commercial databases with the simplicity and cost-effectiveness of open-source databases. We review the functionality in order to understand the architectural differences that contribute to improved scalability, availability, and durability. We also dive deep into the capabilities of the service and review the latest available features. 
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>11:50-12:10</td>
+        <td>
+	<i>A Billion Updates per Second Using 30,000 Hierarchical In-Memory D4M Databases</i><br/>
+	Jeremy Kepner (MIT), Vijay Gadepally (MIT), Lauren Milechin (MIT), Siddharth Samsi (MIT), William Arcand (MIT), David Bestor (MIT), William Bergeron (MIT), Chansup Byun (MIT), Matthew Hubbell (MIT), Micheal Houle (MIT), Micheal Jones (MIT), Anne Klein (MIT), Peter Michaleas (MIT), Julie Mullen (MIT), Andrew Prout (MIT), Antonio Rosa (MIT), Charles Yee (MIT), Albert Reuther (MIT) 
+          <!--<a href="talks/mork.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa2C')">Click to toggle abstract.</a>
+          <div id="pa2C" class="abstract" style="display: none;">
+            <p>
+             Analyzing large scale networks requires high per- formance streaming updates of graph representations of these data. Associative arrays are mathematical objects combining properties of spreadsheets, databases, matrices, and graphs, and are well-suited for representing and analyzing streaming network data. The Dynamic Distributed Dimensional Data Model (D4M) library implements associative arrays in a variety of languages (Python, Julia, and Matlab/Octave) and provides a lightweight in-memory database. Associative arrays are designed for block updates. Streaming updates to a large associative array requires a hierarchical implementation to optimize the performance of the memory hierarchy. Running 34,000 instances of a hierarchical D4M associative arrays on 1,100 server nodes on the MIT SuperCloud achieved a sustained update rate of 1,900,000,000 updates per second. This capability allows the MIT SuperCloud to analyze extremely large streaming network data sets.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>12:10-1:00</td>
+        <td><strong>Lunch Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 3: ML for Systems </strong> Chair: Mirek Riedewald </td>
+      </tr>
+
+      <tr>
+        <td>1:00-1:20</td>
+        <td>
+		<i>Bootstrapping an End-to-End Natural Language Interface for Databases</i> <br/>
+		Nathaniel Weir (Brown University), 
+		P. Ajie Utama (TU Darmstadt),
+		Carsten Binnig (TU Darmstadt),
+		Ugur Cetintamel (Brown University),
+		Benjamin Hättasch (TU Darmstadt),
+		Shekar Ramaswamy (Brown University),
+		Amir Rahimzadeh Ilkhechi (Brown University),
+		Rohin Bhushan (Brown University) 
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa4B')">Click to toggle abstract.</a>
+          <div id="pa4B" class="abstract" style="display: none;">
+            <p>
+              The ability to extract insights from data is critical for decisionmaking. Intuitive natural language interfaces to databases provide non-technical users with an effective way to formulate complex questions and information needs efficiently and effectively. A recent trend in the area of Natural Language Interfaces for Databases (NLIDBs) has been the use of neural machine translation models to synthesize executable Structured Query Language (SQL) queries from natural language utterances. The main bottleneck in this type of approach is the acquisition of examples for training the model. Recent work has assumed access to a rich manually-curated training set for a given target database. However, this assumption ignores the large manual overhead required to curate the training set for any new database. As a result, NLIDB systems that can simply ‘plugin’ to any new database and perform effectively for naive users have yet to make their way into commercial products.</br>
+
+			Here we present DBPal, an end-to-end NLIDB framework in which a neural translation model is trained for any new database schema with minimal manual overhead. In addition to being the first off-the-shelf, neural machine translation-based system of its kind, the contributions of our project are 1) its use of a synthetic training set generation pipeline used to bootstrap a translation model without requiring manually curated data, and 2) its use of cross-domain learning techniques that increase the robustness of the translation model towards unseen linguistic phenomena in new domains. In experiments, we show that our system can achieve competitive performance on recently released benchmarks for nl-to-sql translation. We evaluate our model on both single database scenarios as well as cases involving multiple target domains. Through ablation analysis, we show the benefit of using cross-domain learning techniques on the performance of the system.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+
+
+      <tr>
+        <td>1:20-1:40</td>
+        <td>
+		 <i>Multi-Modal Data Exploration with a Learned Relational Embedding</i> <br/>
+		Raul Castro Fernandez (MIT), 
+		Samuel Madden (MIT) 
+         
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa4C')">Click to toggle abstract.</a>
+          <div id="pa4C" class="abstract" style="display: none;">
+            <p>
+              In modern enterprises, analysts often engage in data exploration, where, given an unfamiliar database, they seek to understand if the database contains the answer to the question they want to answer. Exploration involves understanding the schema and contents of the database, and then devising a SQL query that provides the answer, which is time-consuming. Users need to develop an understanding of table contents and relationships between tables, which requires a variety of ad-hoc analyses, each of them taking a significant effort. We introduce relational embedding, an abstraction to facilitate the implementation of multiple exploration strategies that consists of representing data from potentially multiple different sources in a single vector space.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>1:40-2:00</td>
+        <td>
+	<i>Making ML-for-DB Easier: Operator Embeddings via Deep Learning</i><br/>
+		Ryan Marcus (Brandeis University), 
+		Olga Papaemmanouil (Brandeis University) 
+          
+          <!--<a href="talks/athanassoulis.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa4D')">Click to toggle abstract.</a>
+          <div id="pa4D" class="abstract" style="display: none;">
+            <p>
+         Integrating machine learning into the internals of database management systems requires significant feature engineering, a human effort-intensive process to determine the best way to represent the pieces of information that are relevant to a task. In addition to being labor intensive, the process of hand-engineering features must generally be repeated for each data management task, and may make assumptions about the underlying database that are not universally true. This talk will introduce flexible operator embeddings, a deep learning technique for automatically transforming query operators into feature vectors that are useful for a multiple data management tasks and are custom-tailored to the underlying database. Our approach works by taking advantage of an operator's context, resulting in a neural network that quickly transforms sparse representations of query operators into dense, information-rich feature vectors. This talk will include experimental results showing that our flexible operator embeddings perform well across a number of data management tasks, using both synthetic and real-world datasets.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+      <tr>
+        <td>2:00-2:20</td>
+        <td><strong>Coffee Break</strong></td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+
+	  <tr>
+        <td>2:20-2:50</td>
+        <td><strong>Short Keynote 3: </strong>
+		Alexandra Meliou (University of Massachusetts, Amherst.) <i>A Data Management Perspective on Fairness and Diversity in Learning Systems</i>
+          <!--<a href="talks/suciu.pdf">slides</a>-->
+          <br/>
+          <a href="javascript: toggleVisibility ('#keynote3A')">Click to toggle abstract and bio.</a>
+          <div id="keynote3A" class="abstract" style="display: none;">
+            <h3>Abstract</h3>
+            <p>
+             Data-driven software has the ability to shape human behavior: it affects the
+			products we view and purchase, the news articles we read, the social
+			interactions we engage in, and, ultimately, the opinions we form. Biases in
+			data and software risk forming, propagating, and perpetuating biases in
+			society. Machine learning research has drawn focus onto this growing problem,
+			but most solutions have focused on addressing the issues at the end of the
+			pipeline: the learning stage. These solutions treat data as an immutable input
+			and try to counteract problems in the learning process. But data is not a
+			black box: we often know its sources, the extraction processes, the
+			integration pipelines, the cleaning methodologies, and other operations that
+			contributed to the data's final form. In this talk, I argue for a
+			comprehensive look over the data evolution pipeline and focus on the role of
+			data management in addressing biases in data-driven decisions. I will present
+			a vision for learning-data management systems and give examples of how data
+			management processes can evolve and provide solutions to biases, highlighting
+			some of my group's recent work on data diversification.
+            </p>
+            <h3>Bio</h3>
+            <p>
+              <b>Alexandra Meliou</b> is an Assistant Professor in the College of Information and
+			Computer Science, at the University of Massachusetts, Amherst. Prior to that,
+			she was a Post-Doctoral Research Associate at the University of Washington.
+			Alexandra received her PhD degree from the Electrical Engineering and Computer
+			Sciences Department at the University of California, Berkeley. She has
+			received recognitions for research and teaching, including a CACM Research
+			Highlight, an ACM SIGMOD Research Highlight Award, an ACM SIGSOFT
+			Distinguished Paper Award, an NSF CAREER Award, a Google Faculty Research
+			Award, and a Lilly Fellowship for Teaching Excellence. Her research focuses on
+			data provenance, causality, explanations, data quality, and algorithmic
+			fairness. 
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr class="success">
+        <td colspan="2" align="center"><strong>Session 4: Spotlight Talks  </strong>Chair: Wolfgang Gatterbauer</td>
+      </tr>
+
+      <tr>
+        <td>2:50-3:00</td>
+        <td>
+	<i>Not Your Father's Big Data</i><br/>
+	Carl Nuessle (University of Buffalo, SUNY),
+		Oliver Kennedy (University at Buffalo, SUNY),
+		Lukasz Ziarek (University at Buffalo, SUNY),
+          
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5a')">Click to toggle abstract.</a>
+          <div id="pa5a" class="abstract" style="display: none;">
+            <p>
+              Embedded database libraries provide developers with a common and convenient data persistence layer. As such they have spread to many types of systems, including interactive devices like smartphones, appearing in all major mobile operating systems. Their performance affects the response times and resource consumption of millions of smartphone apps and billions of smartphone users. Given their wide use and impact, it is critical that we better understand how they work, so that they can be used more efficiently, and so that developers can make faster libraries. Mobile databases differ significantly from server-class storage in terms of platform, usage, and measurement. Phones are multi-tenant, end-user devices that the database must share with other apps. Contrary to traditional database design goals, workloads on phones are single-threaded, bursty, and rarely saturate the CPU. We argue that mobile storage design should refocus on what matters on the mobile platform: latency and energy. As accurate performance measurement tools are necessary to evaluation of good database design, this uncovers an additional issue. Specifically, traditional database benchmarking methods produce misleading results when applied to mobile devices, due to evaluating performance at saturation. Development of databases and measurement tools specifically designed for the mobile platform is necessary to optimize user experience of the most common database usage in the world.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:00-3:10</td>
+        <td>
+	<i>The case for learned sampling in video datasets</i><br/>
+	Oscar Moll (MIT),
+		Samuel Madden (MIT),
+		Michael Stonebraker (MIT),
+		Vijay Gadepally (MIT Lincoln Laboratory),
+		Tim Kraska (MIT)
+          
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5b')">Click to toggle abstract.</a>
+          <div id="pa5b" class="abstract" style="display: none;">
+            <p>
+              Video streams are emerging as a data source with applications in mapping, navigation, autonomous driving, and many other areas. Capturing and processing video is increasingly possible as cameras and networks improve and algorithms for rich scene understanding and object recognition have become practical.
+			However, video datasets grow much larger and more quickly than other data sources, and processing any single frame has low benefit relative to its cost. In this paper, we introduce algorithms that learn to prioritize what video frames to sample first. Given a limited work budget and a repository of video data our sampling algorithms learn from previous samples to maximize matches for a user defined predicate. They do this by modeling the search as an exploration-exploitation problem, and allocating and reallocating the search budget according to feedback at runtime. We show that this approach to search finds up to orders of magnitude more results over sequential search, that it adapts to changes in the dataset and queries, and that it naturally allows the user to incorporate domain specific knowledge into the search process. By intelligently allocating search efforts across the dataset, our approach makes video data usable in many more data mining applications.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:10-3:20</td>
+        <td>
+	<i>From Top-K to Any-K Evaluation of Join Queries</i> <br/>
+		Mirek Riedewald (Northeastern University),
+		Xiaofeng Yang (Northeastern University),
+		Nikos Tziavelis (Northeastern University),
+		Patrick K. Nicholson (Bell Lab Ireland),
+		Wolfgang Gatterbauer (Northeastern University),
+		Deepak Ajwani (University College, Dublin),
+          
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5c')">Click to toggle abstract.</a>
+          <div id="pa5c" class="abstract" style="display: none;">
+            <p>
+              We propose the notion of “any-k algorithms” over database queries.
+			An any-k algorithm returns query answers in the order determined
+			by a ranking function over the answer tuples, and satisfies the
+			following three intuitive properties:
+			(1) Time-to-first (TTF): It returns the top-ranked result
+			“quickly;”
+			(2) Time-to-next (TTN): after returning a result, it returns the
+			next lower-ranked result “quickly;” and
+			(3) Time-to-last (TTL): it takes “not significantly longer” to
+			return all answers than the best-known algorithms for full
+			query (bulk-) computation and ranking
+            </p>
+          </div>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>3:20-3:30</td>
+        <td> <i>An Open-Source, Cloud Native Database (CNDB)</i> <br/>
+		David Cohen (Intel),
+		Yekesa Kosuru (State Street),
+		Steve Shaw (Intel),
+		Mikhail Sinyavin (Intel),
+		Dhruba Borthakur (Rockset),
+		Igor Canadi (Rockset),
+		Jiten Vaidya (PlanetScale),
+		Sugu Sougoumarane (PlanetScale)
+          
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5e')">Click to toggle abstract.</a>
+          <div id="pa5e" class="abstract" style="display: none;">
+            <p>
+             Near the end of 2018, Amazon announced they would be completely off Oracle by the end of 2019; replacing Oracle’s database products with their own AWS-based services. Interestingly, Amazon’s move to run entirely on it's own, internally operated data services is consistent with a “desire” voiced by many large companies we’ve spoken to over the past 18 mos. A major impediment for these companies to move forward, however, is that they want their databases to operate in their own data-centers, be open-source, and deployable/operable as a Cloud-Native, Database-as-a-Service (DBaaS) offering.
+ 
+How can a company deploy/operate data services that satisfy the requirements they currently address with their proprietary database portfolio? In Amazon’s case they are moving forward by replacing proprietary database software with a combination of AWS DynamoDB and Aurora for transactions. For data warehousing, Amazon is using a combination of AWS Redshift and Athena.  
+ 
+Are their existing alternative, open-source projects for each of these components? In the case of DynamoDB and Aurora, yes, the Apache Cassandra and MySQL/MariaDB projects can be used for this purpose. For data warehousing, PrestoDB and the Apache Impala projects can be used in place of Athena and Redshift. All of these depend on a combination of the following additional data services: local caching, event streams, and a REST-based object store. 
+ 
+Enter Rockset's RocksDB-Cloud. For the past year, we have been working to enable MariaDB and Percona’s MySQL distribution to extend their respective distributions of Facebook’s MyRocks storage. The RocksDB-Cloud library is configured to load the RocksDB-Cloud library, which is binary-compatible RocksDB; extending it with support for local caching as well as maintaining a consistent image over an event stream and an Object Store “bucket.” An instance of MariaDB/MySQL operates against local storage (aka the "cache”). The instance’s WAL is mapped on to an event stream and a consistent copy of its LSM-tree is maintained in the bucket. In 2019 we are looking to extend this approach to Cassandra and Postgres using the PGRocks and Facebook’s Rocksandra projects respectively.  
+ 
+Why Intel? The local cache and event stream capabilities of the architecture described above map nicely on to Intel’s upcoming Optane DC Persistent Memory product. The use of a REST-based object store affords many opportunities to cost-optimize warm data that needs to remain online but accessed with decreasing frequency over time. As for data warehousing, AWS’s Redshift and Athena exploit Amazon’s s3 object store. The idea here is similar in that the REST-based object store presents an s3-compatible interface to Impala and PrestoDB as well as exploits the solution’s local caching capability.
+ 
+What other technologies enable this solution? First and foremost is availability of low cost, relatively low latency, high bandwidth networking that can be employed as scalable cluster interconnect with full bisection bandwidth. Secondly, an Orchestration/Scheduling framework based on Kubernetes (k8s) has emerged as a key enabler. We combine k8s with cluster-wide software defined network (SDN) and software defined storage (SDS) implementations to fully exploit the resources available within the physical cluster. Finally, we employ the Vitesse-Based Database-as-a-Service (DBaaS) framework to manage databases operating over the cluster. 
+ 
+In this talk, we’ll briefly review the architecture we presented at last year’s NEDB event. We’ll then discuss the current implementation with particular focus on the trade-offs we made for the local cache, the WAL/event-stream, and the REST-based object store. We’ll end the talk with a discussion on plans for 2019 and beyond.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td>3:30-3:40</td>
+        <td> <i>LiveGraph: Hybrid Transactional/Analytical Graph Processing</i> <br/>
+		Xiaowei Zhu (Tsinghua University),  Marco Serafini (UMass Amherst), Xiaosong Ma (Qatar Computing Research Institute), Ashraf Aboulnaga (Qatar Computing Research Institute),
+		Wenguang Chen (Tsinghua University), Aaron Elliot (UMass Amherst), Guanyu Feng (Tsinghua University), Jiping Yu (Tsinghua University)
+          
+          <!--<a href="talks/binnig.pdf">slides</a> -->
+          <br/>
+          <a href="javascript: toggleVisibility ('#pa5f')">Click to toggle abstract.</a>
+          <div id="pa5f" class="abstract" style="display: none;">
+            <p>
+           	This work presents LiveGraph, a graph system designed to support both transactional and analytical processing efficiently. LiveGraph uses a novel Multi-versioned Adjacency List Log (MALL) data structure that provides significant advantages over conventional alternatives adopted by existing graph databases/engines. MALL expresses graph-structured data with per-vertex, contiguous, and over-provisioned logs; promoting sequential accesses crucial to edge scan performance while accommodating writes.
+
+			LiveGraph is designed to both provide the convenience of a two-in-one solution and better end-to-end performance for each type of its target workload. Our evaluation based on Facebook graph transactional workloads finds that LiveGraph significantly outperforms five widely-used (graph) database systems (often by orders of magnitude). Its analytical performance is often comparable to a state-of-the-art graph engine, while entirely eliminating graph pre-processing steps that actually dominate the end-to-end analytics time. As expected, the I/O-intensive and latency-sensitive transaction workloads are more vulnerable to concurrent analytics jobs, but the performance impact from the latter could be effectively controlled by varying the number of threads allocated.
+            </p>
+          </div>
+        </td>
+      </tr>
+
+  
+        <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+
+  <tr class="success">
+        <td colspan="2" align="center"><strong>Poster Session</strong></td>
+      </tr>
+
+
+      <tr>
+        <td>3:40-4:00</td>
+        <td><a href="#posters">Setting up posters</td>
+      </tr>
+      <tr>
+        <td>4:00 - 5:00</td>
+        <td><a href="#posters"><strong>Poster Session</strong></a> and Appetizers / Drinks</td>
+      </tr>
+      
+       <tr>
+        <td colspan="2">&nbsp;</td>
+      </tr>
+  <tr class="success">
+        <td colspan="2" align="center"><strong>End Of Official Program</strong></td>
+      </tr>
+      
+      <tr>
+        <td>5:30</td>
+        <td>The Amazon Aurora PostgreSQL AWS database team will host a happy hour at <a href="https://themeadhall.com/">Mead Hall</a> after the closing remarks at 5:30 PM -7:30 PM. 
+Beer, wine, appetizers provided  </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
