@@ -21,135 +21,135 @@
 <tbody>
 <tr>
     <td>
-    Jeremy Kepner (MIT Lincoln Laboratory)
+    Anat Kleiman (Brandeis University)
     <br/>
     <strong>
-    TabulaROSA: Tabular Operating System Architecture
+    Shared Reads in Predicting Well-Behaved Query Combinations
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po1')">Toggle Abstract</a>
     <div id="po1" class="abstract" style="display: none;">
     <p>
-    The rise in computing hardware choices is driving a reevaluation of operating systems. The traditional role of an operating system controlling the execution of its own hardware is evolving toward a model whereby the controlling processor is distinct from the compute engines that are performing most of the computations. In this context, an operating system can be viewed as software that brokers and tracks the resources of the compute engines and is akin to a database management system. To explore the idea of using a database in an operating system role, this work defines key operating system functions in terms of rigorous mathematical semantics (associative array algebra) that are directly translatable into database operations. These operations possess a number of mathematical properties that are ideal for parallel operating systems by guaranteeing correctness over a wide range of parallel operations. The resulting operating system equations provide a mathematical specification for a Tabular Operating System Architecture (TabulaROSA) that can be implemented on any platform. Simulations of forking in TabularROSA are performed using an associative array implementation and compared to Linux on a 32,000+ core supercomputer. Using over 262,000 forkers managing over 68,000,000,000 processes, the simulations show that TabulaROSA has the potential to perform operating system functions on a massively parallel scale. The TabulaROSA simulations show 20x higher performance as compared to Linux while managing 2000x more processes in fully searchable tables.
+    Systems can optimize for efficiency by selecting sets of queries that run faster concurrently compared to sequentially. As such, query pair selection is a vital component of a database management system.    In the past, the important problem of query combination selection has predominantly been approached with opaque machine learning techniques that require huge amounts of training data, or complex, hand-turned models. Many problems exist with these approaches, the largest being that they are generally difficult to maintain. Furthermore, these approaches are overfitted to a limited amount of scenarios, and cannot be used on a general scale. As such, an overarching solution to the problem of selecting queries to be run concurrently has not been found yet.  Our experimental study of this problem revealed that a simple observation that we believe can generalize a solution to this issue. Using two datasets, TPC-DS (synthetic), and JOB/IMDB (real world), we have found that the run-speed of concurrent queries is inversely proportional to shared reads. In other words, queries that run faster concurrently tend to also share more read data. In turn, they are able to make more cache hits when run together. As such, a huge predictor of whether a query mix is efficient or not is how many reads that mix shares.  Based on our observation, we propose a system that predicts the quality of a query mix by estimating their shared reads. In our work we show that a simple approach based on set-similarity is somewhat predictive, and can work to optimize query-pair selection to concurrently run. Going forward, we hope to implement an ML-driven prediction strategy to increase and maximize predictivity.  
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Abdul Wasay (Harvard University)
+    Andy Vidan (Composable Analytics, Inc.)
     <br/>
     <strong>
-    MotherNets: Rapid Deep Ensemble Learning
+    Composable DataOps: Overcoming Challenges Moving Data and Analytics Products to Production
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po2')">Toggle Abstract</a>
     <div id="po2" class="abstract" style="display: none;">
     <p>
-    Ensembles of deep neural networks with diverse architectures significantly improve generalization accuracy. However, training such ensembles requires a large amount of computational resources and time as every network in the ensemble has to be trained. In practice, this restricts the number of deep neural network architectures that can be included within an ensemble. We propose MotherNets to address this problem. A MotherNet captures the maximum structural similarity across different members of a deep neural network ensemble. To train an ensemble, we first train the MotherNet and subsequently, this knowledge (or mapping function) is transferred to all members of the ensemble. Then, we continue to train the ensemble networks which converge significantly faster as compared to training from scratch. We show through experiments that MotherNets can: (i) reduce ensemble training cost by training large and diverse ensembles of deep neural networks achieving comparable accuracy to existing approaches in a fraction of their training time (e.g., 2x to 6x faster in our experiments) or (ii) alternatively, improve ensemble accuracy by being able to train larger ensembles within the same time state-of-the-art approaches train smaller ones. This reduction in training cost is because MotherNets reduces the total number of epochs (or rounds of training) required to train the ensemble resulting in fewer data movements and computations. This improvement grows linearly with the size of the ensemble allowing the construction of larger and more diverse ensembles to attack more complex problems without extra cost.
+    The productionalization of data-driven products requires cross-functional teams of data professionals, ranging from data engineers and software developers to data scientists, IT operations and business leaders, to work collaboratively and unify around a set of best practices and tools for “Data OPerationS” or DataOps. Where DevOps allows organizations to modernize their approach to software development and deployment, DataOps establishes a modern framework for development and deployment of data-driven products. In this talk, we introduce the Composable DataOps Platform, and describe its implementation.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Brian N Hentschel (Harvard University)
+    Peter Griggs (MIT- CSAIL)
     <br/>
     <strong>
-    Column Sketches: A Scan Accelerator for Rapid and Robust Predicate Evaluation
+    Indexing Methods for Large Scale Interactive Data Visualization
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po3')">Toggle Abstract</a>
     <div id="po3" class="abstract" style="display: none;">
     <p>
-    While numerous indexing and storage schemes have been developed to address the core functionality of predicate evaluation in data systems, they all require specific workload properties (query selectivity, data distribution, data clustering) to provide good performance and fail in other cases. We present a new class of indexing scheme, termed a Column Sketch, which improves the performance of predicate evaluation independently of workload properties. Column Sketches work primarily through the use of lossy compression schemes which are designed so that the index ingests data quickly, evaluates any query performantly, and has small memory footprint. A Column Sketch works by applying this lossy compression on a value-by-value basis, mapping base data to a representation of smaller fixed width codes. Queries are evaluated affirmatively or negatively for the vast majority of values using the compressed data, and only if needed check the base data for the remaining values. Column Sketches work over column, row, and hybrid storage layouts.   We demonstrate that by using a Column Sketch, the select operator in modern analytic systems attains better CPU efficiency and less data movement than state-of-the-art storage and indexing schemes. Compared to standard scans, Column Sketches provide an improvement of 3X-6X for numerical attributes and 2.7X for categorical attributes. Compared to state-of-the-art scan accelerators such as Column Imprints and BitWeaving, Column Sketches perform 1.4 - 4.8X better.
+    Interactive visualization systems need to have low latency user interactions to maintain the user’s attention, but this can be difficult when the dataset being visualized is very large. While it is common for web-based data visualization tools like D3.js to store the entire dataset in memory, large datasets must be stored in a database. Kyrix is a system for creating pan-and-zoom visualizations that uses a database to store visualization objects as spatial data. As a user interacts with the visualization, the frontend dynamically fetches data from the database and renders it using D3.js. This architecture pushes the performance bottleneck from browser to database level. In a purely browser visualization system, the bottleneck comes from rendering the dataset. However, in a scalable visualization system, the bottleneck is fetching data from the database, which relies on spatial indexing. Typically, a 2D rtree is used for indexing bounding boxes. Due to the requirements of interactive visualization systems, 2D rtrees are not necessarily the best option. We compare the performance of using 2D rtrees, 3D rtrees, and quadtrees as indexes. This ongoing research aims to show that 3D rtrees are beneficial for zoom interactions and that quadtree-based indexes might handle highly-skewed data better than 2D rtrees. Additionally, we explore optimizations including spatial partitioning, row compression, and pre-sorting data in z-order to improve index scalability. As the datasets that data scientists want to interact with grow, interactive visualization systems need to scale to handle these needs. The results of this research will help these systems scale to handle changing workloads and help data scientists make sense of this data.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Sebastian Schelter (New York University)
+    Andy Vidan (Composable Analytics, Inc.)
     <br/>
     <strong>
-    Data-Related Challenges in End-to-End Machine Learning
+    Building End-to-end Scalable Machine Learning Data Pipelines
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po4')">Toggle Abstract</a>
     <div id="po4" class="abstract" style="display: none;">
     <p>
-    I moved back to academia after working on a set of real-world machine learning (ML) deployments at Amazon Core ML for some years. I would like to present a poster summarizing some of the data management challenges encountered during that time with the goal to provide directions for future research.
+    Developing truly scalable, end-to-end machine learning data pipelines is challenging. In this talk, we begin by describing flow-based programming and its ability to facilitate distributed data and query integration. We then describe our use of flow-based programming to define end-to-end data pipelines with embedded analytics and machine learning. Patterns and reference architectures for these pipelines are presented. Finally, we demonstrate our approach by reviewing several successful implementations from real-world business use cases.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Pieter Cailliau (Redis Labs), Timothy A Davis (Texas A&M University), Vijay Gadepally (MIT Lincoln Laboratory), Jeremy Kepner (MIT Lincoln Laboratory), Roi Lipman (Redis Labs), Jeffrey Lovitz (Redis Labs), Keren Ouaknine (Redis Labs)
+    Jeremy Kepner (MIT Lincoln Laboratory)
     <br/>
     <strong>
-    RedisGraph GraphBLAS Enabled Graph Database
+    75,000,000,000 Streaming Inserts/Second Using Hierarchical Hypersparse GraphBLAS Matrices
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po5')">Toggle Abstract</a>
     <div id="po5" class="abstract" style="display: none;">
     <p>
-    RedisGraph is a Redis module developed by Redis Labs to add graph database functionality to the Redis database. RedisGraph represents connected data as adjacency matrices. By representing the data as sparse matrices and employing the power of GraphBLAS (a highly optimized library for sparse matrix operations), RedisGraph delivers a fast and efficient way to store, manage and process graphs. Initial benchmarks indicate that RedisGraph is significantly faster than comparable graph databases.
+    The SuiteSparse GraphBLAS C-library implements high performance hypersparse matrices with bindings to a variety of languages (Python, Julia, and Matlab/Octave). GraphBLAS provides a lightweight in-memory database implementation of hypersparse matrices that are ideal for analyzing many types of network data, while providing rigorous mathematical guarantees, such as linearity. Streaming updates of hypersparse matrices put enormous pressure on the memory hierarchy. This work benchmarks an implementation of hierarchical hypersparse matrices that reduces memory pressure and dramatically increases the update rate into a hypersparse matrices. The parameters of hierarchical hypersparse matrices rely on controlling the number of entries in each level in the hierarchy before an update is cascaded. The parameters are easily tunable to achieve optimal performance for a variety of applications. Hierarchical hypersparse matrices achieve over 1,000,000 updates per second in a single instance. Scaling to 31,000 instances of hierarchical hypersparse matrices arrays on 1,100 server nodes on the MIT SuperCloud achieved a sustained update rate of 75,000,000,000 updates per second. This capability allows the MIT SuperCloud to analyze extremely large streaming network data sets.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Richard Wang (MIT), Jeremy Kepner (MIT Lincoln Laboratory)
+    Yi Lu (MIT), Xiangyao Yu (University of Wisconsin, Madison), Samuel Madden (MIT)
     <br/>
     <strong>
-    Database Schema for Human Brain Scale Neural Networks
+    STAR: Scaling Transactions through Asymmetric Replication
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po6')">Toggle Abstract</a>
     <div id="po6" class="abstract" style="display: none;">
     <p>
-    Deep neural networks have shown great potential in solving various problems through machine learning. With recent high levels of accuracy, there is a new possibility to model and understand the human brain by running a neural network comparable to the number of neurons and connections in the human brain. In many cases, memory limits neural network size. Fortunately, the human brain’s number of neurons and sparse connections implies that we can model the human brain as a large, sparse neural network. With the Dynamic Distributed Dimensional Data Model (D4M) software and the Apache Accumulo database, it is possible to store a neural network, with as many neurons and connections as the human brain, through the help of parallel computing in supercomputers. This work describes a schema for storing a human brain scale neural network. Using Graphulo, the stored neural network will be able to execute large inference on the same scale as the human brain.
+    In this poster, we present STAR, a new distributed in-memory database with asymmetric replication. By employing a single- node non-partitioned architecture for some replicas and a partitioned architecture for other replicas, STAR is able to efficiently run both highly partitionable workloads and work- loads that involve cross-partition transactions. The key idea is a new phase-switching algorithm where the execution of single-partition and cross-partition transactions is separated. In the partitioned phase, single-partition transactions are run on multiple machines in parallel to exploit more concurrency. In the single-master phase, mastership for the entire data- base is switched to a single designated master node, which can execute these transactions without the use of expen- sive coordination protocols like two-phase commit. Because the master node has a full copy of the database, this phase- switching can be done at negligible cost. Our experiments on two popular benchmarks (YCSB and TPC-C) show that high availability via replication can coexist with fast serializable transaction execution in distributed in-memory databases, with STAR outperforming systems that employ conventional concurrency control and replication algorithms by up to one order of magnitude.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Yoshinori Matsunobu (Facebook)
+    Jiyuan Zhang (CMU), Daniele Giuseppe Spampinato (Carnegie Mellon University), Franz Franchetti (Carnegie Mellon University)
     <br/>
     <strong>
-    MyRocks -- Space and Write optimized MySQL database
+    FESIA: A Fast and SIMD-Efficient Set Intersection Approach on Modern CPUs
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po7')">Toggle Abstract</a>
     <div id="po7" class="abstract" style="display: none;">
     <p>
-    MyRocks is our open source MySQL database engine on top of RocksDB, with the goal of improving space and write efficiency beyond what was possible with compressed InnoDB. Our objective was to migrate one of our main databases (UDB) from compressed InnoDB to MyRocks and reduce the amount of storage and number of servers used by half. We carefully planned and implemented the migration from InnoDB to MyRocks for our UDB tier, which manages data about Facebook’s social graph. We also migrated backend database of Facebook Messenger from HBase to MyRocks in 2017-2018, which improved reliability and performance on Flash devices. This poster describes MyRocks overview, comparison to InnoDB, and future plans.
+    Set intersection is an important operation and widely used in both database and graph analytics applications. However, existing state-of-the-art set intersection methods only consider the size of input sets and fail to optimize for the case in which the intersection size is small. In real-world scenarios, the size of most intersections is usually orders of magnitude smaller than the size of the input sets, e.g., keyword search in databases and common neighbor search in graph analytics. In this paper, we present FESIA, a new set intersection approach on modern CPUs. The time complexity of our approach is $O(n/\sqrt{w} + r)$, in which $w$ is the SIMD width, and $n$ and $r$ are the size of input sets and intersection size, respectively. The key idea behind FESIA is that it first uses bitmaps to filter out unmatched elements from the input sets, and then selects suitable specialized kernels at runtime to compute the final intersection on each pair of bitmap segments. In addition, all data structures in FESIA are designed to take advantage of SIMD instructions provided by vector ISAs with various SIMD widths, including SSE, AVX, and the latest AVX-512. Our experiments on both real-world and synthetic datasets show that our intersection method achieves more than a order of magnitude better performance than conventional scalar implementations, and up to 4x better performance than state-of-the-art SIMD implementations.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Kostas Zoumpatianos (Harvard University), Stratos Idreos (Harvard), Themis Palpanas (Paris Descartes University)
+    Cen Wang (University of Massachusetts Amherst)
     <br/>
     <strong>
-    T-Store: Tunable Storage for Large Sequential Data
+    NIM: GENERATIVE NEURAL NETWORKS FOR SIMULATION INPUT MODELING
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po8')">Toggle Abstract</a>
     <div id="po8" class="abstract" style="display: none;">
     <p>
-    T-Store is the first data series storage engine that uses the query workload in order to tune its data layout, leading to significant performance improvements. It is able to efficiently re-organize and partition arbitrary collections of data series, to match a given workload specification. It intelligently partitions data series in groups based on the access patterns, minimizing query execution cost.   In addition, it allows for arbitrary index structures to be efficiently built above.  The main contributions of this work are: i) a novel workload characterization method for data series queries workloads, ii) a workload-aware data partitioning scheme that constructs optimal groups of data series, iii) an efficient data ingestion method based on write-optimized partitioning, and iv) how to provide support for summarizations and content-based search.   We perform a thorough experimental evaluation in multiple datasets and workloads, demonstrating that T-Store can improve query performance by more than one order of magnitude by choosing the correct data layout, while still being robust to random query workloads.
+    Neural Input Modeling (NIM) is a novel generative-neural-network framework that exploits modern data-rich environments to automatically capture complex simulation input distributions and then generate samples from them. Experiments show that our prototype architecture, which uses a variational autoencoder with LSTM components, can accurately and automatically capture complex stochastic processes. Outputs from queuing simulations based on known and learned inputs, respectively, are also statistically close.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    sandeep polisetty (UMASS), Marco Serafini (University of Massachusetts Amherst)
+    Leonhard Spiegelberg (Brown University), Tim Kraska (MIT), Malte Schwarzkopf (Brown University)
     <br/>
     <strong>
-    Opportunities in decoupling storage and compution in graph mining
+    Tuplex
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po9')">Toggle Abstract</a>
     <div id="po9" class="abstract" style="display: none;">
     <p>
-    POSTER: Graph data exists in a broad range of domains such as social networks, mobile networks and semantic webs. Ever increasing graph data has led to growing importance for graph mining. Graph Mining algorithms tend themselves to either of the following programming abstractions. A vertex oriented approach where each step results in an update to the state of a vertex and outgoing messages given an initial state and incoming messages edges. While this approach works for algorithms such as PageRank and ShortestPath, it is quite to challenging to write pattern mining algorithms (FSM,CliqueFinding) with this paradigm. A task oriented approach is better suited where each subgraph to be explored is treated as a task and incrementally explored.While the vertex oriented approach could be easily scaled taking advantage of vertex locality as the graph is typically stored as contiguous vertex partitions and streaming in partitions(eg. RStream). The task based approach cannot be scaled as easily as each task involves random vertex access. Therefore task based platforms such as GMiner and Arabesque partition the graph and keep the partition in memory. However, maintaining the graph partition in memory leads to higher compute time, due to high preloading cost. Coupling the computation with storage implies they cannot be independently scaled. Therefore, even simple computation on large graphs would need a lot of machines to store the graph in memory. By Modifying Gminer, we attempt to show the performance gained as the cost of preloading the graph is amortized over the computation. We analyze other preformance bottlenecks that would arise in scaling such a system.
+    Tuplex is a new big data framework which allows to execute python code at native speeds together with a robust exception handling model.
     </p>
     </div>
     </td>
@@ -171,75 +171,75 @@
     </tr>
 <tr>
     <td>
-    Niv Dayan (Harvard), Stratos Idreos (Harvard)
+    Malte Sandstede (RelationalAI), John Liagouris (Boston University), Vasiliki Kalavri (Boston University)
     <br/>
     <strong>
-    Dostoevsky: Removing Superfluous Merging from LSM-Trees
+    ST2: Analyzing Performance Issues in Distributed Dataflows
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po11')">Toggle Abstract</a>
     <div id="po11" class="abstract" style="display: none;">
     <p>
-    We show that all mainstream LSM-tree based key-value stores in the literature and in industry suboptimally trade between the I/O cost of updates on one hand and the I/O cost of lookups  and storage space on the other. The reason is that they perform equally expensive merge operations across all levels of LSM-tree to bound the number of runs that a lookup has to probe and to remove obsolete entries to reclaim storage space. With state-of-the-art designs, however, merge operations from all levels of LSM-tree but the largest (i.e., most merge operations) reduce point lookup cost, long range lookup cost, and storage space by a negligible amount while significantly adding to the amortized cost of updates.   To address this problem, we introduce Lazy Leveling, a new design that removes merge operations from all levels of LSM-tree but the largest. Lazy Leveling improves the worst-case complexity of update cost while maintaining the same bounds on point lookup cost, long range lookup cost, and storage space. We further introduce Fluid LSM-tree, a generalization of the entire LSM-tree design space that can be parameterized to assume any existing design. Relative to Lazy Leveling, Fluid LSM-tree can optimize more for updates by merging less at the largest level, or it can optimize more for short range lookups by merging more at all other levels.  We put everything together to design Dostoevsky, a key-value store that adaptively removes superfluous merging by navigating  the Fluid LSM-tree design space based on the application workload and  hardware. We implemented Dostoevsky on top of RocksDB, and we show that it strictly dominates state-of-the-art designs in terms of  performance and storage space.  
+    Large-scale data processing systems such as Apache Spark, Flink, and Tensorflow, employ a dataflow programming model and target distributed architectures. A dataflow job consists of workers executing tasks in parallel and communicating via messages over a network. Understanding the performance of such complex and dynamic systems is challenging. Traditional profiling tools like gprof, measure aggregate time per activity but fail to capture computation dependencies. Bottleneck detection methods for data analytics, such as blocked time analysis, operate offline and are only applicable to batch execution. In this poster, we present ST2, a tool that analyzes distributed dataflow traces at scale, operates online, and provides feedback to running applications in real-time. We leverage the fact that dataflow instrumentation can model any interaction between system components and that processing instrumentation traces can itself be expressed as a streaming computation.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Tabassum Kakar (Worcester Polytechnic Institute)
+    Ji Zhang (Huazhong University of Science and Technology), Kun Wan (Huazhong University of Science and Technology), Sebastian Schelter (New York University), ke zhou (HUST)
     <br/>
     <strong>
-    ConText: Supporting the Pursuit and Management of Evidence in Text-based Reporting Systems 
+    Exploring Monte Carlo Tree Search for Join Order Selection
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po12')">Toggle Abstract</a>
     <div id="po12" class="abstract" style="display: none;">
     <p>
-    Incident Inquiry Analysis (IIA) requires investigators to analyze text-based reports, where each may be evidence of a larger pattern that requires regulatory action. Given the rise of reporting systems in organizations, there is a need for systems that aid IIA analysts in exploring, evaluating, and generalizing findings across independently produced reports. We describe ConText, an IIA tool designed in collaboration with Pharmacovigilance analysts. ConText aims to address IIA challenges by combining domain-informed models to process unstructured text, interactive visualizations for steering investigations, and a case-building workflow that aligns with known analytical operations such as evidence collection and management. We evaluate ConText through case-studies that illustrate IIA workflows, and through semi-structured usage interviews with n=10 Pharmacovigilance analysts.We discuss how the design and evaluation of ConText may point to emerging challenges for interactive analytics in life-critical workflows, including a growing need for approaches that support trustworthy and transparent model-driven analytics.
+    Query optimization remains a difficult problem, and existing database management systems (DBMSs) often miss good execution plans. Identifying an efficient join order is key to achieving good performance in database systems. A primary challenge in join order selection is enumerating a set of candidate orderings and identifying the most effective ordering. Searching in larger candidate spaces increases the potential of finding well working plans, but also increases the cost of query optimization. In this paper, we explore the benefits of Monte Carlo Tree Search (MCTS) for the join order selection problem. 
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Raj Singh (IBM)
+    Nikolaos Tziavelis (Northeastern University), Deepak Ajwani (University College, Dublin), Wolfgang Gatterbauer (Northeastern University), Mirek Riedewald (Northeastern University), Xiaofeng Yang (Northeastern University)
     <br/>
     <strong>
-    THE URBAN MORPHOLOGY PROJECT: Collaboratively Building an Open Global Land Use Database
+    Optimal Algorithms for Ranked Enumeration of Answers to Full Conjunctive Queries
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po13')">Toggle Abstract</a>
     <div id="po13" class="abstract" style="display: none;">
     <p>
-    The Urban Morphology Project is a collaborative effort to develop an open global urban land use database. Prior efforts at global land use mapping have focused on categorizing land cover by natural features such as forest, agriculture, and water, leaving urban use as a single, homogeneous category. This has been useful for environmental issues and looking at the spread of human settlement, but there has been little work on breaking that urban use category into its constituent parts such as residential, industrial, commercial, etc. Such a database would be of tremendous value to urban scientists and designers in a wide range of fields. Using open data sets in conjunction with the very high resolution satellite imagery (sub-30m) just becoming publicly available, we seek to develop machine learning models tuned to the distinct developmental patterns that exist across the globe that can identify these urban land use forms.
+    We study ranked enumeration of the results to a join query in order of decreasing importance, as imposed by an appropriate ranking function. Our main contribution is a framework for ranked enumeration over a class of Dynamic Programming problems that generalizes seemingly diﬀerent problems that to date had been studied in isolation. To this end, we study and extend classic algorithms that ﬁnd the k-shortest paths in a weighted graph. For full conjunctive queries, including cyclic ones, our approach is asymptotically optimal in terms of (1) time to return the top result, (2) delay between results, and (3) time until all results are returned in order. These optimality properties were derived for a complexity measure that has been widely used in the context of worst-case optimal join algorithms, but which abstracts away dependency on query size and a polylogarithmic cost factor in input size. By performing a more detailed cost analysis, we are able to uncover a previously unknown tradeoﬀ between two incomparable ranked enumeration approaches: one has lower complexity for small k, the other for large k. We demonstrate theoretically and empirically the superiority of our techniques to batch algorithms that produce the full result and then sort it. Interestingly, our technique is not only faster for returning the ﬁrst few results, but even when all results are produced.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Mihin S Sumaria (Worcester Polytechnic Institute), Rodica Neamtu (Worcester Polytechnic Institute)
+    Andy Huynh (Boston University), Manos Athanassoulis (Boston University)
     <br/>
     <strong>
-    Data Series Analytics Powered by Multiple Warped Distances using DAVIS
+    Tuning Data Systems Under Uncertainty in Resources and Workload
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po14')">Toggle Abstract</a>
     <div id="po14" class="abstract" style="display: none;">
     <p>
-    With the continuous increase of availability of time-series data in medical, financial, weather forecasting, and many other domains, the need to visually explore time-series data is becoming vital to extracting trends that may not otherwise be accessible to analysts. The computational costs associated with the interactive exploration of misaligned and variable-length time-series using elastic distances such as dynamic time warping is very high and impact the scalability of data discovery tools. We propose the Data Analytics and Visualization system (DAVIS) for mining large data series sets. Our system enables analysts to get insights by retrieving k_similar sequences in real-time using rich visualizations such as element-wise DTW matchings, line, difference, stacked area, and radial charts. Our DAVIS interface also provides square plots for summarizing clusters within our datasets, while also capturing point-wise similarities in misaligned sequences. 
+    Tuning databases for applications with hybrid workloads is a difficult and complex problem. Designers often rely on pre-existing tools in conjunction with workload and hardware knowledge to tune a database correctly. However, the increasing demands for resources has caused databases to migrate to the cloud. Due to virtualization and co-locating of applications in the cloud, designers often face uncertainty in resource availability. Additionally these applications may present ad hoc workloads, or deviate slightly from previous workload knowledge. This introduces potential performance cliffs due to workload drift. In this work we both explore how these uncertainties affect performance and propose a design paradigm that combats these uncertainties. Our design paradigm formulates tuning as a robust optimization problem which allows designers to trade off between performance and robustness to noise. We demonstrate our design in OakDB, a column-oriented database that exposes a robustness knob to the designer. 
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Rebecca L Wild (James Madison University), Matthew Hubbell (MIT Lincoln Laboratory), Jeremy Kepner (MIT Lincoln Laboratory)
+    Ju Hyoung Mun (Boston University), Zichen Zhu (Boston University), Aneesh Raman (Boston University), Manos Athanassoulis (Boston University)
     <br/>
     <strong>
-    Scaling Big Data Platform for Big Data Pipeline
+    Reducing hashing overhead of Bloom filters in LSM-trees
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po15')">Toggle Abstract</a>
     <div id="po15" class="abstract" style="display: none;">
     <p>
-    Monitoring and Managing High Performance Computing (HPC) systems and environments generate an ever growing amount of data. Making sense of this data and generating a platform where the data can be visualized for system administrators and management to proactively identify system failures or understand the state of the system requires the platform to be as efficient and scalable as the underlying database tools used to store and analyze the data. In this paper we will show how we leverage Accumulo, d4m, and Unity to generate a 3D visualization platform to monitor and manage the Lincoln Laboratory Supercomputer systems and how we have had to retool our approach to scale with our systems.
+    A log-structured merge-tree (LSM-tree) is a key-value store that balances read performance and ingestion rate employing out-of-place updates. LSM-trees are  widely adopted as the storage backend by a range of systems including LevelDB and BigTable at Google, and RocksDB at Facebook. In order to improve the performance of point queries, LSM-trees often maintain in main memory Bloom filters which are used to avoid unnecessary accesses to durable storage. In practice, the Bloom filters help avoid the vast percentage of unnecessary disk reads, which is particularly beneficial when a large portion of the queries are expected to return an empty result set. Using Bloom filters, however, comes at a cost. In particular, a Bloom filter first hashes the queried value and then probes the corresponding bits. When compared with accessing the disk hashing and probing bits in memory is orders of magnitude faster, hence, Bloom filters are always beneficial.  Contrary to common perception, Bloom filters are not always beneficial. The rationale behind using Bloom filters is that there is a vast difference between the cost of accessing Bloom filters and the data. As the gap of accessing time between the Bloom filter and the data narrows, the advantage of using Bloom filter weakens.  In order to alleviate the hashing overhead, we propose to share the hash calculation between multiple Bloom filter queries under the same key and re-use it by bit-manipulation across the tree hierarchy. Furthermore, by sharing the hash calculations, the indices of multiple Bloom filters along with different hierarchy are acquired in advance. Using this property, we also propose to prefetch the necessary Bloom filter sections to improve the lookup performance further. The preliminary simulation result shows that the proposed scheme can lower the cost for the hash calculation by up to 75% for empty queries to an LSM-tree with four levels.
     </p>
     </div>
     </td>
@@ -261,15 +261,15 @@
     </tr>
 <tr>
     <td>
-    Yan Li (UMass Lowell)
+    Jeff Fried (InterSystems)
     <br/>
     <strong>
-    VTeller: Telling the Values Somewhere, Sometime in a Dynamic Network of Urban Systems
+    Multi-model databases: current state and future trends
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po17')">Toggle Abstract</a>
     <div id="po17" class="abstract" style="display: none;">
     <p>
-    Dynamic networks are very common in urban systems today. As data are acquired, unfortunately, they are rarely complete observations of the whole system. It is important to reliably infer the unobserved attribute values anywhere in the graphs, at certain times—either in the past or in the future. Previous work does not sufficiently capture the correlations inherent with graph topology and with time. We propose a machine learning approach using a novel probabilistic graphical model. We devise a series of algorithms to efficiently group the vertices, to learn the model parameters, and to infer the unobserved values for query processing. Furthermore, we propose a method to incrementally and automatically update the model. Finally, we perform an extensive experimental study using two real-world dynamic graph datasets to evaluate our approach.
+    Relational, columnar, object, XML, and graph databases are flourishing, but many applications need all of these for different capabilities.    A variety of multi-model databases are now available, but practices for applying these vary, and the variety can be confusing.  This talk covers the range of options, and considers the pros and cons, what is possible, what is best for performance, and what is practical.    We'll explore the current state of technology and adoption as well as the future trends.   We'll go deep on InterSystems' multimodel implementations as an example.
     </p>
     </div>
     </td>
@@ -291,300 +291,60 @@
     </tr>
 <tr>
     <td>
-    Xuanming Liu (UMass Lowell), Tingjian Ge (University of Massachusetts, Lowell), Yinghui Wu (Washington State University)
+    Mengyuan Sun (MIT), Joana M. F. da Trindade (MIT), Samuel Madden (MIT), Julian Shun (MIT), Nesime Tatbul (Intel Labs and MIT)
     <br/>
     <strong>
-    Finding Densest Lasting Subgraphs in Dynamic Graphs: a Stochastic Approach
+    In-memory Graph Partitioning for Efficient Temporal Graph Analytics on NVRAM
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po19')">Toggle Abstract</a>
     <div id="po19" class="abstract" style="display: none;">
     <p>
-    One important problem that is insufficiently studied is finding densest lasting-subgraphs in large dynamic graphs, which considers the time duration of the subgraph pattern. We propose a framework called Expectation-Maximization with Utility functions (EMU), a novel stochastic approach that nontrivially extends the conventional EM approach. EMU has the flexibility of optimizing any user-defined utility functions. We validate our EMU approach by showing that it converges to the optimum—by proving that it is a specification of the general Minorization-Maximization (MM) framework with convergence guarantees. We then devise EMU algorithms for the densest lasting subgraph problem. Using real-world graph data, we experimentally verify the effectiveness and efficiency of our techniques, and compare with two prior approaches on dense subgraph detection.
+    Routing EMS responders in busy city streets, airplanes in congested sky highways, and server requests on a network datacenter are tasks crucial to the daily operation of large-scale infrastructure services. These tasks can be naturally modeled as temporal paths over temporal graphs, i.e., edges have a time interval to denote their validity. Temporal graphs are increasingly ubiquitous (e.g., interaction networks from various domains, such as protein-protein interactions, data center traffic networks, and spatio-temporal dynamic networks). Due to their dynamic nature, they can also be orders of magnitude larger than their atemporal counterparts. A key challenge in making a temporal path query efficient over these graphs is in ensuring that the algorithm’s execution respects the application's constraints (e.g., monotonically increasing start times in a “earliest arrival time” temporal path), while still providing good cache-locality. In the TGDB project, so far we have designed efficient parallel temporal graph algorithms that operate over specialized in-memory data structures to provide better cache-locality than traditional parallel graph processing indexes. The TGDB framework, however, assumes that the entire graph fits in the available DRAM, which is not the case for temporal graphs where the user would like to pose queries over both recent and historical data. Here we explore alternative memory and storage designs for these queries. Specifically, we developed a NVRAM-aware in-memory graph partitioning scheme optimized for performance of temporal graph analytics workloads. Our system employs a novel algorithm that considers workload access patterns to devise optimal placement for in-memory graph data structures onto DRAM and NVRAM. We show that, when compared to a baseline that stores the graph entirely onto NVRAM, we are able to obtain reasonable speedups on workloads that include both synthetic and real-world temporal graph data.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Fatemeh Nargesian (University of Toronto)
+    Priya Deshpande (DePaul University), Alexander Rasin (DePaul University)
     <br/>
     <strong>
-    Optimizing Organizations for Navigating Data Lakes
+    Exploring Fine-Grained Access to Bio-medical Data using FAIR Principles
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po20')">Toggle Abstract</a>
     <div id="po20" class="abstract" style="display: none;">
     <p>
-    Navigation is known to be an effective complement to search. In addition to data discovery, navigation can help users develop a conceptual model of what types of data are available. In data lakes, there has been considerable research on dataset or table discovery using search. We consider the complementary problem of creating an effective navigation structure over a data lake. We define an organization as a navigation structure (graph) containing nodes representing sets of attributes (from tables or from semi-structured documents) within a data lake. An edge represents a subset relationship. We propose a novel problem, the data lake organization problem where the goal is to find an organization that allows a user to most efficiently find attributes or tables. We present a new probabilistic model of how users interact with an organization and define the likelihood of a user finding an attribute or a table using the organization. Our approach uses the attribute values and metadata (when available). For data lakes with little or no metadata, we propose a way of creating metadata using metadata available in other lakes. We propose an approximate algorithm for the organization problem and show its effectiveness on a synthetic benchmark. Finally, we construct an organization on tables of a real data lake containing data from federal Open Data portals and show that the organization dramatically improves the expected probability of discovering tables over a baseline. Using a second real data lake with no metadata, we show how metadata can be inferred that is effective in enabling organization creation. 
+    As more data is created in healthcare domain, integration of electronic health records, pathology reports, and radiology teaching files is becoming a priority.  Digitization of health care data raises challenges in the biomedical domain, ranging from data generation to data management and data analysis. For the purposes of biomedical data analysis, researchers and doctors need to be able to to find relevant data and to integrate data sources. This outcome of data analysis over integrated data repositories will have many applications in diagnostic process, biomedical research, epidemiology, and education. However, these data is located at different hospitals or research institutes; each institution has their own security protocols, formats, and policies, making data integration a challenge. Integrating these data sources and providing a unified repository for doctors and researchers would be a great contribution towards growth of the medical research and drug industry. Biomedical data custodians expect guarantees with regard to data security and compliance with access policies in order to consider sharing their data. Researchers want access to data but they have to perform searches over geographically scattered data and only small amount data is available to authorized users for further analysis. It is currently difficult for researchers to find and access relevant data sources; gaining such access often requires a custom and involved registration process with the current owners of the data.  In this proposed work, we focus on integration of heterogeneous biomedical data sources, designing a workflow for researchers to share and reuse data with fine-grained access control. Our proposed system -- Data integration and indexing System (DiiS) will provide data source discovery and make data available for reproducibility. We plan to follow FAIR (Findable, Accessible, Interoperable, and Reusable) principles to deploy the DiiS framework. 
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Jialin Ding (MIT)
+    Prashanth Menon (Carnegie Mellon Universiy), Andrew Pavlo (Carnegie Mellon University), Todd Mowry (Carnegie Mellon University)
     <br/>
     <strong>
-    Learned Multi-Dimensional Index for Data Warehouses
+    Regret-Free Compilation: An Optimization Framework for Recompiling SQL Queries on the Fly
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po21')">Toggle Abstract</a>
     <div id="po21" class="abstract" style="display: none;">
     <p>
-    Given a multi-dimensional table in a data warehouse, an analyst will often want to run queries on subsets of those dimensions. For example, given a table that tracks employee attributes such as age, salary, level, and start date, one possible range query is, ``Return all employees between ages 25-30 with salary between $90K and $100K."  Current methods for indexing multi-dimensional data are unsatisfactory. Multi-dimensional indexes such as R trees are rarely used in practice because they are difficult to implement and spend unnecessary resources on dimensions that are infrequently queried. In practice, multi-dimensional data is often only partially indexed: a primary index is built on the most important dimension, secondary indexes are built on some other dimensions, and infrequently-queried dimensions are simply not indexed. However, the decision of which dimensions to index is ad hoc and based on hand-tuned parameters.  In this work, we create a multi-dimensional learned index that uses knowledge of the dataset and query workload to automatically create an optimal index. Specifically, the learned index optimally rearranges the data storage order to achieve low scan overhead, which is a primary contributor to faster query speeds. On a workload derived from the TPC-H benchmark, the multi-dimensional learned index achieves up to 34X faster queries than a clustered column index and 1000X faster than an index-less column scan, while also maintaining an index size many orders of magnitude smaller than the size of the dataset.
+    A popular technique to improve the performance of modern in-memory relational database management systems (RDBMS) is to compile SQL queries directly into machine code. This just-in-time compilation (JIT) removes all interpretation overhead and allows the DBMS to specialize both access methods and intermediate data structures such as hash tables. However, the compiler is at the mercy of the query plan optimizer: a bad plan will produce bad code. Moreover, compilation time is non-negligible, meaning that stopping a query to recompile a potentially better plan is expensive and often prohibitive.  To overcome the static nature of code-generation based RDBMS, we present a query compilation framework tailored for in-memory RDBMS that supports dynamic recompilation. Instead of compiling the whole query, the RDBMS uses domain knowledge to cleverly structure the program to make recompiling fragments easier. The execution engine instruments these fragments and can determine whether to optimize and recompile them at runtime.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Kishori M  Konwar (MIT)
+    Suman Karumuri (Slack), Franco Solleza (Brown University), Stan Zdonik (Brown University), Nesime Tatbul (Intel Labs and MIT)
     <br/>
     <strong>
-    Storage Efficient Erasure-coded Consistent Key-value Store
+    The Case for a Polystore Architecture for Observability Data Management
     </strong><br/>
     <a href="javascript: toggleVisibility ('#po221')">Toggle Abstract</a>
     <div id="po221" class="abstract" style="display: none;">
     <p>
-    Highly-available and cost-effective large-scale distributed key-value (KV) stores with consistency guarantees are at the heart of many Internet-based applications. To ensure high availability and scalability most KV stores replicate data across multiple servers. Recently, erasure-code based distributed KV stores have gained interest due to their low storage and bandwidth costs.  Existing erasure-code based implementations of strongly consistent KV stores either rely on a leader to propagate the coded elements or use expensive consensus protocols to handle concurrent operations. Furthermore, only a handful of strongly consistent  KV stores that uses  erasure-codes are available.  Here, we design a novel erasure-code based, strongly consistent, KV store algorithm and then implement it. Our algorithm  is designed with practical considerations in mind therefore, our KV-store algorithm embodies many desirable attributes of an effective distributed storage system such as,   the ability to tolerate client and server failures;  graceful handling of asynchrony, without assuming common clock or failure detector or using timeouts etc;  low communication rounds during  read (GET) and write (PUT) operations;  highly available and near-optimal storage and communication costs.  Our KV-store mechanism can handle any number of concurrent PUTs and GETs on the stored data. Strong consistency and availability properties  of our algorithm are analytically proven. We experimentally study the performance of the KV-store  under a wide range of scenarios and compare with a quorum based replicated system. Our implementation closely follows  our  algorithm  specification of and hence   does not rely on additional distributed computing services or primitives like leader-election or consensus protocol to achieve coordination and synchronization.  Our experiments show that our KV-store  achieves substantially lower storage and bandwidth costs and has a significantly lower latency of operations than the replication-based mechanisms.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Joana M. F. da Trindade (MIT), Carlo Curino (Microsoft), Konstantinos Karanasos (Microsoft), Samuel Madden (MIT), Julian Shun (MIT)
-    <br/>
-    <strong>
-    Kaskade: Graph Views for Efficient Graph Analytics
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po231')">Toggle Abstract</a>
-    <div id="po231" class="abstract" style="display: none;">
-    <p>
-    Graphs are an increasingly popular way to model real-world entities and relationships between them, ranging from social networks to data lineage graphs and biological datasets. Queries over these large graphs often involve expensive sub-graph traversals and complex analytical computations. These real-world graphs are often substantially more structured than a generic vertex-and-edge model would suggest, but this insight has remained largely unexplored by existing graph engines for graph query optimization purposes. Therefore, in this work, we focus on leveraging structural properties of graphs and queries to automatically derive materialized graph views that can dramatically speed up query evaluation. We present Kaskade, the first graph query evaluation engine that exploits materialized graph views for query optimization purposes. Kaskade employs a novel inference-based view enumeration technique that significantly reduces the search space of views that need to be considered. More- over, it introduces a graph view size estimator to pick the most beneficial views to materialize given a query set and to select the best query evaluation plan given a set of materialized views. We evaluate its performance over real-world graphs, including the provenance graph that we maintain at Microsoft to enable auditing, service analytics, and advanced system optimizations. Our results show that Kaskade substantially reduces the effective graph size and yields significant performance speedups (up to 50x), in some cases making otherwise intractable queries possible.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Amir Rahimzadeh Ilkhechi (Brown University), Yicong Mao (Brown University), Alex Galakatos (Brown University), Andrew Crotty (Brown University), Ugur Cetintemel (Brown University)
-    <br/>
-    <strong>
-    DeepSqueeze: Using deep learning models to compress relational databases
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po241')">Toggle Abstract</a>
-    <div id="po241" class="abstract" style="display: none;">
-    <p>
-    Abstract The rapid proliferation of enormous datasets has made efficient data compression more important than ever. Traditional columnar compression techniques (e.g., dictionary encoding, run-length encoding) have proven highly effective in modern OLAP systems, but they typically compress individual columns without considering potential relationships between columns, such as functional dependencies and attribute correlations. Semantic compression, on the other hand, directly leverages these relationships to store only a subset of the attributes necessary to infer the others, but this approach cannot efficiently model subtle or complex relationships between more than a few attributes at a time.  We, therefore, propose DeepSqueeze, a novel semantic compression framework that uses deep learning models to efficiently capture complex relationships in relational data. In contrast to existing semantic compression techniques that model individual relationships between attributes, DeepSqueeze captures all columnar relationships together by directly mapping tuples to a lower-dimensional representation through the use of deep auto-encoders, leading to significant compression rate gains. In fact, our initial results demonstrate that DeepSqueeze can achieve up to 20% reduction in data size compared to state-of-the-art alternatives.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Leonhard Spiegelberg (Brown University), Tim Kraska (MIT)
-    <br/>
-    <strong>
-    [POSTER] Robust data centric code generation
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po251')">Toggle Abstract</a>
-    <div id="po251" class="abstract" style="display: none;">
-    <p>
-    In the world of data preparation Python is winning the race nowadays. Not only because of its large universe of modules and its community, but also due to its ease of use, expressiveness and high level features. Another advantage is its near to zero startup time which especially supports fast prototyping and quick delivery of data analytics tasks. Besides, it became the ultimate glue language to bring different frameworks together; predominantly in the domain of both analytics and Machine Learning frameworks. It is not uncommon for large enterprises to build complex pipelines not only using Python at the prototype stage but also to deploy them eventually for production use. However, its flexibility and typing issues are also its curse preventing robust, competitive and native compilation largely. Modern big data frameworks like Apache Spark or Ray rely on the cloudpickle module for remote execution of Python UDFs using the Python interpreter. However, their execution speed is limited since they still use the interpreter ultimately and do not take advantage of both the monadic nature of MapReduce pipelines and the inherent patterns in the data. In this project, we first implemented a robust data centric compilation mode for Python UDFs. Then, we created a more robust big data analytics framework called Tuplex and used our novel execution model to provide overall speedups while allowing users to deal more efficiently with exceptions caused by ill-formatted input data. This poster shows our journey started by our wish to design a faster alternative to PySpark towards a more robust and efficient data analytics framework.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Rundong Li (Northeastern University), Mirek Riedewald (Northeastern University), Wolfgang Gatterbauer  (Northeastern University), Dhaval Patel (Northeastern University)
-    <br/>
-    <strong>
-    Speeding Up Distributed Band Joins
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po261')">Toggle Abstract</a>
-    <div id="po261" class="abstract" style="display: none;">
-    <p>
-    We consider the problem of speeding up band-join computation in the cloud. A simple example band-join is “SELECT * FROM S, T WHERE |S.A - B.A| <= b”, where b is called the bandwidth. To reduce running time in the cloud, one has to identify a partitioning that carefully trades input duplication for improved load balance across the worker machines. Band-join relaxes equi-join’s equality condition, allowing tuples with non-equal keys to match. The state of the art for this type of condition are recently-proposed theta-join algorithms. Those either suffer from excessive input duplication or rely on expensive geometric tiling algorithms. The latter could have higher computational complexity than the join itself when the condition involves multiple attributes. We propose a lightweight adaptive partitioning technique that maps a band-join to an equivalent equi-join. Optimization cost, even for complex band-joins with conditions on multiple attributes, does not exceed a few seconds. For band-joins on a single attribute, we provide optimality guarantees similar to those established for equi-joins. We also show that these guarantees do not carry over to band-joins on multiple attributes. Despite this negative analytical result, experiments with real and synthetic data demonstrate a reduction in running time over the state of the art by a factor of two or more.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Amin Saeidi (Microfocus Vertica), Ryan Roelke (Microfocus - Vertica)
-    <br/>
-    <strong>
-    Vertica Eon mode and challenges
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po271')">Toggle Abstract</a>
-    <div id="po271" class="abstract" style="display: none;">
-    <p>
-    Vertica has historically managed local disk for performance and reliability, at the cost of product complexity and scalability. Eon mode is a new Vertica architecture that puts the data on a shared storage with the promise of comparable performance on existing workloads and support for new types of workload. While the design reuses Vertica’s optimizer and execution engine, the metadata, storage, and fault tolerance mechanisms are rearchitected to reflect shared storage. Eon mode demonstrates promising performance, as well as, superior scalability and operational behavior.    This initial Eon mode design assumes that each Vertica node operates with a large local instance storage, which can be used for temporary data processing, as well as for caching files from the associated shared file system. We call this cache the “depot”. Using the depot means that the query executor only ever accesses files from a local file system. In the initial Eon mode deployments, several customers have preferred to use smaller depot instead. This results in most workloads reading files directly from shared storage rather than first fetching those files into the depot. This means file system operations comprise a much greater proportion of the query latency. This exposes some problems with Vertica’s query executor, such as:  - High cost of filesystem stat calls.  - Slow query planning and execution time when data/metadata files are not in the depot.  - Slow and costly merge-out operations with lots of small reads.  - Failure to load data sets larger than the depot.   We have improved Vertica’s design to resolve each of these issues. In our presentation, we’d like to discuss how we resolved the above issues by re-designing some key components of Vertica.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Yizhou Yan (Worcester Polytechnic Institute), Lei Cao (MIT), Samuel Madden (MIT), Elke Rundensteiner (WPI)
-    <br/>
-    <strong>
-    SeqDB: A Database for Exploring Sequence Data
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po281')">Toggle Abstract</a>
-    <div id="po281" class="abstract" style="display: none;">
-    <p>
-    Modern data intensive applications generate massive amounts of time-stamped data, much of it in the form of discrete, symbolic sequences produced from online customer transactions, sensors, and system logs. While valuable knowledge in such sequence data could be detected by discovering interesting sequential patterns, to date there is no suitable technology supporting interactive exploration of such patterns. In this work, we present a system, SeqDB, that efficiently supports a rich variety of pattern exploration requests with varying pattern semantics and input parameter settings. SeqDB pro-vides a sequence pattern query language (PQL) that enables the users to issue pattern-related query and mining requests. A query plan generator then produces an efficient execution plan for each PQL query. Further, SeqDB employs an innovative index structure that succinctly summarizes sequence data using a small set of sequential patterns. Using the index, PQL plans are mapped to effective execution strategies for pattern query and mining. As a result, SeqDB provides near-real time responsiveness even on large sequence datasets. Our experimental evaluation using several real world and synthetic sequence data sets demonstrates the versatility and efficiency of SeqDB, showing it to be 3 orders of magnitude faster or more than the current state-of-the-art pattern query and mining techniques.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Andy Vidan (Composable Analytics, Inc.)
-    <br/>
-    <strong>
-    Composable Adaptive Decision Engine
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po291')">Toggle Abstract</a>
-    <div id="po291" class="abstract" style="display: none;">
-    <p>
-    In this talk, we begin by describing dataflow programming and its ability to facilitate distributed data and query integration, allowing users to ingest an unlimited number of information sources in a variety of formats and integrate them using a flow-based application. In this way, entire datasets can be merged and mastered in a single system, while defining a layer of custom analytics (“rules”) as well as a visual web UI for user input and reporting. The analytics layer can include computer vision (for OCR and image processing), natural language processing (for text and document parsing), and other machine learning algorithms. We will then introduce the Composable Analytics platform, originally developed at MIT Lincoln Laboratory, and describe how we can use these methods to develop an adaptive decision and scoring engine.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Andy Vidan (Composable Analytics, Inc.)
-    <br/>
-    <strong>
-    Composable DataOps
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po301')">Toggle Abstract</a>
-    <div id="po301" class="abstract" style="display: none;">
-    <p>
-    Enter DataOps. This emerging trend is a way for enterprises to build processes around data management and analytics. At a high level, DataOps is similar to the more familiar DevOps. Where DevOps allows organizations to modernize their approach to software development, DataOps establishes a modern framework for data practices, which can help close the gap that companies discovered when pursuing Big Data. In this poster, we describe the technical features of the Composable DataOps Platform, originally developed at MIT Lincoln Laboratory, and its use as a full-stack analytics platform, with built-in services for data orchestration, automation and analytics.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Chi Zhang (Brandeis university)
-    <br/>
-    <strong>
-    DQN-Join: A Learning-based Join Ordering Enumeration Techniques
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po311')">Toggle Abstract</a>
-    <div id="po311" class="abstract" style="display: none;">
-    <p>
-    Query optimization is a process that a database or data warehouse takes an input from users, and reworks that question to deliver a quick response with as few computing resources as possible. The number of query plan choices reach far beyond human’s calculation. It is critical for query optimizer to select a physical execution plan that can improve performance and reduce costs in database systems. However, when query optimizer starts to select a good plan, it turns out that this so-called good plan is actually not very good. In other words, bad plans will always be on spot and potential better plans may be hidden forever.  Consequently, join order selection, as one of the most well-studied problems in database systems, plays a significant role in solving the challenge I mentioned above. Inspired by a new algorithm Deep Q-learning from Demonstration (DQFD), A new join ordering enumeration technique will be introduced in our poster. In support of learning from demonstration and DQFD, our self-designed DQN-Join algorithm is able to outperform traditional query optimizer and find better plans with lower latency.  DQN-Join consider join ordering enumeration as a reinforcement learning problem. First and foremost, when a query workload comes in, each query q will be executed and transformed into various states vectors s and actions a. We use latency as a reward signal to measure quality of each selected action on each state. latency will be recorded as L on each state after a query is successfully executed. Figure 1 shows how a query is transformed into pairs of states and actions. Next, our DQN-Join agent will use states as input and latency as output to mimic reward function. With the help of demonstration data, our DQN-Join agent will acquire similar behaviors(actions) and performance of traditional query optimizer. Last but not least, our DQN-Join agent will start to react from real world. For example, A new SQL query will firstly be transformed into a vector of the initial state. The initial state will then be sent to our neural network framework as input and a reward output including all actions will be generated. The DQN-Join agent will take an action with highest reward and move to a next state. The next state will be sent to our neural network again to get a new action. The process won’t stop until reaching terminal state.  It is beneficial for query optimizer to adapt DQN-Join algorithm and find a better query plan with lower cost and latency. Meanwhile In support of theory from learning from demonstration our model can largely reduce training time and reach a fast convergence. Finally, we can also prove that deep reinforcement learning can be widely applied in database systems especially in query optimization.  
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Dan Zhang (University of Massachusetts Amherst), Michael Hay (Colgate University), Gerome Miklau (University of Massachusetts Amherst), BRENDAN  O'CONNOR (University of Massachusetts Amherst ),  Ali Sarvghad (university)
-    <br/>
-    <strong>
-    Challenges of visualizing Differentially Private Data
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po321')">Toggle Abstract</a>
-    <div id="po321" class="abstract" style="display: none;">
-    <p>
-    Differential privacy has become a primary standard for protecting individual data while supporting flexible data analysis. Despite the adaptation of differential privacy to a wide variety of applications and tasks, visualizing the output of differentially private algorithms has rarely been considered. Visualization is one of the primary means by which humans understand and explore an unknown dataset and therefore supporting visualization is an important goal to advance the practical adoption of differential privacy.  We explore key challenges and propose solution approaches. Using two-dimensional location data as an example domain, we consider the challenges of plotting noisy output, the impact of visual artifacts caused by noise, and the proper way to present known uncertainty about private output. We propose the indistinguishability principle as an attempt to one of the major challenges: visualization under uncertainty. 
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Erfan Zamanian (Brown University), Julian Shun (MIT), Carsten Binnig (TU Darmstadt), Tim Kraska (MIT)
-    <br/>
-    <strong>
-    Chiller: Contention-centric Transaction Execution and Data Partitioning for Fast Networks
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po331')">Toggle Abstract</a>
-    <div id="po331" class="abstract" style="display: none;">
-    <p>
-    Distributed transactions on high-overhead TCP/IP-based networks were conventionally considered to be prohibitively expensive and thus were avoided at all costs. To that end, the primary goal of almost any existing partitioning scheme is to minimize the number of cross-partition transactions. However, with the next generation of fast RDMA-enabled networks, this assumption is no longer valid. In fact, recent work has shown that distributed databases can scale even when the majority of transactions are cross-partition. In this paper, we first make the case that the new bottleneck which hinders truly scalable transaction processing in modern RDMA-enabled databases is data contention, and that optimizing for data contention leads to different partitioning layouts than optimizing for the number of distributed transactions. We then present Chiller, a new approach to data partitioning and transaction execution, which minimizes data contention for both local and distributed transactions. Finally, we evaluate Chiller using TPC-C and a real-world workload, and show that our partitioning and execution strategy outperforms traditional partitioning techniques which try to avoid distributed transactions, by up to a factor of 2 under the same conditions.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Ani Kristo (Brown University), Kapil Vaidya (MIT), Ugur Cetintemel (Brown University), Tim Kraska (MIT)
-    <br/>
-    <strong>
-    A Learned Sorting Algorithm
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po341')">Toggle Abstract</a>
-    <div id="po341" class="abstract" style="display: none;">
-    <p>
-    Sorting is one of the most fundamental algorithms in computer science and a common operation in databases, appearing in indexing and query processing (e.g., ORDER BY clauses and sort-merge joins). In this work, we introduce a new type of distribution sort that leverages a learned model of the empirical CDF of the data in order to generate a sorted order of keys. The algorithm uses a Recursive Model Index (RMI) to efficiently get an approximation of the scaled CDF for each record key and map it to the corresponding position in the output array. We then apply a deterministic sorting algorithm that works well on nearly-sorted arrays (e.g., Insertion Sort) to establish a completely sorted order. In contrast to comparison-based sorts like Quicksort, this approach heavily reduces the number of conditional branches, hence resulting in fewer CPU stalls, branch mispredictions, and cache faults. We compared this algorithm against common sorting approaches and measured its running time performance for 50M randomly-distributed double-precision Gaussian keys. The results show that our approach yields a 2.6_ performance improvement over C++ STL sort, which is an optimized Quicksort hybrid, 3.88_ improvement over Timsort, which is the default sorting function for Java and Python, and 1.18_ over Radix sort, which is a common counting-based sort algorithm. We believe that these results reveal the potential for learned sorting approaches, which we expect to be the largest for parallel sorting, large key sizes, as well as with GPU, TPU, and FPGA accelerators. Our ongoing work is exploring several open research challenges that include building SIMD-optimized implementations of the algorithm to determining its complexity class.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Darshana Balakrishnan (State University of New York at Buffalo), Oliver A Kennedy (University at Buffalo, SUNY), Lukasz Ziarek (University at Buffalo, SUNY)
-    <br/>
-    <strong>
-    Frankeinstein's Data Structure
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po351')">Toggle Abstract</a>
-    <div id="po351" class="abstract" style="display: none;">
-    <p>
-    In most standard database systems creating or modifying a primary index is a very time-consuming process as indexes typically need to be rebuilt from scratch. Adaptive indexing is a form of incremental index organization in every query posted to the system is considered as a hint for incrementally building the index. This type of incremental indexing puts a little penalty on the initial few queries but they will eventually get answered faster when compared to building a full static index and then scanning over it. However, an adaptive index structure e.g. a sorted array or a B-Tree that is initially optimal for one type of workload becomes sub-optimal as the workload changes.  Just-In-Time Data Structures is a generalized approach to adaptive indexing that dynamically adapts to changing workloads even after index convergence. We show that it is possible to simulate the behavior of the Just-In-Time data Structure so as to help us estimate appropriate heuristics for dynamic and adaptive index creation.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Lucas P Hendren (SimplyVital health)
-    <br/>
-    <strong>
-    DLT Enabled Database
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po361')">Toggle Abstract</a>
-    <div id="po361" class="abstract" style="display: none;">
-    <p>
-    Based on research done by the MIT media lab group MedRec we have developed a blockchain enabled database that utilizes distributed ledger technology to govern and determine access to data and create an audit trail for the data.  This is currently deployed live on the Rinkeby Test Network.  We are continuing to develop and gather data on this.  This poster will showcase this setup and initial findings.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Nesime Tatbul (Intel Labs and MIT), Tae Jun Lee (Microsoft), Stan Zdonik (Brown University), Mejbah Alam (Intel Labs), Justin Gottschlich (Intel Labs)
-    <br/>
-    <strong>
-    Precision and Recall for Time Series
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po371')">Toggle Abstract</a>
-    <div id="po371" class="abstract" style="display: none;">
-    <p>
-    Classical anomaly detection is principally concerned with point-based anomalies, those anomalies that occur at a single point in time. Yet, many real-world anomalies are range-based, meaning they occur over a period of time. Motivated by this observation, we present a new mathematical model to evaluate the accuracy of time series classification algorithms. Our model expands the well-known Precision and Recall metrics to measure ranges, while simultaneously enabling customization support for domain-specific preferences.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Tianyu Li (Carnegie Mellon University), Matt Butrovich (Carnegie Mellon University), Amadou Ngom (Carnegie Mellon University), Andrew Pavlo (Carnegie Mellon University)
-    <br/>
-    <strong>
-    Fast Columnar Multi-Versioned In-Memory Transactional Storage Engine for Lightweight Transformation to Apache Arrow
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po381')">Toggle Abstract</a>
-    <div id="po381" class="abstract" style="display: none;">
-    <p>
-    In-memory columnar formats, such as Apache Arrow, are becoming more popular for modern data analytics. These formats, however, are designed to be read-only. This means that a OLTP DBMS generates the data and then a data scientist need to use a heavy-weight transformation process to load the data into the desired columnar format. We aim to reduce or even eliminate this process by building a transactional DBMS that is aware of the eventual usage of its data and operates directly on Arrow-style storage blocks. We introduce several relaxations of Arrow’s invariants to make it amenable to transactional access, and rely on a lightweight in-memory transformation process to convert the data to Arrow when it is no longer active transactionally (i.e., cold). We built our system based on the concurrency control scheme of HyPer, and preliminary results show comparable performance with dedicated OLTP DBMS and much reduced overhead when exporting to Arrow.
+    With rapid advances in distributed computing technologies, software systems and applications are increasingly becoming more distributed, heterogeneous, and complex, making it challenging to predict their behavior in the face of failures and varying load. Observability has been gaining importance as a key capability for monitoring and maintaining cloud-native systems to ensure their quality of service to customers. Borrowed from control theory, the notion of observability aims at bringing better visibility into testing, debugging, and understanding the general behavior of software based on telemetry data collected from the internals of the system as it operates. Beyond simple black-box monitoring of known scenarios, observability requires gaining deeper contextual information and insight about operational semantics of systems for root-cause analysis of unforeseen problems. As such, providing observability is inherently a data-intensive, time-sensitive, and iterative process that also involves humans in the loop (e.g., DevOps teams). While time series is the core data type in this space, there are interconnected data categories that differ in their characteristics and needs. These include Metrics, Events, Logs, and Traces (MELT). Large volumes of these heterogeneous time series should be collected, stored, and indexed from instrumented systems in a way that enables their low-latency search, analysis, and visualization in real time and on demand. In this poster, we will present real-world experience with observability data and its use cases at Slack, a cloud-based workplace communication service with more than 10M daily active users. We hypothesize that a polystore architecture that unifies common lifecycle management issues of MELT data into a single infrastructure while supporting the varying requirements of each data type using a pluggable storage and query engine interface is the best way to address these requirements in a scalable manner.
     </p>
     </div>
     </td>
@@ -594,70 +354,70 @@
     Anil Shanbhag (MIT)
     <br/>
     <strong>
-    How good are GPU-based databases really ?
+    Running Data Analytics Efficiently on GPUs
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po391')">Toggle Abstract</a>
-    <div id="po391" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po231')">Toggle Abstract</a>
+    <div id="po231" class="abstract" style="display: none;">
     <p>
-    There has been significant amount of excitement and recent work on GPU-based database systems. Previous work has claimed that these systems can perform orders of magnitude better than CPU-based database systems on analytical workloads such as those found in decision support and business intelligence applications. A hardware expert would view these gains with suspicion. Given the general notion that database operators are memory bandwidth bound, one would expect the maximum gain to be roughly the bandwidth ratio i.e.: the ratio of the memory bandwidth of GPU to that of CPU. Also, given the restrictive GPU programming model which requires running program over a large number of threads, one would expect additional materializations leading to reduction in gain. The empirical nature of past works makes it hard to access the true nature of performance gains from using GPUs vs implementation artifacts.  In this work, we adopt a model-based approach to understand why the performance gain got from running the query on GPU vs on CPU deviates from the bandwidth ratio. We propose Blockwise, a library of parallel routines that can be combined together to run full SQL queries on the GPU with minimal materializations. First, we implement individual query operators to show that while speedup for selection and projection are around bandwidth ratio, join and sort achieve speedup smaller than the bandwidth ratio due to difference in hardware capabilities. We present a new join algorithm called Hybrid Join for GPUs that works around limitation of running radix join on GPUs. We show on a popular analytical workload that full query performance gain from running on GPU exceeds the bandwidth ratio despite individual operators having speedup less than bandwidth ratio due to limitation of vectorizing chained operators on CPUs. Finally, we do a performance/cost analysis to show that GPUs can be around 3x more cost-effective when the critical section of the computation fits in GPU memory.
+    There has been significant amount of excitement and recent work on GPU-based database systems. Previous work has claimed that these systems can perform orders of magnitude better than CPU-based database systems on analytical workloads such as those found in decision support and business intelligence applications. A hardware expert would view these claims with suspicion.  First, the empirical nature of past work, which often compares different code bases from different developers, makes it hard to assess the true nature of performance gains from  GPUs vs implementation artifacts. Second, given the general notion that database operators are memory-bandwidth bound, one would expect the maximum gain to be roughly equal to the ratio of the memory bandwidth of GPU to that of CPU.  In this paper, we adopt a model-based approach to understand when and why the performance gains of running queries on GPUs vs on CPUs varies from the bandwidth ratio (which is roughly 16$\times$ on modern hardware). We propose Crystal, a library of parallel routines that can be combined together to run full SQL queries on a GPU with minimal materialization overhead. We implement individual query operators to show that while the speedups for selection, projection, and sorts are near the bandwidth ratio, joins  achieve less speedup due to differences in hardware capabilities. Interestingly, we show on a popular analytical workload that full query performance gain from running on GPU exceeds the bandwidth ratio despite individual operators having speedup less than bandwidth ratio, as a result of limitations of vectorizing chained operators on CPUs, resulting in a 25$\times$ speedup for GPUs over CPUs on the benchmark. Finally, we do a cost/performance analysis to show that GPUs can be around 4$\times$ more cost-effective when the workload  fits into GPU memory.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Matthew Perron (MIT), Raul Castro Fernandez (MIT), Samuel Madden (MIT), David DeWitt (MIT)
+    Alan Piciacchio (IBM)
     <br/>
     <strong>
-    Analytics on Cloud Function Services
+    Data Science & Engineering - Best Practices for Curation
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po401')">Toggle Abstract</a>
-    <div id="po401" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po241')">Toggle Abstract</a>
+    <div id="po241" class="abstract" style="display: none;">
     <p>
-    Recent research demonstrates the benefit of cloud function services, like AWS Lambda, for parallel workloads like video encoding. Some are skeptical that cloud function services, as they exist today, are are a useful tool for workloads with more complex communication patterns. We demonstrate that TPC-H queries, executed on cloud function services and cloud storage, like Amazon S3, can be cost and performance competitive with the best provisioned systems reading from cloud storage, including Apache Hive, Presto, Amazon Redshift Spectrum, and Amazon Athena.
+    It has been said that "data is our new natural resource."  Often, the burgeoning data scientist will be tempted to use advanced techniques to process data. However - the first critical step in adding value to data is to validate and refine it. These tasks, which may seem burdensome, are necessary and mandatory, and if not addressed appropriately, can send businesses in the wrong direction, and can cost $10s of millions of dollars.  In the presentation, the basic critical factors of data curation will be reviewed, including:   - Guaranteeing complete, unfiltered data sets - Selective removal of data - Addressing errant data tactically and at its root  - Provisions for data maintenance - including feeds and linkage structures - Inclusion of agile principles  Several case studies will be reviewed, in which the basic principles were applied. In these case studies, the applied principles resulted in significant increases in revenue and reductions in operating costs. These case studies include the management of client requests, root-cause analysis of IT outages, and building server systems in an enterprise IT environment.   It is expected that the presentation will help audience members gain a better understanding of the data science profession. 
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Walter Gerych (Worcester Polytechnic Institute), Emmanuel Agu (WPI), Elke Rundensteiner (WPI)
+    Haneen Mohammed (Columbia University)
     <br/>
     <strong>
-    Classifying  Depression  in  Imbalanced  Datasets  using  an Autoencoder-Based  Anomaly  Detection  Approach
+    Continuous Prefetch for Interactive Data Applications
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po421')">Toggle Abstract</a>
-    <div id="po421" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po251')">Toggle Abstract</a>
+    <div id="po251" class="abstract" style="display: none;">
     <p>
-    Depression is the most prevalent mental health ailment in the United States, affecting 15% of the population. Untreated depression can significantly decrease quality of life, physical health, and has significant economic and societal costs. The traditional method of diagnosing depression requires the patient to respond to medical questionnaires and is subjective. Passive methods to autonomously detect depression are desirable. Prior work on smartphone sensing of depression has utilized machine learning classification of smartphone sensor data. However, as with many ailments, the percentage of afflicted users in most populations is small compared with those unaffected, leading to severe class imbalance. In this work, we explore  anomaly detection methods as a method for mitigating class imbalance for depression detection. Our approach adopts a multi-stage machine learning pipeline. First, using autoencoders, we project the mobility features of the majority class (undepressed users). Thereafter, the trained autoencoder  then  classifies a test set of users as either depressed (anomalous) or not depressed (inliers) using a One Class SVM algorithm. Our method, when applied to the real-world StudentLife data set shows that even with an extremely imbalanced dataset, our method is able to detect individuals with depression symptoms with an AUC-ROC of 0.92, significantly outperforming traditional machine learning classification approaches.
+    Interactive data visualization and exploration (DVE) applications are often network-bottlenecked due to bursty request patterns, large response sizes, and heterogeneous deployments over a range of networks and devices. This makes it difficult to ensure consistently low response times (<100ms).  Khameleon is a framework for DVE applications that uses a novel combination of prefetching and response tuning to dynamically trade-off response quality for low latency by combining progressive visualizations and resource-aware scheduling. Khameleon exploits DVE's approximation tolerance: immediate lower-quality responses are preferable to waiting for complete results. Our preliminary results show that, across a wide range of network and client resource conditions, Khameleon outperforms classic prefetching approaches that even use perfect prediction models.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Hyungsik Caleb Kim (DePaul University), Alexander Rasin (DePaul University), James Wagner (DePaul University)
+    Wilson Qin (Harvard), Stratos Idreos (Harvard)
     <br/>
     <strong>
-    The art of pruning query plan search space: optimization of queries with user-defined  predicates 
+    Navigating the CPU vs Data Movement Tradeoff for NoSQL Key-Value Stores
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po431')">Toggle Abstract</a>
-    <div id="po431" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po261')">Toggle Abstract</a>
+    <div id="po261" class="abstract" style="display: none;">
     <p>
-    The use of user-defined functions in today’s relational databases are common especially as they are frequently integrated with other relational or non-relational databases. When a query contains expensive user-defined predicates, early pruning of vast search space by applying greedy heuristics may result in suboptimal execution plan. On the other hand, dynamic programming provides a thorough enumeration of search space yet is too expensive. In our presentation, we describe a dynamic approach that skips similar enumerations unit of joins and user-defined predicates. Our solution significantly reduces the search space while maintaining quality of the plan. As the number of tables and the number of user-defined predicates in a query grows, the pruning algorithms reduces the search space by greater proportion. We evaluate our algorithm for query plan enumeration based on search space enumeration complexity and the resulting quality of query plans.  
+    For the past several decades research on data systems design focuses on minimizing data movement costs to improve throughput and response times. Moving data is much more expensive than computing and as such the focus on minimizing data movement is justified. However, in the past decade the growth in CPU instruction capacity per cycle has gone up on the order of 50%, even though storage and memory have scaled magnitudes more in capacity, memory especially has faced slower gains in latency acceleration (e.g. only on the order of 25% for DRAM). This economic trend means that data is increasingly resident in the now cheap memory (not just as a cache for disk), creating a new challenge as memory access becomes more of a critical path.  We show several new insights on CPU and Data Movement tradeoffs. While modern hardware decouples waiting for I/O from the CPU instruction flow, ultimately the wait on memory bandwidth creates ready available CPU cycles that can be further harnessed for more data processing. This creates a growing opening to utilize optimal latent CPU capacity by redesigning NoSQL key-value store systems in a way that not only minimizes data movement. In addition, even if key-value stores are primarily designed for big-data applications where data movement is naturally the bottleneck, we show that for modern key-value systems (RocksDB, WiredTiger, Redis) there are families of workloads and query patterns which strike varying levels of CPU intensiveness. For these workload patterns, key-value stores need again to be redesigned to balance to harness the newly available CPU capacities exposed by accessing growing amounts of data resident in main memory.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Aristotelis Sigiouan Leventidis (Northeastern University), Wolfgang Gatterbauer (Northeastern University), Cody Dunne (Northeastern University), Mirek Riedewald (Northeastern University)
+    Aristotelis Leventidis (Northeastern University), Wolfgang Gatterbauer (Northeastern University), Cody Dunne (Northeastern University), Mirek Riedewald (Northeastern University)
     <br/>
     <strong>
     I See What This Query Does: Visualising SQL Queries
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po441')">Toggle Abstract</a>
-    <div id="po441" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po271')">Toggle Abstract</a>
+    <div id="po271" class="abstract" style="display: none;">
     <p>
     Complex SQL queries can be hard to understand, even for experienced programmers. We present QueryViz, a novel tool that can transform a SQL query over a given database schema into a visual representation. QueryViz aims to enhance query interpretation with concrete minimal visual elements that help the user capture the intent of a query quickly. It relies on the concise translation of first order logic into visualization by identifying the equivalence of SQL to that of logic representations. QueryViz automatically decides which visual elements to use and how to arrange them. Intuitively, our system behaves like a traditional optimizer, but optimizes for visual clarity instead of performance. We argue that it would be fairly straightforward to integrate QueryViz into existing DBMS, where it could facilitate modification, re-use, and maintenance of non-trivial SQL queries. In addition, it is also ideally suited as a teaching tool. An initial user study confirms the feasibility and potential benefits of our system.
     </p>
@@ -666,109 +426,214 @@
     </tr>
 <tr>
     <td>
-    Dmytro Bogatov (Boston University), George Kollios (Boston University), Leo Reyzin (Boston University)
+    Nathan Ng (University of Massachusetts Amherst), Sandeep Polisetty (UMASS), Marco Serafini (University of Massachusetts Amherst)
     <br/>
     <strong>
-    A Comparative Evaluation of Order-Preserving and Order-Revealing Schemes, and Secure Range-Query Protocols
+    Challenges and opportunities in building a transactional graph storage system for efficient real-time analytics
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po451')">Toggle Abstract</a>
-    <div id="po451" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po281')">Toggle Abstract</a>
+    <div id="po281" class="abstract" style="display: none;">
     <p>
-    Database query evaluation over encrypted data has received a lot of attention recently. Order Preserving Encryption (OPE) and Order Revealing Encryption (ORE) are two important encryption schemes that have been proposed in this area. These schemes can provide very efficient query execution but at the same time may leak some information to adversaries. We present the first comprehensive comparison among a number of important OPE and ORE schemes using a framework that we developed. We evaluate protocols that are based on these schemes as well. We analyze and compare them both theoretically and experimentally and measure their performance over database indexing and query evaluation techniques using not only execution time but also I/O performance and usage of cryptographic primitive operations. Our comparison reveals some interesting insights concerning the relative security and performance of these approaches in database settings. This work is based on our original paper submitted to VLDB.
+    We are currently developing a new storage system that is graph-aware, like LiveGraph, but is much more space-efficient. In this poster,  we will describe the state-of-the-art system LiveGraph, the existing problems of the system, research opportunities that emerged when trying to optimize the existing system, and possible solutions in tackling the abovementioned problems.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Alexander Rasin (DePaul University), Priya Deshpande (DePaul University)
+    Matthew Tolton (Facebook Inc), Cornel Rat (Facebook Inc), Mathew Eis (Facebook Inc), Chaomin Yu (Facebook Inc), Tiho Tarnavski (Facebook Inc)
     <br/>
     <strong>
-    Data Integration and Information Retrieval -- Two sides of the same coin:  Case Study using Biomedical Data Sources
+    Synapse: Distributed Transactional Storage in Facebook
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po461')">Toggle Abstract</a>
-    <div id="po461" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po291')">Toggle Abstract</a>
+    <div id="po291" class="abstract" style="display: none;">
     <p>
-    Data integration and information retrieval are two sides of the same coin which have their own individual identity. In data integration, design of the database schema needs to consider data retrieval to best use the integrated database system. Data integration and information retrieval modules can work individually, and at a glance one can see them as two independent entities. However, in practice one needs to consider both together. We therefore think that database community should place more emphasis on information retrieval research in database conferences. Here we will be presenting our work showing how these two techniques interact. We believe, based on a literature survey, that the interaction between integration and retrieval of data is similar across other domains, such as: collecting data from different sources, data cleaning, designing schemas, fetching data from integrated repository. One needs to apply domain specific knowledge to learn about data sources and write retrieval algorithm (e.g., using domain specific ontologies). We will be presenting a case study with biomedical data integration, IRIS (Integrated Radiology Image Search) engine we developed to query radiology data sources. Our system demonstrates how integration and retrieval algorithms support each other in an application that can be used by doctors, radiologists, and researchers in the medical domain.
+    Synapse is a highly-available, ACID compliant, horizontally-scaling data store in Facebook. The consistency model is serializability, with optional linearizability. Each transaction maps to one instance of hierarchical single decree Paxos, with the client as the initial proposer. Compared to 2 phase commit on top of multi-Paxos model, Synapse leaderless design optimizes for predictability, scalability and availability.  Synapse exposes a key -> object interface within an auto-shared key space. Object types include Log, Blob, Counter and more. Transactions understand type specific operations for pipelining and conflict detection.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Philipp Eichmann (Brown University), Franco Solleza (Brown University), Nesime Tatbul (Intel Labs and MIT), Stan Zdonik (Brown University)
+    Vasiliki Kalavri (Boston University), John Liagouris (Boston University)
     <br/>
     <strong>
-    Metro-Viz: Visual Exploration of Time Series Anomalies
+    Evaluating State Management Approaches for Streaming Dataflows
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po471')">Toggle Abstract</a>
-    <div id="po471" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po301')">Toggle Abstract</a>
+    <div id="po301" class="abstract" style="display: none;">
     <p>
-    Vast amounts of time series data are being generated by a variety of sources from IoT sensors to systems logs. Anomaly detection (AD) is a critical capability for detecting rare, interesting, or abnormal events over this data. While there has been much recent progress in machine learning models and algorithms for AD, these techniques by themselves are not enough to characterize the results or behaviors of anomaly detectors in a systematic and human-interpretable way. In this poster, we present Metro-Viz, a visual tool to help data scientists to detect, explore, and reason about time series anomalies and anomaly detectors over large datasets. Metro-Viz aims to efficiently support a number of interactive tasks from exploring anomalies at different time granularities to hypothesis testing, using memory management techniques specifically tailored to data access patterns required by these tasks.
+    Modern stream processors rely on embedded key-value stores to manage larger-than-memory state accumulated by long-running computations. RocksDB is the most prominent store used by systems such as Apache Flink, Kafka, and Samza, as well as Facebook’s Stylus. However, its benefits come at considerable cost: Flink applications using the RocksDB backend reportedly suffer an order of magnitude latency increase. A more recent key-value store, FASTER, provides support for in-place updates and promises better performance for workloads with a hot set.  In this poster, we present an experimental testbed for evaluating current practices and promising alternatives to streaming state management. Using a flexible API, we compare RocksDB and FASTER on diverse streaming queries and we also measure the performance gap between out-of-the-box approaches and carefully optimized state stores. Finally, we show that workload-aware state management can improve p99 latency of streaming queries by an order of magnitude. Our results motivate the need for flexible and customizable state stores.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Peter Ivanov (Northeastern University), Wolfgang Gatterbauer (NEU)
+    Amadou Ngom (Carnegie Mellon University)
     <br/>
     <strong>
-    Minimal Factorizations of the Lineage for Conjunctive Queries
+    Strategies for Vectorized Execution
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po481')">Toggle Abstract</a>
-    <div id="po481" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po311')">Toggle Abstract</a>
+    <div id="po311" class="abstract" style="display: none;">
     <p>
-    Probabilistic databases are databases where the existence of each entry is uncertain and has a certain probability associated with it. Data in the real world often contains some errors or is uncertain and we can model this using probabilistic databases.  When we evaluate a query on a probabilistic database, the result is a boolean expression (called a lineage) that we would like to calculate. This problem is #P-Hard for general queries.   We try to approximate the value of the boolean expression by finding the minimal factorization (minFac) of the lineage (i.e. finding an equivalent Boolean expression that minimizes the number of repetitions of the variables). We do this for self-join-free conjunctive queries, for which the general problem of calculating the value of the lineage is still #P-Hard.  Query evaluation over probabilistic databases where (i) read-once formulas are known allow exact PTIME solutions and (ii) non read-once formulas are known allow approximate solutions with an error that depends on the number of repetitions of the variables (i.e. the penalty is the number of occurrences minus number of distinct variables). Our problem is to minimize this penalty.  We found out that minFac(q,D) is NP-Complete for most queries, but there are special cases where it is in P. For the hard queries, we found a 2(k-1)-factor approximation of the minimal penalty where k is the number of atoms in the query. There is a class of queries (which we call linear queries) for which we have not decided the complexity yet. 
+    DBMSs use vectorizations to speed up database algorithms (joins, aggregates, etc.) and reduce the overhead of individual operations. For each vector, these algorithms often need to track the set of valid tuples after a predicate has been applied. To do so, systems employ one of two methods: dense selection vectors, or sparse bitmaps. There is currently no comparison of the two approaches, no analysis of which approach works better under given scenarios. This work does precisely this analysis. For vectorized joins and scans, we determine the tradeoffs between the two approaches. Preliminary results show that sparse bitmaps work better most of the time thanks to a higher potential for SIMD vectorization. If the execution engine supports adaptive query processing, then adaptively switching between the two proves to be a better technique.  
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Matteo Brucato (UMass Amherst), Nishant  Yadav (U Mass, Amherst), Azza Abouzied (New York University Abu Dhabi), Peter Haas (University of Massachusetts Amherst), Alexandra Meliou (University of Massachusetts Amherst)
+    Lei Cao (MIT), Yizhou Yan (Worcester Polytechnic Institute), Samuel Madden (MIT), Elke Rundensteiner (WPI)
     <br/>
     <strong>
-    Stochastic Package Queries
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po491')">Toggle Abstract</a>
-    <div id="po491" class="abstract" style="display: none;">
+    An End-to-end Anomaly Detection System
+    <a href="javascript: toggleVisibility ('#po321')">Toggle Abstract</a>
+    <div id="po321" class="abstract" style="display: none;">
     <p>
-    We must often make decisions in the face of uncertain data. For example, investors must decide which assets to sell or buy without knowing their future value. While probabilistic databases can manage uncertainty, they lack support for decision making, and package queries can only support deterministic decisions. In this talk, we introduce stochastic package queries to model optimization problems with uncertainty, close to the data. We introduce SPaQL, our declarative language for the specification of package queries with stochastic constraints and objectives, and our stochastic query evaluation method SummarySearch based on Monte Carlo summaries that can produce feasible and close-to-optimal packages with high probability.
+    Staggering volumes of data sets collected by modern applications from financial transaction data to IoT sensor data contain critical insights from rare phenomena to anomalies indicative of fraud or failure. To decipher valuables from the counterfeit, analysts need to interactively sift through and explore the data deluge. By detecting anomalies, analysts may prevent fraud or prevent catastrophic sensor failures. While previously developed research offers a treasure trove of stand-alone algorithms for detecting particular types of outliers, they tend to be variations on a theme. There is no end-to-end paradigm to bring this wealth of alternate algorithms to bear in an integrated infrastructure to support anomaly discovery over potentially huge data sets while keeping the human in the loop.  This project is the first to design an integrated paradigm for end-to-end anomaly discovery. It aims to support all stages of anomaly discovery by seamlessly integrating outlier-related services within one integrated platform. The result is a database-system inspired solution that models services as first class citizens for the discovery of outliers. It integrates outlier detection processes with data sub-spacing, explanations of outliers with respect to their context in the original data set, feedback on the relevance of outlier candidates, and metric-learning to refine the effectiveness of the outlier detection process. The resulting system enables the analyst to steer the discovery process with human ingenuity, empowered by near real-time interactive responsiveness during exploration. Our solution promises to be the first to achieve the power of sense making afforded by outlier explanation services and human feedback integrated into the discovery process.
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Manasi Vartak (MIT)
+    Hyungsik Caleb Kim (DePaul University), Alexander Rasin (DePaul University), James M Wagner (DePaul University)
     <br/>
     <strong>
-    Data Science is growing up: building the DS/ML Infrastructure Backbone
+    Optimizing query plans with expensive user-defined-predicates
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po51')">Toggle Abstract</a>
-    <div id="po51" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po331')">Toggle Abstract</a>
+    <div id="po331" class="abstract" style="display: none;">
     <p>
-    Machine learning and data science applications have become ubiquitous in a variety of domains ranging from voice assistants to self-driving cars. As a result, data science and machine learning have gone from an offline, research-oriented activity to one that drives core product features and revenue. While investments in DS/ML have risen exponentially, we find that the process of developing and deploying DS/ML and the associated tools remain ad-hoc. In the “wild-west” of DS/ML tools, reproducibility, diagnosis, and deployment of production-ready models are massive battles for small and large companies alike. As we depend more and more on DS/ML models to run products and businesses, the stack supporting the development and deployment of DS/ML also needs to develop to be as robust and dependable as the software development stack.  A key component of this new DS/ML stack is the model management system. Just as databases provide the source of truth for data, model management systems provide the source of truth for models --- they track models starting with feature engineering and training, all the way to model deployment and debugging. At MIT, we developed ModelDB, the first open-source system for managing machine learning models. Since its release, our GitHub repository has garnered > 500 stars, has been cloned over a thousand times, and has been forked >100 times. Moreover, ModelDB has been adopted at multiple financial institutions, insurance companies and retail companies, and has served as inspiration for commercial model management systems. Most recently, we have expanded ModelDB to enable model deployment as well as debugging.   In this talk, I will give an overview of the need for a new DS/ML tool stack, the key role played by model management, our work on ModelDB, and new functions enabled by model management such as model deployment and debugging.
+    All major relational database management systems (RDBMS) support function calls (built-in or custom) incorporated directly into SQL. RDBMSes enable users to create user-deﬁned functions using embedded languages (e.g., PL/SQL) or general languages (e.g., C/Java). User-deﬁned functions are necessary for applications in diﬀerent domains, including geographical data analytics, software project intelligence), bioinformatics, and data-driven astronomy (e.g., the Sloan Digital Sky Survey).   In this poster presentation, we propose improvements to both of our algorithms: the binary search algorithm and the query plan pruning algorithm. We describe our strategies for improving the binary search algorithm to further reduce the optimization cost while maintaining the same query plan quality. Our improved strategy terminates the inner dimension of the 2-dimensional UDP search as our algorithm performs a binary search. The goal of our new algorithm is to reduce the optimization cost while improving the quality of plan as compared to our previous approach. Our strategy for the improved query plan pruning approach is to dynamically adjust sub-plan pruning threshold based on the schema complexity and the number of tables and UDPs in a query. Our current query plan pruning algorithm uses a fixed sub-plan pruning threshold. 
     </p>
     </div>
     </td>
     </tr>
 <tr>
     <td>
-    Zheng Gong (Facebook), Dongqing Xiao (Facebook)
+    Jeremy Kepner (MIT Lincoln Laboratory)
     <br/>
     <strong>
-   Warehouse Sampling Service at Facebook
+    Simple Data Architecture Best Practices for AI Readiness
     </strong><br/>
-    <a href="javascript: toggleVisibility ('#po52')">Toggle Abstract</a>
-    <div id="po52" class="abstract" style="display: none;">
+    <a href="javascript: toggleVisibility ('#po341')">Toggle Abstract</a>
+    <div id="po341" class="abstract" style="display: none;">
     <p>
-    The volume of data processed by Facebook’s analytics workload has been rapidly increasing, resulting in greater compute and storage demands. We have been investigating how to use sampling as a technique offset such demand while still providing good approximate query results. In this poster, we discuss the approaches we have been using to support the computation of analytical dashboards using sampling, where approximations result in negligible visual differences of the graphs. We discuss the challenges that this poses to approximate computation, such as the need to consider uncertainty propagation when calculating aggregated metrics. We will also show the benefits in terms of resource consumption, in both compute and storage.
+    AI requires data. A core requirement for AI techniques to be successful is high quality data. Hence, preparing systems to be “AI Ready” involves collecting raw data and parsing it for subsequent ingest, scan, query, and analysis. There are simple techniques that can be applied during initial parsing of raw data that can dramatically reduce the effort of applying AI. This parsing is much more efficient to do during initial collection setup when the knowledge of the data exists with the programmer. Requiring an AI analyst to later deduce this knowledge is a primary reason why “data wrangling” is often 80% of the effort in building an AI system. This work provides a short list of a few of these best practices, which can be summarized in one word: tables.
     </p>
     </div>
     </td>
     </tr>
+<tr>
+    <td>
+    Neil B Band (Harvard College), Wasay Abdul (Harvard), Stratos Idreos (Harvard)
+    <br/>
+    <strong>
+    MemFlow: Memory-Aware Distributed Deep Learning
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#po351')">Toggle Abstract</a>
+    <div id="po351" class="abstract" style="display: none;">
+    <p>
+    The memory requirement in deep neural network (DNN) training is increasing due to a positive feedback loop in data generation. Data collection improves and users generate more training data, more expressive models capture increasing complexity, and higher model accuracy attracts more users. A major contributor to the memory bottleneck is storage of feature maps: intermediate results produced during the forward pass and consumed during the backward pass of gradient backpropagation. State-of-the-art optimization frameworks for training on distributed hardware, however, fail to model both training time and memory usage, and hence fail to find parallelization strategies that optimize memory usage.   In this work, we address this problem by introducing MemFlow, an optimization framework for distributed DNN training that considers the important metric of memory usage when searching for a parallelization strategy. MemFlow consists of: (i) a task graph generator that estimates computation time and memory usage; (ii) a memory-conscious execution simulator; and (iii) a Markov Chain Monte Carlo (MCMC) search algorithm that considers various degrees of recomputation i.e., discarding feature maps during the forward pass and recomputing them as needed during the backward pass. MemFlow produces per-device load statistics for a given parallelization strategy and permits optimization of arbitrary user-defined cost functions parametrized by both computation time and memory usage. Our experiments demonstrate that under memory constraints, MemFlow can readily locate valid and superior parallelization strategies unattainable with previous frameworks.         
+    </p>
+    </div>
+    </td>
+    </tr>
+<tr>
+    <td>
+    ajay patel (EnterpriseDB)
+    <br/>
+    <strong>
+    Zero to Hero: Managing Postgres through DevOps 
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#po361')">Toggle Abstract</a>
+    <div id="po361" class="abstract" style="display: none;">
+    <p>
+    With Devop's motion and powerful automation platforms, organizations are adopting a product-centric approach for Postgres deployment and management. Whether it's Public Cloud, Private Cloud, VM's, containers Infrastructure management as code solve a lot of problems.  It also helps organizations and database administrators to save, effort and cost to make the business successful. With new automation and best practices in place, database operation can focus on performance, tuning and capacity planning to scale the projects much faster.  This session we are going to cover  1. How DevOps play a key role in the Postgres world. 2. Open source Devop's tools and brief comparison. 3. Infrastructure deployment and Configuration management for Postgres. 4. Top database deployment strategies. 5. Successful playbook demo to set High scalability, connection pooling, and automatic failover. 
+    </p>
+    </div>
+    </td>
+    </tr>
+<tr>
+    <td>
+    Darryl Ho (MIT), Jialin Ding (MIT), Sanchit Misra (Intel), Nesime Tatbul (Intel Labs and MIT), Vikram Nathan (MIT); Vasimuddin Md (Intel), Tim Kraska (MIT)
+    <br/>
+    <strong>
+    LISA: Towards Learned DNA Sequence Search
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#po371')">Toggle Abstract</a>
+    <div id="po371" class="abstract" style="display: none;">
+    <p>
+    Next generation sequencing (NGS) technologies have enabled affordable sequencing of billions of short DNA fragments at high throughput, paving the way for population-scale genomics. Genomics data analytics at this scale requires overcoming performance bottlenecks, such as searching for short DNA sequences over long reference sequences. In this paper, we introduce LISA (Learned Indexes for Sequence Analysis), a novel learning-based approach to DNA sequence search. As a first proof of concept, we focus on accelerating one of the most essential flavors of the problem, called exact search. LISA builds on and extends FM-index, which is the state-of-the-art technique widely deployed in genomics tool-chains. Initial experiments with human genome datasets indicate that LISA achieves up to a factor of 4X performance speedup against its traditional counterpart.
+    </p>
+    </div>
+    </td>
+    </tr>
+<tr>
+    <td>
+    Erfan Zamanian (Brown University), Xiangyao Yu (MIT), Michael Stonebraker (MIT), Tim Kraska (MIT)
+    <br/>
+    <strong>
+    Rethinking Database High Availability with RDMA Networks
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#po381')">Toggle Abstract</a>
+    <div id="po381" class="abstract" style="display: none;">
+    <p>
+    Highly available database systems rely on data replication to tolerate machine failures. Both classes of existing replication algorithms, active-passive and active-active, were designed in a time when network was the dominant performance bottleneck. In essence, these techniques aim to minimize network communication between replicas at the cost of incurring more processing redundancy; a trade-off that suitably fitted the conventional wisdom of distributed database design. However, the emergence of next-generation networks with high throughput and low latency calls for revisiting these assumptions.  In this poster, we first make the case that in modern RDMA-enabled networks, the bottleneck has shifted to CPUs, and therefore the existing network-optimized replication techniques are no longer optimal. We present Active-Memory Replication, a new high availability scheme that efficiently leverages RDMA to completely eliminate the processing redundancy in replication. Using Active-Memory, all replicas dedicate their processing power to executing new transactions, as opposed to performing redundant computation. Active-Memory maintains high availability and correctness in the presence of failures through an efficient RDMA-based undo logging scheme. Our evaluation against active-passive and active-active schemes shows that Active-Memory is up to a factor of 2 faster than the second-best protocol on RDMA-based networks.
+    </p>
+    </div>
+    </td>
+    </tr>
+<tr>
+    <td>
+    Yoshinori Matsunobu (Facebook)
+    <br/>
+    <strong>
+    MyRocks -- Space and Write optimized MySQL database
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#po391')">Toggle Abstract</a>
+    <div id="po391" class="abstract" style="display: none;">
+    <p>
+    MyRocks is our open source MySQL database engine on top of RocksDB, with the goal of improving space and write efficiency beyond what was possible with compressed InnoDB. Our objective was to migrate one of our main databases (UDB) from compressed InnoDB to MyRocks and reduce the amount of storage and number of servers used by half. We carefully planned and implemented the migration from InnoDB to MyRocks for our UDB tier, which manages data about Facebook’s social graph. We also migrated backend database of Facebook Messenger from HBase to MyRocks in 2017-2018, which improved reliability and performance on Flash devices. This poster describes MyRocks overview, comparison to InnoDB, and future plans.
+    </p>
+    </div>
+    </td>
+    </tr>
+<tr>
+    <td>
+    Connor Luckett (Brown University), Alex Galakatos (Brown University), Andrew Crotty (Brown University), Ugur Cetintemel (Brown University)
+    <br/>
+    <strong>
+    WimPi: In-Memory Analytics on a "Wimpy" Cluster
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#po401')">Toggle Abstract</a>
+    <div id="po401" class="abstract" style="display: none;">
+    <p>
+    Modern data processing infrastructures traditionally favor high-end hardware (e.g., the latest generation processors, abundant main memory), with deployments typically ranging from a single machine to small clusters. On the other end of the spectrum are microservers, which typically have lower-powered processors and limited main memory. Therefore, they are relatively inexpensive, with a price point of around $50 or less, despite the fact that they can serve as full-fledged computers.  In fact, microservers like the Raspberry Pi 3B+, have actually become quite competitive with high-end hardware. While older microserver designs included weak, single-core CPUs, currently available versions have multi-core CPUs with advanced features (e.g., superscalar processing, out-of-order execution). Surprisingly, our microbenchmarks even show that the single-threaded compute performance of a Raspberry Pi 3B+ is comparable to that of a high-end Intel Xeon processor that is two orders of magnitude more expensive.  Moreover, microservers consume substantially less power than traditional servers. For instance, at peak CPU utilization, we measured a power draw of only 5 Watts on a Raspberry Pi 3B+, whereas servers typically draw hundreds of Watts. In addition to drawing orders-of-magnitude less power, microservers generate significantly less heat, thereby eliminating associated cooling costs.   We believe that microservers are actually an interesting and viable alternative to high-end servers in the context of in-memory analytics. Therefore, we present WimPi, a cluster of inexpensive Raspberry Pi 3B+ microservers that offers a promising alternative to traditional high-end hardware deployments. Using a series of microbenchmarks and a detailed experimental evaluation with realistic workloads, we show that such an architecture is able tooer much more "bang for the buck", especially for applications that are not latency-sensitive (e.g., bulk processing jobs, offline machine learning).
+    </p>
+    </div>
+    </td>
+    </tr>
+<tr>
+    <td>
+    Meena Jagadeesan (Harvard University), Subarna Chatterjee (Harvard University), Stratos Idreos (Harvard)
+    <br/>
+    <strong>
+    From Worst-Case to Average-Case Analysis: Accurate Latency Predictions for Key-Value Storage Engine
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#po421')">Toggle Abstract</a>
+    <div id="po421" class="abstract" style="display: none;">
+    <p>
+    Selecting the optimal storage engine and tuning for an application requires being able to cost the underlying data structures. For this, it is necessary to develop accurate latency predictions for diverse workloads executed on different data structures. In this work, we start to develop an average-case analysis of the performance of storage engines that can achieve significantly more accurate predictions than existing worst-case models. In particular, we propose a distribution-aware framework to predict the latency of diverse workloads executed on a vast number of data structures. Our framework can be used to find the optimal storage engine and tuning for an application, which vastly improves the application’s performance.
+    </p>
+    </div>
+    </td>
+    </tr>
+    
 
 
 </tbody>
