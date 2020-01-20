@@ -156,21 +156,6 @@
     </tr>
 <tr>
     <td>
-    Aaron Elliot (University of Massachusetts Amherst )
-    <br/>
-    <strong>
-    The Learned Index as a Constant Space Secondary Index : Range Search on Unsorted Data
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po10')">Toggle Abstract</a>
-    <div id="po10" class="abstract" style="display: none;">
-    <p>
-    Secondary indices can be expensive in terms of storage, especially in case of high dimensional data. The gain from keeping a secondary index on a large number of attributes can often be outweighed by the storage cost of a traditional index’s O(n) space.  Learned index structures can be far more space efficient than traditional indexes, as they only require storing the function and weights. A constant space learned index structure may be valuable when a linear space index is too large. Along this vein of reasoning, we explore the plausibility of learned index structures as constant space secondary indexes. In particular, we build a learned index structure for range search on a secondary attribute assuming the data is sorted on a primary attribute. Our approach requires that values of the primary attribute not be independent of the values of the secondary attribute.  The relationship between primary and secondary attributes may be many to many. To solve this challenge, we develop a neural mixed regression model. Another challenge we face is that TPC benchmark data has independent columns. As a work around, we evaluate on a dataset of Los Angeles parking citations, and consider range searches along uniformly random intervals.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
     Malte Sandstede (RelationalAI), John Liagouris (Boston University), Vasiliki Kalavri (Boston University)
     <br/>
     <strong>
@@ -246,21 +231,6 @@
     </tr>
 <tr>
     <td>
-    Yi Lu (MIT), Xiangyao Yu (MIT), Samuel Madden (MIT)
-    <br/>
-    <strong>
-    SCAR: Strong Consistency using Asynchronous Replication with Minimal Coordination
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po16')">Toggle Abstract</a>
-    <div id="po16" class="abstract" style="display: none;">
-    <p>
-    Data replication is crucial in modern distributed systems as a means to provide high availability. Many techniques have been proposed to utilize replicas to improve a system's performance, often requiring expensive coordination or sacrificing consistency. In this paper, we present SCAR, a new distributed and replicated in-memory database that allows serializable transactions to read from backup replicas with minimal coordination. SCAR works by assigning logical leases to database records so that a transaction can safely read from a backup replica without coordination, because the records cannot be changed up to a certain logical time. In addition, we propose two optimization techniques (timestamp synchronization and parallel locking and validation) to further reduce coordination. We show that SCAR outperforms systems with conventional concurrency control algorithms and replication strategies by up to a factor of 2 on two popular benchmarks. We also demonstrate that SCAR achieves higher throughput by running under reduced isolation levels and detects concurrency anomalies in real time.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
     Jeff Fried (InterSystems)
     <br/>
     <strong>
@@ -270,21 +240,6 @@
     <div id="po17" class="abstract" style="display: none;">
     <p>
     Relational, columnar, object, XML, and graph databases are flourishing, but many applications need all of these for different capabilities.    A variety of multi-model databases are now available, but practices for applying these vary, and the variety can be confusing.  This talk covers the range of options, and considers the pros and cons, what is possible, what is best for performance, and what is practical.    We'll explore the current state of technology and adoption as well as the future trends.   We'll go deep on InterSystems' multimodel implementations as an example.
-    </p>
-    </div>
-    </td>
-    </tr>
-<tr>
-    <td>
-    Erkang Zhu (University of Toronto)
-    <br/>
-    <strong>
-    JOSIE: Overlap Set Similarity Search for Finding Joinable Tables in Data Lakes
-    </strong><br/>
-    <a href="javascript: toggleVisibility ('#po18')">Toggle Abstract</a>
-    <div id="po18" class="abstract" style="display: none;">
-    <p>
-    We present a new solution for finding joinable tables in massive data lakes: given a table and one join column, find tables that can be joined with the given table on the largest number of distinct values. The problem can be formulated as an overlap set similarity search problem by considering columns as sets and matching values as intersection between sets. Although set similarity search is well-studied in the field of approximate string search (e.g., fuzzy keyword search), the solutions are designed for and evaluated over sets of relatively small size (average set size rarely much over 100 and maximum set size in the low thousands) with modest dictionary sizes (the total number of distinct values in all sets is only a few million). We observe that modern data lakes (including an enterprise lake and two important public data lakes of Open Government Data and WebTables) typically have massive set sizes (with maximum set sizes that may be tens of millions) and dictionaries that include hundreds of millions of distinct values. Our new algorithm, JOSIE (JOining Search using Intersection Estimation) minimizes the cost of set reads and inverted index probes used in finding the top-k sets. We show that JOSIE completely out performs the state-of-the-art overlap set similarity search techniques on data lakes. More surprising, we also consider state-of-the-art approximate algorithm and show that our new exact search algorithm performs almost as well, and even in some cases better, on real data lakes.
     </p>
     </div>
     </td>
@@ -633,7 +588,7 @@
     </div>
     </td>
     </tr>
-    
+
 
 
 </tbody>
