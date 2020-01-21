@@ -589,6 +589,156 @@
     </td>
     </tr>
 
+</tbody>
+</table>
+
+   <h3>Spotlight Presentations will also present a poster:</h3>
+<table class="table table-bordered posterTable">
+<tbody>
+
+<tr>
+    <td>
+    Maria Basmanova (Facebook), Orri Erling (Facebook)
+    <br/>
+    <strong>
+    Evolving Big Data at Facebook
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo1')">Toggle Abstract</a>
+    <div id="spo1" class="abstract" style="display: none;">
+    <p>
+    The Facebook Data Platform (Warehouse) handles all the mission critical big data at Facebook and holds exabytes of data across multiple data centers. Presto is the main interactive query engine and Spark is the main ETL/batch engine.  Additionally, Facebook has a number of in-house systems for stream processing, time series for operational data, in-memory analytics and real time query of aggregated ads statistics, to mention just a few. Beyond this, there are all the customer web-facing serving systems like TAO for graph caching and RocksDB for scalable key-value stores and MySQL backend.   In this talk we drill down on Presto efficiency advances, the limits of the Java platform and our work for next generation converged execution across multiple analytical data systems.   We see that Facebook scale data warehousing requires a holistic understanding of the space for overcoming the fragmentation and consequent maintenance burden that comes from multiple point solutions. We have presented some aspects of our answer to this challenge: - Aria: Do only the work that answering the business question requires - Folly4Data: Highest CPU efficiency and adaptivity for execution primitives, use in Presto and elsewhere, obtain consistent semantics, performance and user experience - Scalability: Adaptively handle resource allocation and workload placement. This stack of technologies will be open source and usable standalone or as part of PrestoDB. The Presto Foundation under Linux Foundation is the current Presto public facing entity. We welcome new members and participation in open source. 
+    </p>
+    </div>
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Ajay Patel (EnterpriseDB)
+    <br/>
+    <strong>
+    Monitor Postgres for performance 
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo2')">Toggle Abstract</a>
+    <div id="spo2" class="abstract" style="display: none;">
+    <p>
+    Postgres is really easy and simple to install and use on various platforms cloud or on-premises. Monitoring is a key element of the Database eco-system and to the overall database performance. It also helps to ensure Database is healthy and contributes towards long term stability.  Monitoring sounds really easy but it becomes tricky on what to monitor and how to monitor?  On this session we are going to talk about:   1. Why is it important to monitor Postgres?  2. What are the proactive monitoring and reactive monitoring approaches, and how do they help in handling future problems?  3. Top 10 monitoring points.  4. When not to monitor?  5. Deep dive into Open Source tools for monitoring.  6. Deployment categories & Check list 
+    </p>
+    </div>
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Subhadeep Sarkar (Boston University), Dimitris Staratzis (Boston University), Tarikul Islam Papon (Boston University), Manos Athanassoulis (Boston University)
+    <br/>
+    <strong>
+    Lethe: A Delete-Aware LSM-Based Storage Engine
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo3')">Toggle Abstract</a>
+    <div id="spo3" class="abstract" style="display: none;">
+    <p>
+    To support fast ingestion and fast query processing, modern data stores handle incoming data in an out-of-place fashion. Deletes in such data stores are realized logically by inserting additional metadata. We highlight that all out-of-place data stores treat deletes as second class citizens, and are not designed to efficiently realize deletes without hurting performance. To address this, we introduce Lethe, a new delete-aware out-of-place key-value store.
+    </p>
+    </div>
+    </td>
+    </tr>
+
+     <tr>
+    <td>
+    sandeep polisetty (UMASS), Nathan Ng (University of Massachusetts Amherst), Marco Serafini (University of Massachusetts Amherst)
+    <br/>
+    <strong>
+    Speeding up subgraph queries by constructing efficient intermediate structures
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo4')">Toggle Abstract</a>
+    <div id="spo4" class="abstract" style="display: none;">
+    <p>
+    We study the problem of subgraph querying i.e finding instances of a given subgraph in a larger graph, a fundamental computation performed by many applications and supported by many software systems that process graphs. Example applications include triangles and larger clique-like structures for detecting related pages in the world wide web and finding diamonds in recommendation algorithms in social networks.  The underlying systems used by these applications could be graph databases, RDF engines or graph processing systems. These subgraph queries are typically evaluated one vertex at a time using the worst-case optimal generic joins.  Worst-case optimal joins heavily use set intersections which are sensitive to branch mispredictions.  These branches do not allow for proper utilization of SIMD acceleration.  However unlike SQL queries on multiple tables, graph queries consist of joins on the same table.  This repetitive structure of graph queries allows the existence of reusable intermediate structures.  We propose a novel bitvector to store these reusable structures in a SIMD friendly format which can later be processed rapidly using SIMD without any branches.  Our experiments show that we can achieve a reduction in branch misprediction by 50 percent and a speedup of 2-4x for n-clique queries
+    </p>
+    </div>
+    </td>
+    </tr>
+
+     <tr>
+    <td>
+    Ryan C Marcus (MIT), Tim Kraska (MIT)
+    <br/>
+    <strong>
+    Learning to Multiplex Simple Query Optimizers
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo5')">Toggle Abstract</a>
+    <div id="spo5" class="abstract" style="display: none;">
+    <p>
+    Modern machine-learning based solutions to query optimization (e.g., learned cardinality estimators, reinforcement learning, etc.) suffer from large training data requirements, poor tail latency, and inevitable staleness as the data and schema shift. We propose a new class of learned optimizers based on multiplexing simple query optimizers in a contextual multi-armed bandit setting. We show preliminary results suggesting that such an approach could learn to outperform traditional query optimizers with very little training data, while never producing a catastrophic query plan. We are hopeful that structural properties of our proposed system will allow it to easily adapt to changes in data and schema.
+    </p>
+    </div>
+    </td>
+    </tr>
+
+         <tr>
+    <td>
+    Catherine Macheret (MITRE), Arnie Rosenthal (MITRE), Peter Mork (MITRE)
+    <br/>
+    <strong>
+    Toward Agile Harmonization of Specifications
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo6')">Toggle Abstract</a>
+    <div id="spo6" class="abstract" style="display: none;">
+    <p>
+    Systems interoperate more effectively when different components employ similar data definitions. To achieve this, one needs to harmonize the systems’ specifications. This need arises not just with databases, but also with ontologies, survey instruments, GUIs, statistical queries, and other information conveyances describable by metadata structures. The database community employs two complementary approaches to harmonization: data standardization (for new and evolving systems and interfaces) and data integration/mapping (for systems and interfaces one cannot change). This talk has several objectives for advancing these approaches: 1. Propose harmonization as a general problem in a way that facilitates the transition of data integration lore into practice, on problems requiring harmonizing structured metadata. 2. Describe some surprising shortfalls in the state of the practice for metadata and data standards 3. Discuss how agile harmonization might be achieved, by adding decentralized, time-limited, bottom-up capabilities to the standards and harmonization armory We then describe questions where research progress might mitigate these difficulties.
+    </p>
+    </div>
+    </td>
+    </tr>
+
+         <tr>
+    <td>
+    Matteo Brucato (UMass Amherst), Nishant  Yadav (University of Massachusetts Amherst), Azza Abouzied (New York University Abu Dhabi), Peter Haas (University of Massachusetts Amherst), Alexandra Meliou (University of Massachusetts Amherst)
+    <br/>
+    <strong>
+    Stochastic Package Queries for In-Database Constrained Optimization Under Uncertainty
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo7')">Toggle Abstract</a>
+    <div id="spo7" class="abstract" style="display: none;">
+    <p>
+    In this talk, we introduce methods for in-database support of constrained optimization under uncertainty. Many important decision problems correspond to selecting a ``package'' (bag of tuples in a relational database) in order to jointly satisfy a set of constraints (expressed as predicates) while minimizing some overall ``cost'' function; in most real-world problems, the data is uncertain. We provide methods for specifying---via a SQL extension---and processing stochastic package queries (SPQs). SPQs model optimization problems with uncertainty, and let users express and solve these problems inside the database system. In order to handle a broad class of uncertainty models, prior work by the stochastic programming community uses Monte Carlo methods where the original stochastic optimization problem is approximated by a large deterministic optimization problem that incorporates many ``scenarios'', i.e., sample realizations of the uncertain data values. For large database tables, however, a huge number of scenarios is required, leading to poor performance and, often, failure of the solver software. We therefore provide a novel SummarySearch algorithm that, instead of trying to solve a large deterministic problem, seamlessly approximates it via a sequence of problems defined over carefully crafted ``summaries'' of the scenarios that accelerate convergence to a feasible and near-optimal solution. Experimental results on our prototype system show that SummarySearch can be orders of magnitude faster than prior methods at finding feasible and high-quality packages.
+    </p>
+    </div>
+    </td>
+    </tr>
+
+        <tr>
+    <td>
+    Christine F Reilly (Skidmore College)
+    <br/>
+    <strong>
+    A Generic RDBMS Schema for Property Graphs
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo8')">Toggle Abstract</a>
+    <div id="spo8" class="abstract" style="display: none;">
+    <p>
+    This talk describes on-going research focused on creating and evaluating a generic schema for storing property graphs in a relational database management system (RDBMS). We focus on transactional graph data, where there are updates (insertions, deletions, and modifications) to the data over time. We are motivated by related work that has demonstrated that an RDBMS performs as well as or better than a specialized graph system for graph analytics applications. This related work suggests that an RDBMS may be the preferred storage system for graph data, because RDBMSs are mature software systems that use well-tested approaches for reliable data storage. This talk will present the schema as implemented in MariaDB, and will discuss the design decisions made and challenges faced in the creation of this schema. The plan for evaluation of this approach and directions for future work will be discussed.
+    </p>
+    </div>
+    </td>
+    </tr>
+
+    <tr>
+    <td>
+    Brian Hentschel (Harvard University), Stratos Idreos (Harvard University)
+    <br/>
+    <strong>
+    Workload-Dependent Filtering
+    </strong><br/>
+    <a href="javascript: toggleVisibility ('#spo9')">Toggle Abstract</a>
+    <div id="spo9" class="abstract" style="display: none;">
+    <p>
+    Filters are memory-efficient data structures that are computationally efficient and which give partial answers to queries or defer answers to a secondary more complete source of the data. In this poster, we overview different ways that workload characteristics and data characteristics can be used to create better filter data structures. We present 1) Column Sketches, a technique using filtering to improve predicate evaluation, 2) preliminary work on its extensions to general operators 3) Stacked Filters, a technique using workload skew to create filters which help in zero result point lookups and 4) preliminary work improving Learned Bloom Filters, which like Stacked Filters help in the evaluation of zero result point lookups. We additionally examine the overlying themes which connect all four filter data structures. 
+    </p>
+    </div>
+    </td>
+    </tr>
 
 
 </tbody>
