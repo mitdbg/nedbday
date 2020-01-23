@@ -150,12 +150,16 @@
 
       <tr>
         <td>11:30-11:45</td>
-        <td> <i>Semi-supervised learning in extremely sparsely labeled graphs with factorized graph statistics</i> <br/>Prakhar Krishna Kumar (IISc), Paul Langton (Northeastern University), Wolfgang Gatterbauer (Northeastern University)
+        <td> <i>Semi-supervised learning from sparse labels with algebraic amplification</i> <br/>Krishna Kumar (IIT Madras), Paul Langton (Northeastern University), Wolfgang Gatterbauer (Northeastern University)
           <br/>
           <a href="javascript: toggleVisibility ('#pa2B')">Click to toggle abstract.</a>
           <div id="pa2B" class="abstract" style="display: none;">
             <p>
-              Node classification is an important problem of graph management and Belief Propagation (BP) methods, along with its linearization, have been widely used for graphs with arbitrary compatibilities between classes. These methods rely on a prior specified compatibility matrix between classes, which is commonly given by domain experts or heuristics. Thus an important unresolved questions is: Can we do better in deriving compatibilities from the actual data in a principled and scalable way? We address this problem by indeed estimating the compatibilities on sparsely labeled graphs even if we have very sparse labels (e.g., 1 in 10,000 nodes is labeled).  We propose a factorized method to perform this estimation in a fraction of time it later takes to label the remaining nodes, which makes it a cheap pre-processing step for any existing label propagation method.  Our approach consists of two steps: first, we create multiple consistent and compact graph summaries; and second, perform estimation on these far smaller representations. We show that the labeling accuracy of our proposed estimator is comparable to using the "correct" compatibilities and that our estimator is orders of magnitude faster than standard approaches based on train-test sets.
+              Node classification is an important problem in graph data management, and is commonly solved by various label propagation methods that work iteratively starting from a few labeled seed nodes. For graphs with arbitrary compatibilities between classes, these methods crucially depend on a compatibility matrix between classes that is commonly provided either by domain experts or heuristics. Can we instead derive compatibilities from the actual graph we like to label in a principled and scalable way? 
+
+We answer this question positively and suggest a method ("distant compatibility estimation'') that can estimate the compatibilities on extremely sparsely labeled graphs (e.g., 1 in 10,000 nodes is labeled) in a fraction of time it later takes to label the remaining nodes. This makes it a cheap pre-processing step for any existing label propagation method and removes the current dependence on any domain experts or heuristics.
+
+Our approach first creates multiple consistent and compact factorized graph representations (with size independent on the graph) and only then perform estimation on these smaller representations. We show that the classification accuracy of our proposed estimator is comparable to using "ground truth" compatibilities and that our estimator is by orders of magnitude faster than standard approaches based on train-test sets.
             </p>
           </div>
         </td>
